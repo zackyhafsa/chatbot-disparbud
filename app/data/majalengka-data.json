@@ -1,0 +1,161 @@
+
+{
+  "pariwisata": {
+    "wisata_alam": [
+      {
+        "nama": "Terasering Panyaweuyan Argapura",
+        "deskripsi": "Menyajikan pemandangan sawah terasering yang indah dan membentang di lereng Gunung Ciremai, menjadikannya salah satu wisata alam hits di Majalengka."
+      },
+      {
+        "nama": "Gunung Ciwaru",
+        "deskripsi": "Menawarkan pemandangan alam yang spektakuler dari puncaknya, cocok untuk pendakian dan mencari spot foto unik."
+      },
+      {
+        "nama": "Puncak Sawiyah",
+        "deskripsi": "Destinasi ini menawarkan pemandangan Gunung Galunggung, Gunung Papandayan, Talaga Bodas, dan Bandara Internasional Jawa Barat, serta spot foto menarik seperti balon udara dan sayap burung."
+      },
+      {
+        "nama": "Bukit Mercury Sayang Kaak",
+        "deskripsi": "Pilihan tepat untuk menikmati pemandangan indah dari ketinggian dengan banyak spot instagramable, serta cocok untuk trekking dan camping."
+      },
+      {
+        "nama": "Hutan Pinus Darmacaang",
+        "deskripsi": "Menawarkan udara sejuk khas pegunungan dengan deretan pohon pinus yang tinggi menjulang, populer sebagai tempat menyantap nasi liwet khas Sunda dan tujuan favorit pesepeda."
+      },
+      {
+        "nama": "Gunung Sanghyangdora",
+        "deskripsi": "Cocok untuk camping dengan pemandangan alam yang asri, udara sejuk, dan suasana tenang."
+      }
+    ],
+    "wisata_air": [
+      {
+        "nama": "Situ Cipanten",
+        "deskripsi": "Danau alami dengan keindahan yang memukau, air jernih, dan dikelilingi pepohonan hijau, cocok untuk memancing, berperahu, atau bersantai."
+      },
+      {
+        "nama": "Talaga Herang",
+        "deskripsi": "Destinasi wisata alam yang menawarkan pesona danau yang jernih dan tenang, cocok untuk relaksasi."
+      },
+      {
+        "nama": "Curug Muara Jaya",
+        "deskripsi": "Air terjun yang menawan dengan air jernih dan segar."
+      },
+      {
+        "nama": "Curug Cipeuteuy",
+        "deskripsi": "Air terjun tersembunyi di tengah hutan dengan ketinggian sekitar 30 meter, menawarkan keindahan alam yang alami dan segar."
+      },
+      {
+        "nama": "Curug Ibun Pelangi",
+        "deskripsi": "Dikenal juga sebagai Air Terjun Embun Pelangi, memiliki ketinggian mencapai 20 meter dan diapit oleh dua tebing menjulang."
+      }
+    ],
+    "wisata_lainnya": [
+      {
+        "nama": "Kebun Teh Cipasung",
+        "deskripsi": "Hamparan hijau kebun teh seluas 58 hektare yang menyegarkan, cocok untuk berkeliling dan berfoto."
+      },
+      {
+        "nama": "Paralayang Adventure Land",
+        "deskripsi": "Terkenal untuk olahraga paralayang dengan pemandangan Kota Majalengka dan Gunung Ciremai, juga tersedia aktivitas lain seperti gantole, ATV, dan glamping."
+      },
+      {
+        "nama": "Petilasan Prabu Siliwangi",
+        "deskripsi": "Tempat ziarah yang menawarkan keindahan alam dan nilai sejarah."
+      },
+      {
+        "nama": "Ciboer Pass",
+        "deskripsi": "Menawarkan pemandangan sawah terasering yang memikat dengan banyak spot hits untuk nongkrong dan berfoto."
+      },
+      {
+        "nama": "Taman Dinosaurus Buana Marga",
+        "deskripsi": "Salah satu tempat wisata keluarga."
+      }
+    ]
+  },
+  "kebudayaan": {
+    "seni_pertunjukan": [
+      {
+        "nama": "Sampyong",
+        "deskripsi": "Kesenian adu ketangkasan yang ekstrem dan merupakan warisan leluhur Majalengka."
+      },
+      {
+        "nama": "Tari Dawet Ireng",
+        "deskripsi": "Tarian yang menampilkan gerakan energik dan lincah, sering diperagakan secara massal dalam acara adat atau hajatan."
+      },
+      {
+        "nama": "Wayang Golek",
+        "deskripsi": "Kesenian yang tak terpisahkan dari budaya Sunda, dengan banyak pengrajin dan dalang terkenal di Majalengka. Pertunjukan wayang golek biasanya diiringi tarian dan musik gamelan Sunda."
+      },
+      {
+        "nama": "Gaok",
+        "deskripsi": "Seni tradisional yang merupakan sinkretisme antara nilai-nilai budaya etnis Sunda buhun dan budaya bernuansa Islam, disajikan dalam bentuk '''mamacan''' (membaca teks) atau wawacan."
+      },
+      {
+        "nama": "Pencak Silat",
+        "deskripsi": "Seni bela diri tradisional yang juga merupakan bagian dari kekayaan budaya Majalengka."
+      }
+    ],
+    "kerajinan_lokal": [
+      {
+        "nama": "Seni Tenun Troso",
+        "deskripsi": "Majalengka dikenal dengan seni tenun Troso berkualitas tinggi, yang dikelola secara turun temurun dengan mempertahankan teknik tradisional."
+      },
+      {
+        "nama": "Batik Tulis dan Keramik",
+        "deskripsi": "Kerajinan ini juga mendapatkan pengakuan baik di tingkat nasional maupun internasional."
+      }
+    ],
+    "tradisi_dan_adat_istiadat": [
+      {
+        "nama": "Mapag Tamba",
+        "deskripsi": "Tradisi yang dilakukan masyarakat untuk mengawali musim tanam baru, khususnya di Desa Pilangsari."
+      },
+      {
+        "nama": "Mapag Sri (Munjungan)",
+        "deskripsi": "Tradisi budaya masyarakat Sunda dalam menyambut panen raya sebagai wujud rasa syukur kepada Tuhan Yang Maha Esa, sering diisi dengan pertunjukan wayang kulit."
+      },
+      {
+        "nama": "Sedekah Bumi",
+        "deskripsi": "Tradisi yang masih dijalankan di beberapa desa sebagai bentuk mempertahankan nilai-nilai budaya daerah."
+      },
+      {
+        "nama": "Upacara Seren Taun",
+        "deskripsi": "Ritual syukur petani atas hasil panen yang melimpah."
+      },
+      {
+        "nama": "Ruwatan",
+        "deskripsi": "Sering dilakukan dalam bentuk upacara adat dengan rangkaian ritual yang melibatkan tokoh adat dan masyarakat, biasanya diiringi seni pertunjukan wayang kulit."
+      }
+    ],
+    "kuliner_khas": [
+      {
+        "nama": "Nasi Jamblang",
+        "deskripsi": "Kuliner tradisional yang lezat."
+      },
+      {
+        "nama": "Dodol Susu",
+        "deskripsi": "Kuliner tradisional yang lezat."
+      },
+      {
+        "nama": "Opak Bakar",
+        "deskripsi": "Kuliner tradisional yang lezat."
+      },
+      {
+        "nama": "Mie Kocok",
+        "deskripsi": "Kuliner tradisional yang lezat."
+      },
+      {
+        "nama": "Nasi Tutug Oncom",
+        "deskripsi": "Kuliner tradisional yang lezat."
+      },
+      {
+        "nama": "Nasi Liwet",
+        "deskripsi": "Kuliner tradisional yang lezat."
+      },
+      {
+        "nama": "Kue Cuhcur",
+        "deskripsi": "Kuliner tradisional yang lezat."
+      }
+    ]
+  }
+}
