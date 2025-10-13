@@ -11,7 +11,7 @@ const NoChat: React.FC<NoChatProps> = ({ onExampleClick }) => {
     "Apa saja wisata buatan yang ada di Majalengka?",
     "Saya ingin mencoba kuliner khas Majalengka, ada rekomendasi?",
     "Bagaimana rasa dari Gedong Gincu?",
-    "Apa itu Kalua Jeruk.",
+    "Apa itu Kalua Jeruk?",
   ];
 
   const containerVariants = {
