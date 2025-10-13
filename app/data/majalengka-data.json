@@ -1,161 +1,124 @@
 
 {
   "pariwisata": {
-    "wisata_alam": [
+    "alam": [
       {
         "nama": "Terasering Panyaweuyan Argapura",
-        "deskripsi": "Menyajikan pemandangan sawah terasering yang indah dan membentang di lereng Gunung Ciremai, menjadikannya salah satu wisata alam hits di Majalengka."
-      },
-      {
-        "nama": "Gunung Ciwaru",
-        "deskripsi": "Menawarkan pemandangan alam yang spektakuler dari puncaknya, cocok untuk pendakian dan mencari spot foto unik."
-      },
-      {
-        "nama": "Puncak Sawiyah",
-        "deskripsi": "Destinasi ini menawarkan pemandangan Gunung Galunggung, Gunung Papandayan, Talaga Bodas, dan Bandara Internasional Jawa Barat, serta spot foto menarik seperti balon udara dan sayap burung."
-      },
-      {
-        "nama": "Bukit Mercury Sayang Kaak",
-        "deskripsi": "Pilihan tepat untuk menikmati pemandangan indah dari ketinggian dengan banyak spot instagramable, serta cocok untuk trekking dan camping."
-      },
-      {
-        "nama": "Hutan Pinus Darmacaang",
-        "deskripsi": "Menawarkan udara sejuk khas pegunungan dengan deretan pohon pinus yang tinggi menjulang, populer sebagai tempat menyantap nasi liwet khas Sunda dan tujuan favorit pesepeda."
-      },
-      {
-        "nama": "Gunung Sanghyangdora",
-        "deskripsi": "Cocok untuk camping dengan pemandangan alam yang asri, udara sejuk, dan suasana tenang."
-      }
-    ],
-    "wisata_air": [
-      {
-        "nama": "Situ Cipanten",
-        "deskripsi": "Danau alami dengan keindahan yang memukau, air jernih, dan dikelilingi pepohonan hijau, cocok untuk memancing, berperahu, atau bersantai."
-      },
-      {
-        "nama": "Talaga Herang",
-        "deskripsi": "Destinasi wisata alam yang menawarkan pesona danau yang jernih dan tenang, cocok untuk relaksasi."
-      },
-      {
-        "nama": "Curug Muara Jaya",
-        "deskripsi": "Air terjun yang menawan dengan air jernih dan segar."
+        "deskripsi": "Pemandangan sawah terasering yang sangat luas dan hijau, menjadi salah-satu destinasi wisata paling populer di Majalengka.",
+        "lokasi": "Kecamatan Argapura"
       },
       {
         "nama": "Curug Cipeuteuy",
-        "deskripsi": "Air terjun tersembunyi di tengah hutan dengan ketinggian sekitar 30 meter, menawarkan keindahan alam yang alami dan segar."
+        "deskripsi": "Air terjun yang terletak di tengah hutan pinus dengan suasana yang sejuk dan asri.",
+        "lokasi": "Kecamatan Lemahsugih"
       },
       {
-        "nama": "Curug Ibun Pelangi",
-        "deskripsi": "Dikenal juga sebagai Air Terjun Embun Pelangi, memiliki ketinggian mencapai 20 meter dan diapit oleh dua tebing menjulang."
+        "nama": "Situ Cipanten",
+        "deskripsi": "Danau dengan air yang jernih dan berwarna biru kehijauan, dikelilingi oleh pepohonan rindang.",
+        "lokasi": "Kecamatan Sindang"
+      },
+      {
+        "nama": "Gunung Ciwaru",
+        "deskripsi": "Menawarkan pemandangan alam dari ketinggian, cocok untuk kegiatan hiking dan berkemah.",
+        "lokasi": "Kecamatan Argapura"
+      },
+      {
+        "nama": "Cikadongdong River Tubing",
+        "deskripsi": "Wisata petualangan menyusuri sungai dengan menggunakan ban.",
+        "lokasi": "Kecamatan Cingambul"
       }
     ],
-    "wisata_lainnya": [
+    "buatan": [
       {
-        "nama": "Kebun Teh Cipasung",
-        "deskripsi": "Hamparan hijau kebun teh seluas 58 hektare yang menyegarkan, cocok untuk berkeliling dan berfoto."
+        "nama": "Jembar Waterpark",
+        "deskripsi": "Taman rekreasi air dengan berbagai wahana permainan untuk keluarga.",
+        "lokasi": "Kecamatan Sumberjaya"
       },
       {
-        "nama": "Paralayang Adventure Land",
-        "deskripsi": "Terkenal untuk olahraga paralayang dengan pemandangan Kota Majalengka dan Gunung Ciremai, juga tersedia aktivitas lain seperti gantole, ATV, dan glamping."
+        "nama": "Paraland Majalengka",
+        "deskripsi": "Menawarkan olahraga paralayang dengan pemandangan kota Majalengka dari ketinggian.",
+        "lokasi": "Kecamatan Maja"
+      }
+    ],
+    "sejarah_dan_budaya": [
+      {
+        "nama": "Museum Talaga Manggung",
+        "deskripsi": "Menyimpan benda-benda peninggalan sejarah Kerajaan Talaga Manggung.",
+        "lokasi": "Kecamatan Talaga"
       },
       {
-        "nama": "Petilasan Prabu Siliwangi",
-        "deskripsi": "Tempat ziarah yang menawarkan keindahan alam dan nilai sejarah."
-      },
-      {
-        "nama": "Ciboer Pass",
-        "deskripsi": "Menawarkan pemandangan sawah terasering yang memikat dengan banyak spot hits untuk nongkrong dan berfoto."
-      },
-      {
-        "nama": "Taman Dinosaurus Buana Marga",
-        "deskripsi": "Salah satu tempat wisata keluarga."
+        "nama": "Makam Pangeran Muhammad",
+        "deskripsi": "Situs ziarah dan sejarah penyebaran Islam di Majalengka.",
+        "lokasi": "Kecamatan Majalengka"
       }
     ]
   },
-  "kebudayaan": {
-    "seni_pertunjukan": [
-      {
-        "nama": "Sampyong",
-        "deskripsi": "Kesenian adu ketangkasan yang ekstrem dan merupakan warisan leluhur Majalengka."
-      },
-      {
-        "nama": "Tari Dawet Ireng",
-        "deskripsi": "Tarian yang menampilkan gerakan energik dan lincah, sering diperagakan secara massal dalam acara adat atau hajatan."
-      },
-      {
-        "nama": "Wayang Golek",
-        "deskripsi": "Kesenian yang tak terpisahkan dari budaya Sunda, dengan banyak pengrajin dan dalang terkenal di Majalengka. Pertunjukan wayang golek biasanya diiringi tarian dan musik gamelan Sunda."
-      },
-      {
-        "nama": "Gaok",
-        "deskripsi": "Seni tradisional yang merupakan sinkretisme antara nilai-nilai budaya etnis Sunda buhun dan budaya bernuansa Islam, disajikan dalam bentuk '''mamacan''' (membaca teks) atau wawacan."
-      },
-      {
-        "nama": "Pencak Silat",
-        "deskripsi": "Seni bela diri tradisional yang juga merupakan bagian dari kekayaan budaya Majalengka."
-      }
-    ],
-    "kerajinan_lokal": [
-      {
-        "nama": "Seni Tenun Troso",
-        "deskripsi": "Majalengka dikenal dengan seni tenun Troso berkualitas tinggi, yang dikelola secara turun temurun dengan mempertahankan teknik tradisional."
-      },
-      {
-        "nama": "Batik Tulis dan Keramik",
-        "deskripsi": "Kerajinan ini juga mendapatkan pengakuan baik di tingkat nasional maupun internasional."
-      }
-    ],
-    "tradisi_dan_adat_istiadat": [
-      {
-        "nama": "Mapag Tamba",
-        "deskripsi": "Tradisi yang dilakukan masyarakat untuk mengawali musim tanam baru, khususnya di Desa Pilangsari."
-      },
-      {
-        "nama": "Mapag Sri (Munjungan)",
-        "deskripsi": "Tradisi budaya masyarakat Sunda dalam menyambut panen raya sebagai wujud rasa syukur kepada Tuhan Yang Maha Esa, sering diisi dengan pertunjukan wayang kulit."
-      },
-      {
-        "nama": "Sedekah Bumi",
-        "deskripsi": "Tradisi yang masih dijalankan di beberapa desa sebagai bentuk mempertahankan nilai-nilai budaya daerah."
-      },
-      {
-        "nama": "Upacara Seren Taun",
-        "deskripsi": "Ritual syukur petani atas hasil panen yang melimpah."
-      },
-      {
-        "nama": "Ruwatan",
-        "deskripsi": "Sering dilakukan dalam bentuk upacara adat dengan rangkaian ritual yang melibatkan tokoh adat dan masyarakat, biasanya diiringi seni pertunjukan wayang kulit."
-      }
-    ],
-    "kuliner_khas": [
-      {
-        "nama": "Nasi Jamblang",
-        "deskripsi": "Kuliner tradisional yang lezat."
-      },
-      {
-        "nama": "Dodol Susu",
-        "deskripsi": "Kuliner tradisional yang lezat."
-      },
-      {
-        "nama": "Opak Bakar",
-        "deskripsi": "Kuliner tradisional yang lezat."
-      },
-      {
-        "nama": "Mie Kocok",
-        "deskripsi": "Kuliner tradisional yang lezat."
-      },
+  "budaya": [
+    {
+      "nama": "Seni Tari Sampyong",
+      "deskripsi": "Seni adu ketangkasan menggunakan tongkat rotan yang diiringi musik tradisional."
+    },
+    {
+      "nama": "Gentra Mangkuk",
+      "deskripsi": "Kesenian musik tradisional yang menggunakan alat musik dari perunggu."
+    },
+    {
+      "nama": "Upacara Adat Seren Taun",
+      "deskripsi": "Upacara syukuran hasil panen yang diadakan setiap tahun."
+    }
+  ],
+  "kuliner": {
+    "makanan": [
       {
         "nama": "Nasi Tutug Oncom",
-        "deskripsi": "Kuliner tradisional yang lezat."
+        "deskripsi": "Nasi yang dicampur dengan oncom bakar, biasanya disajikan dengan lauk pauk lainnya.",
+        "daerah": "Umum dijumpai di seluruh Majalengka"
       },
       {
-        "nama": "Nasi Liwet",
-        "deskripsi": "Kuliner tradisional yang lezat."
+        "nama": "Jalakotek",
+        "deskripsi": "Kue sejenis pastel dengan isi tahu dan sayuran, digoreng renyah.",
+        "daerah": "Kecamatan Maja"
       },
       {
-        "nama": "Kue Cuhcur",
-        "deskripsi": "Kuliner tradisional yang lezat."
+        "nama": "Pepes Jeroan",
+        "deskripsi": "Jeroan ikan atau ayam yang dibumbui dan dimasak dengan cara dipepes.",
+        "daerah": "Banyak ditemukan di daerah sekitar waduk Darma"
+      },
+      {
+        "nama": "Oncom Goreng",
+        "deskripsi": "Oncom yang digoreng dengan tepung, memiliki rasa gurih dan pedas.",
+        "daerah": "Umum dijumpai di seluruh Majalengka"
+      }
+    ],
+    "minuman": [
+      {
+        "nama": "Kalua Jeruk",
+        "deskripsi": "Minuman segar dari kulit jeruk bali yang diolah menjadi manisan.",
+        "daerah": "Kecamatan Maja"
+      }
+    ],
+    "oleh_oleh": [
+      {
+        "nama": "Gula Cakar",
+        "deskripsi": "Gula merah yang dicetak dengan bentuk unik seperti cakar.",
+        "daerah": "Kecamatan Kadipaten"
+      },
+      {
+        "nama": "Kecap Majalengka",
+        "deskripsi": "Kecap manis dengan cita rasa khas yang legendaris.",
+        "daerah": "Kecamatan Majalengka"
+      },
+      {
+        "nama": "Mangga Gedong Gincu",
+        "deskripsi": "Mangga khas Majalengka dengan warna kulit kemerahan dan rasa yang manis.",
+        "daerah": "Kecamatan Panyingkiran, Kadipaten, Ligung, dan Jatitujuh"
+      },
+      {
+        "nama": "Opak",
+        "deskripsi": "Kerupuk dari beras ketan atau singkong.",
+        "daerah": "Kecamatan Lemahsugih"
       }
     ]
-  }
+  },
+  "catatan": "Data ini dikumpulkan berdasarkan informasi yang tersedia hingga tahun 2024. Informasi mengenai 'hingga tahun 2025' diinterpretasikan sebagai data terkini dan relevan yang diproyeksikan akan tetap populer."
 }
