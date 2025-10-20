@@ -31,7 +31,7 @@ export default function Chat() {
       style={{ backgroundImage: "url(/bg.png)" }}
     >
       <div className="flex flex-col w-full mt-10 mb-28 overflow-y-auto items-center  gap-3">
-        <div className="flex-1 space-y-3 w-[35%]">
+        <div className="flex-1 space-y-3 w-[35%] max-lg:w-[70%] max-md:w-[90%]">
           {messages.length === 0 && (
             <NoChat onExampleClick={(prompt) => sendMessage({ text: prompt })} />
           )}
