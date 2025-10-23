@@ -5,11 +5,22 @@ import { useEffect, useRef, useState } from "react";
 import { MessageCard } from "./components/MessageCard";
 import NoChat from "./components/NoChat";
 import ThinkingIndicator from "./components/ThinkingIndicator";
-import { Loader, SendHorizontal } from "lucide-react";
+import { Loader, SendHorizontal, Trash } from "lucide-react";
 
 export default function Chat() {
   const [input, setInput] = useState("");
-  const { messages, sendMessage, status, error, stop } = useChat();
+  const { messages, sendMessage, status, error, stop, setMessages } = useChat();
+
+  useEffect(() => {
+    const storedMessages = localStorage.getItem("chat-bot-kp");
+    if (storedMessages) {
+      setMessages(JSON.parse(storedMessages));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("chat-bot-kp", JSON.stringify(messages));
+  }, [messages]);
   const bottomRef = useRef<HTMLDivElement | null>(null);
 
   const thinking = status === "submitted" || status === "streaming";
@@ -25,12 +36,27 @@ export default function Chat() {
     setInput("");
   };
 
+  const handleDeleteChat = () => {
+    setMessages([]);
+    localStorage.removeItem("chat-bot-kp");
+  };
+
   return (
     <div
       className="flex justify-center w-full h-screen bg-cover bg-center"
       style={{ backgroundImage: "url(/bg.png)" }}
     >
       <div className="flex flex-col w-full mt-10 mb-28 overflow-y-auto items-center  gap-3">
+        <div className="flex justify-end w-[35%] max-lg:w-[70%] max-md:w-[90%]">
+          {messages.length > 0 && (
+            <button
+              className="bg-red-500 text-white px-4 py-2 rounded-full cursor-pointer hover:bg-red-600 flex items-center gap-2"
+              onClick={handleDeleteChat}
+            >
+              <Trash />
+            </button>
+          )}
+        </div>
         <div className="flex-1 space-y-3 w-[35%] max-lg:w-[70%] max-md:w-[90%]">
           {messages.length === 0 && (
             <NoChat onExampleClick={(prompt) => sendMessage({ text: prompt })} />

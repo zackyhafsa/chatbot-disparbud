@@ -21,8 +21,8 @@ export const MessageCard = (props: MessagePropsType) => {
     <div
       className={` px-6 text-lg shadow-md py-4 max-w-md w-fit whitespace-pre-line break-words ${
         props.role === "user"
-          ? "bg-green-700 text-white ml-auto rounded-b-2xl rounded-tl-3xl"
-          : "bg-white border rounded-b-2xl rounded-tr-3xl"
+          ? "bg-green-700 text-white ml-auto rounded-b-3xl rounded-tl-3xl"
+          : "bg-white border rounded-b-3xl rounded-tr-3xl"
       }`}
     >
       {renderWithBold(props.message)}
