@@ -7,7 +7,8 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { href: "/", label: "Destinasi" },
+  { href: "/", label: "Home" },
+  { href: "/#destinasi", label: "Destinasi" },
   { href: "/#budaya", label: "Budaya" },
   { href: "/#kuliner", label: "Kuliner" },
   { href: "/chat", label: "Tanya Asisten" },

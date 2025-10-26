@@ -9,9 +9,9 @@ interface NoChatProps {
 const NoChat: React.FC<NoChatProps> = ({ onExampleClick }) => {
   const examplePrompts = [
     "Apa saja makanan yang sering dijumpai di Majalengka?",
-    "Saya ingin mencoba kuliner khas Majalengka, ada rekomendasi?",
-    "Bagaimana rasa dari Gedong Gincu?",
-    "Apa itu Kalua Jeruk?",
+    "Ada Wisata apa saja yang ada di Majalengka?",
+    "Kebudayaan yang masih Lestari di Majalengka",
+    "Apa saja kesenian yang ada di Majalengka?",
   ];
 
   const containerVariants = {

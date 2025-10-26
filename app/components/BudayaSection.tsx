@@ -1,0 +1,113 @@
+// components/BudayaSection.tsx
+
+"use client"; // Diperlukan untuk framer-motion
+
+import { motion, Variants } from "framer-motion";
+import BudayaItem from "./BudayaItem";
+
+const budayaData = [
+  {
+    id: 1,
+    category: "Kebudayaan",
+    title: "Rampak Genteng Jatiwangi",
+    description:
+      "Rampak Genteng Jatiwangi merupakan sebuah bentuk kesenian pertunjukan yang melibatkan banyak orang (rampak berarti serempak atau bersama-sama) dalam memainkan atau memanfaatkan genteng sebagai instrumen musik dan juga sebagai bagian dari koreografi atau gerakan tari.",
+    imageUrl: "/rampak_genteng.jpg",
+    linkUrl: "#",
+    isReversed: false, // Layout normal
+  },
+  {
+    id: 2,
+    category: "Kesenian",
+    title: "Seni Tari Sampyong",
+    description:
+      "Seni Tari Sampyong Majalengka adalah kesenian tradisional berupa adu ketangkasan yang menggunakan tongkat rotan. Gerakan tariannya yang lincah dan atraktif disajikan dengan iringan musik tradisional, menciptakan perpaduan antara keindahan gerak dan demonstrasi keterampilan. Kesenian ini unik karena menampilkan simulasi pertarungan yang dinamis dan berenergi.",
+    imageUrl: "/tari_sampyong.jpg",
+    linkUrl: "#",
+    isReversed: true, // Layout dibalik
+  },
+];
+
+// --- Mendefinisikan Variasi Animasi ---
+
+// Animasi fade-in dari bawah (untuk judul)
+const fadeInUp: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
+
+// Animasi slide-in dari kiri
+const slideInLeft: Variants = {
+  hidden: { opacity: 0, x: -50 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.7,
+      ease: "easeOut",
+    },
+  },
+};
+
+// Animasi slide-in dari kanan
+const slideInRight: Variants = {
+  hidden: { opacity: 0, x: 50 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.7,
+      ease: "easeOut",
+    },
+  },
+};
+
+export default function BudayaSection() {
+  return (
+    // Kita beri ID "budaya" untuk link Navbar
+    // Gunakan bg-white untuk selang-seling dengan section sebelumnya
+    <section id="budaya" className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* --- Judul Section --- */}
+        <motion.div
+          className="text-center mb-16"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={fadeInUp}
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-green-400 py-2">
+            Kekayaan Budaya & Kesenian
+          </h2>
+          <p className="mt-4 text-lg text-gray-600">
+            Warisan leluhur yang hidup dan lestari di "Kota Angin".
+          </p>
+        </motion.div>
+
+        {/* --- Container untuk Item Budaya --- */}
+        {/* space-y-16 akan memberi jarak antar item */}
+        <div className="space-y-24 md:space-y-32">
+          {/* 2. Panggil komponen BudayaItem di sini */}
+          {budayaData.map((item) => (
+            <BudayaItem
+              key={item.id}
+              category={item.category}
+              title={item.title}
+              description={item.description}
+              imageUrl={item.imageUrl}
+              linkUrl={item.linkUrl}
+              isReversed={item.isReversed}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

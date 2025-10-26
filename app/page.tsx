@@ -1,10 +1,13 @@
+import BudayaSection from "./components/BudayaSection";
+import DestinasiSection from "./components/DestinasiSection";
 import HeroSection from "./components/HeroSection";
 
 const page = () => {
   return (
     <main>
       <HeroSection />
-      <div className="h-screen"></div>
+      <DestinasiSection />
+      <BudayaSection />
     </main>
   );
 };

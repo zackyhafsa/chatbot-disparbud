@@ -1,3 +1,6 @@
+"use client";
+
+import { motion, Variants } from "motion/react";
 import Link from "next/link";
 
 type ImageItem = { src: string; alt: string };
@@ -25,6 +28,18 @@ const IMAGES: ImageItem[] = [
   },
 ];
 
+const fadeInUp: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
+
 export default function HeroTravel() {
   return (
     <section className="relative overflow-hidden bg-[rgb(248,251,255)]">
@@ -36,18 +51,31 @@ export default function HeroTravel() {
       <div className="mx-auto max-w-7xl px-6 py-16 lg:py-72 lg:h-screen flex items-center max-lg:pt-32">
         <div className="grid items-center gap-10 lg:grid-cols-2">
           <div className="relative">
-            <h1 className="text-balance text-4xl font-bold leading-tight text-gray-800 tracking-tight sm:text-5xl md:text-6xl max-lg:text-center ">
+            <motion.h1
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={fadeInUp}
+              className="text-balance text-4xl font-bold leading-tight text-gray-800 tracking-tight sm:text-5xl md:text-6xl max-lg:text-center "
+            >
               Jelajahi{" "}
               <span className="bg-gradient-to-r from-sky-500 to-green-600 bg-clip-text text-transparent">
                 Kuliner, Budaya dan Kesenian
               </span>{" "}
               di Majalengka
-            </h1>
+            </motion.h1>
 
-            <p className="mt-4 text-pretty text-neutral-600 sm:text-lg max-lg:text-center">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ delay: 0.2, ease: "easeOut", duration: 0.6 }}
+              className="mt-4 text-pretty text-neutral-600 sm:text-lg max-lg:text-center"
+            >
               Plan and book your perfect trip with expert advice, travel tips, destination info, and
               inspiration from us.
-            </p>
+            </motion.p>
             <svg
               aria-hidden
               viewBox="0 0 240 120"
@@ -64,19 +92,31 @@ export default function HeroTravel() {
             </svg>
 
             {/* CTA Button */}
-            <div className=" mt-7 flex gap-4 max-lg:justify-center max-sm:flex-col max-sm:text-center">
-              <Link
-                href="/"
-                className="bg-gradient-to-r from-green-700 to-green-600 px-8 py-4 max-sm:py-3 rounded-full shadow-md hover:bg-gradient-to-r hover:from-green-800 hover:to-green-700 text-white "
+            <div className=" mt-10 flex gap-4 max-lg:justify-center">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, ease: "easeOut", duration: 0.6 }}
               >
-                Mulai Menjelajah
-              </Link>
-              <Link
-                href="/chat"
-                className="bg-gradient-to-r from-sky-700 to-sky-600 text-white px-8 py-4 max-sm:py-3 rounded-full shadow-md hover:bg-gradient-to-r hover:from-sky-800 hover:to-sky-700"
+                <Link
+                  href="/"
+                  className="bg-gradient-to-r from-green-700 to-green-600 px-8 py-4 max-sm:py-3 rounded-full shadow-md hover:bg-gradient-to-r hover:from-green-800 hover:to-green-700 text-white "
+                >
+                  Mulai Menjelajah
+                </Link>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6, ease: "easeOut", duration: 0.6 }}
               >
-                Tanya MajaGo
-              </Link>
+                <Link
+                  href="/chat"
+                  className="bg-gradient-to-r from-sky-700 to-sky-600 text-white px-8 py-4 max-sm:py-3 rounded-full shadow-md hover:bg-gradient-to-r hover:from-sky-800 hover:to-sky-700"
+                >
+                  Tanya MajaGo
+                </Link>
+              </motion.div>
             </div>
           </div>
 
@@ -100,7 +140,14 @@ export default function HeroTravel() {
               />
             </svg>
 
-            <div className="mx-auto grid h-[520px] w-[520px] grid-cols-6 grid-rows-6 gap-4 max-lg:scale-90 max-md:h-[420px] max-lg:w-full max-md:grid-cols-4 max-md:grid-rows-6 z-[1] relative">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ delay: 0.8, ease: "easeOut", duration: 0.6 }}
+              className="mx-auto grid h-[520px] w-[520px] grid-cols-6 grid-rows-6 gap-4 max-lg:scale-90 max-md:h-[420px] max-lg:w-full max-md:grid-cols-4 max-md:grid-rows-6 z-[1] relative"
+            >
               {/* 1 */}
               <Figure
                 img={IMAGES[0]}
@@ -126,7 +173,7 @@ export default function HeroTravel() {
                 img={IMAGES[4]}
                 className="col-start-6 col-span-1 row-start-5 row-span-2 rounded-r-4xl rounded-bl-4xl"
               />
-            </div>
+            </motion.div>
 
             {/* small yellow "wifi" swoosh */}
             <svg

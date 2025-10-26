@@ -46,7 +46,7 @@ export default function Chat() {
       className="flex justify-center w-full h-screen bg-cover bg-center"
       style={{ backgroundImage: "url(/bg.png)" }}
     >
-      <div className="flex flex-col w-full mt-10 mb-28 overflow-y-auto items-center  gap-3">
+      <div className="flex flex-col w-full mt-25 mb-28 overflow-y-auto items-center  gap-3">
         <div className="flex justify-end w-[35%] max-lg:w-[70%] max-md:w-[90%]">
           {messages.length > 0 && (
             <button
