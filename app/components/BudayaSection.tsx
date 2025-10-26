@@ -28,9 +28,6 @@ const budayaData = [
   },
 ];
 
-// --- Mendefinisikan Variasi Animasi ---
-
-// Animasi fade-in dari bawah (untuk judul)
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
@@ -43,39 +40,10 @@ const fadeInUp: Variants = {
   },
 };
 
-// Animasi slide-in dari kiri
-const slideInLeft: Variants = {
-  hidden: { opacity: 0, x: -50 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.7,
-      ease: "easeOut",
-    },
-  },
-};
-
-// Animasi slide-in dari kanan
-const slideInRight: Variants = {
-  hidden: { opacity: 0, x: 50 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.7,
-      ease: "easeOut",
-    },
-  },
-};
-
 export default function BudayaSection() {
   return (
-    // Kita beri ID "budaya" untuk link Navbar
-    // Gunakan bg-white untuk selang-seling dengan section sebelumnya
     <section id="budaya" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* --- Judul Section --- */}
         <motion.div
           className="text-center mb-16"
           initial="hidden"
@@ -90,11 +58,7 @@ export default function BudayaSection() {
             Warisan leluhur yang hidup dan lestari di "Kota Angin".
           </p>
         </motion.div>
-
-        {/* --- Container untuk Item Budaya --- */}
-        {/* space-y-16 akan memberi jarak antar item */}
         <div className="space-y-24 md:space-y-32">
-          {/* 2. Panggil komponen BudayaItem di sini */}
           {budayaData.map((item) => (
             <BudayaItem
               key={item.id}

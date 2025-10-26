@@ -2,6 +2,7 @@
 
 import { motion, Variants } from "motion/react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 type ImageItem = { src: string; alt: string };
 
@@ -41,6 +42,8 @@ const fadeInUp: Variants = {
 };
 
 export default function HeroTravel() {
+  const router = useRouter();
+
   return (
     <section className="relative overflow-hidden bg-[rgb(248,251,255)]">
       <div aria-hidden className="pointer-events-none absolute inset-0">
@@ -93,30 +96,24 @@ export default function HeroTravel() {
 
             {/* CTA Button */}
             <div className=" mt-10 flex gap-4 max-lg:justify-center">
-              <motion.div
+              <motion.button
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, ease: "easeOut", duration: 0.6 }}
+                className="bg-gradient-to-r from-green-700 to-green-600 px-8 py-4 max-sm:py-3 rounded-full shadow-md hover:bg-gradient-to-r hover:from-green-800 hover:to-green-700 text-white "
+                onClick={() => router.push("/explore")}
               >
-                <Link
-                  href="/"
-                  className="bg-gradient-to-r from-green-700 to-green-600 px-8 py-4 max-sm:py-3 rounded-full shadow-md hover:bg-gradient-to-r hover:from-green-800 hover:to-green-700 text-white "
-                >
-                  Mulai Menjelajah
-                </Link>
-              </motion.div>
-              <motion.div
+                Mulai Menjelajah
+              </motion.button>
+              <motion.button
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, ease: "easeOut", duration: 0.6 }}
+                className="bg-gradient-to-r from-sky-700 to-sky-600 text-white px-8 py-4 max-sm:py-3 rounded-full shadow-md hover:bg-gradient-to-r hover:from-sky-800 hover:to-sky-700"
+                onClick={() => router.push("/chat")}
               >
-                <Link
-                  href="/chat"
-                  className="bg-gradient-to-r from-sky-700 to-sky-600 text-white px-8 py-4 max-sm:py-3 rounded-full shadow-md hover:bg-gradient-to-r hover:from-sky-800 hover:to-sky-700"
-                >
-                  Tanya MajaGo
-                </Link>
-              </motion.div>
+                Tanya MajaGo
+              </motion.button>
             </div>
           </div>
 

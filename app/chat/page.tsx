@@ -11,16 +11,25 @@ export default function Chat() {
   const [input, setInput] = useState("");
   const { messages, sendMessage, status, error, stop, setMessages } = useChat();
 
-  useEffect(() => {
-    const storedMessages = localStorage.getItem("chat-bot-kp");
-    if (storedMessages) {
-      setMessages(JSON.parse(storedMessages));
-    }
-  }, []);
+  const hasLoadedFromStorage = useRef(false);
 
   useEffect(() => {
-    localStorage.setItem("chat-bot-kp", JSON.stringify(messages));
+    if (!hasLoadedFromStorage.current) {
+      const storedMessages = localStorage.getItem("chat-bot-kp");
+
+      if (storedMessages) {
+        setMessages(JSON.parse(storedMessages));
+      }
+      hasLoadedFromStorage.current = true;
+    }
+  }, [setMessages]);
+
+  useEffect(() => {
+    if (hasLoadedFromStorage.current) {
+      localStorage.setItem("chat-bot-kp", JSON.stringify(messages));
+    }
   }, [messages]);
+
   const bottomRef = useRef<HTMLDivElement | null>(null);
 
   const thinking = status === "submitted" || status === "streaming";
