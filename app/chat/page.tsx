@@ -70,21 +70,31 @@ export default function Chat() {
           {messages.length === 0 && (
             <NoChat onExampleClick={(prompt) => sendMessage({ text: prompt })} />
           )}
-          {messages.map((message) => {
+          {messages.map((message, index) => {
             const messageText = message.parts
               .filter((part) => part.type === "text")
               .map((part) => part.text)
               .join("");
+
+            const isLastMessage = index === messages.length - 1;
+            const isStreaming = isLastMessage && message.role === "assistant" && thinking;
 
             return (
               <MessageCard
                 key={message.id}
                 role={message.role as "user" | "assistant"}
                 message={messageText}
+                isStreaming={isStreaming}
               />
             );
           })}
-          {thinking && <ThinkingIndicator />}
+
+          {(() => {
+            const lastMessage = messages[messages.length - 1];
+            const isAssistantStreaming = lastMessage && lastMessage.role === "assistant";
+            return thinking && !isAssistantStreaming && <ThinkingIndicator />;
+          })()}
+
           {error && <MessageCard role="assistant" message="Terjadi kesalahan, coba ulangi lagi." />}
         </div>
         <div ref={bottomRef} />

@@ -46,16 +46,13 @@ export default function Navbar() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          // Jika section masuk ke zona, set hash aktif
           setActiveHash("/#" + entry.target.id);
         }
       });
     }, observerOptions);
 
-    // 5. Mulai amati setiap section
     sections.forEach((section: any) => observer.observe(section));
 
-    // 6. Bersihkan (cleanup) saat komponen unmount
     return () => {
       sections.forEach((section: any) => observer.unobserve(section));
     };

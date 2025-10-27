@@ -1,6 +1,4 @@
-// components/BudayaSection.tsx
-
-"use client"; // Diperlukan untuk framer-motion
+"use client";
 
 import { motion, Variants } from "framer-motion";
 import BudayaItem from "./BudayaItem";
@@ -14,7 +12,7 @@ const budayaData = [
       "Rampak Genteng Jatiwangi merupakan sebuah bentuk kesenian pertunjukan yang melibatkan banyak orang (rampak berarti serempak atau bersama-sama) dalam memainkan atau memanfaatkan genteng sebagai instrumen musik dan juga sebagai bagian dari koreografi atau gerakan tari.",
     imageUrl: "/rampak_genteng.jpg",
     linkUrl: "#",
-    isReversed: false, // Layout normal
+    isReversed: false,
   },
   {
     id: 2,
@@ -24,7 +22,7 @@ const budayaData = [
       "Seni Tari Sampyong Majalengka adalah kesenian tradisional berupa adu ketangkasan yang menggunakan tongkat rotan. Gerakan tariannya yang lincah dan atraktif disajikan dengan iringan musik tradisional, menciptakan perpaduan antara keindahan gerak dan demonstrasi keterampilan. Kesenian ini unik karena menampilkan simulasi pertarungan yang dinamis dan berenergi.",
     imageUrl: "/tari_sampyong.jpg",
     linkUrl: "#",
-    isReversed: true, // Layout dibalik
+    isReversed: true,
   },
 ];
 

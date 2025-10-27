@@ -4,184 +4,211 @@
       {
         "nama": "Terasering Panyaweuyan Argapura",
         "deskripsi": "Pemandangan sawah terasering yang sangat luas dan hijau, menjadi salah-satu destinasi wisata paling populer di Majalengka.",
-        "lokasi": "Kecamatan Argapura"
+        "lokasi": "Sukasari Kidul, Kecamatan Argapura, Kabupaten Majalengka",
+        "harga": "Rp. 12.000 per orang",
+        "jam_operasional": "06:00 - 17:00 WIB (Waktu terbaik untuk berkunjung adalah pagi hari)"
       },
       {
         "nama": "Curug Cipeuteuy",
         "deskripsi": "Air terjun yang terletak di tengah hutan pinus dengan suasana yang sejuk dan asri.",
-        "lokasi": "Kecamatan Lemahsugih"
+        "lokasi": "Jalan Dukuh Pasir, Bantaragung, Kecamatan Sindangwangi, Kabupaten Majalengka",
+        "harga": "Rp. 15.000 per orang",
+        "jam_operasional": "08:00 - 17:00 WIB"
       },
       {
         "nama": "Situ Cipanten",
         "deskripsi": "Danau dengan air yang jernih dan berwarna biru kehijauan, dikelilingi oleh pepohonan rindang.",
-        "lokasi": "Kecamatan Sindang"
+        "lokasi": "Gunung Kuning, Kecamatan Sindang, Kabupaten Majalengka",
+        "harga": "Rp10.000 untuk dewasa dan Rp5.000 untuk anak-anak",
+        "jam_operasional": "07:00 - 17:00 WIB"
       },
       {
         "nama": "Gunung Ciwaru",
         "deskripsi": "Menawarkan pemandangan alam dari ketinggian, cocok untuk kegiatan hiking dan berkemah.",
-        "lokasi": "Desa Payung, Kecamatan Rajagaluh, Kabupaten Majalengka."
+        "lokasi": "Desa Payung, Kecamatan Rajagaluh, Kabupaten Majalengka",
+        "harga": "Rp. 15.000 per orang. Rp. 2.000 untuk parkir motor, Rp. 5.000 untuk parkir mobil.",
+        "jam_operasional": "08:00 - 17:00 WIB"
       },
       {
         "nama": "Cikadongdong River Tubing",
         "deskripsi": "Wisata petualangan menyusuri sungai dengan menggunakan ban.",
-        "lokasi": "Kecamatan Cingambul"
-      },
-      {
-        "nama": "Bukit Mercury Sayang Kaak",
-        "deskripsi": "Menawarkan pemandangan lembah dan perbukitan dengan spot foto menarik.",
-        "lokasi": "Kecamatan Argapura"
+        "lokasi": "Desa Cikadongdong, Kecamatan Cingambul, Kabupaten Majalengka",
+        "harga": "Rp. 5.000 per orang. Paket River Tubing Reguler (350m) Rp30.000/orang. Paket River Tubing Extreme (1km) Rp100.000/orang",
+        "jam_operasional": "08:00 - 16:00 WIB (Reservasi disarankan)"
       },
       {
         "nama": "Curug Ibun Pelangi",
         "deskripsi": "Air terjun dengan pantulan cahaya matahari yang menciptakan efek pelangi di antara bebatuan.",
-        "lokasi": "Kecamatan Sukahaji"
+        "lokasi": "Sukasari Kaler, Kecamatan Argapura, Kabupaten Majalengka",
+        "harga": "Rp10.000 hingga Rp12.000 per orang. Biaya parkir untuk motor adalah Rp3.000 dan untuk mobil Rp5.000.",
+        "jam_operasional": "08:00 - 16:00 WIB"
       },
       {
         "nama": "Situ Janawi",
         "deskripsi": "Danau alami di kaki Gunung Ciremai dengan air yang jernih dan sejuk.",
-        "lokasi": "Kecamatan Argapura"
+        "lokasi": "Desa Payung, Kecamatan Rajagaluh, Kabupaten Majalengka",
+        "harga": "Rp10.000 per orang",
+        "jam_operasional": "08:00 - 17:00 WIB"
       }
     ],
     "buatan": [
       {
         "nama": "Jembar Waterpark",
         "deskripsi": "Taman rekreasi air dengan berbagai wahana permainan untuk keluarga.",
-        "lokasi": "Kecamatan Sumberjaya"
+        "lokasi": "Desa Ranjiwetan, Kecamatan Kasokandel, Kabupaten Majalengka",
+        "harga": "Rp25.000 untuk hari biasa (weekday) dan Rp30.000 untuk akhir pekan (weekend) dan tanggal merah",
+        "jam_operasional": "08:00 - 17:00 WIB"
       },
       {
         "nama": "Paraland Majalengka",
         "deskripsi": "Menawarkan olahraga paralayang dengan pemandangan kota Majalengka dari ketinggian.",
-        "lokasi": "Gunung Panten, Desa Sidamukti Munjul Majalengka,"
+        "lokasi": "Gunung Panten, Munjul, Kecamatan Majalengka, Kabupaten Majalengka",
+        "harga": "mulai dari sekitar Rp15.000 per orang untuk hari biasa dan Rp20.000 per orang untuk akhir pekan",
+        "catatan": "Harga ini adalah untuk masuk ke area Paraland saja dan belum termasuk biaya untuk aktivitas lain.",
+        "jam_operasional": "08:00 - 17:00 WIB"
       }
     ],
     "sejarah_dan_budaya": [
       {
         "nama": "Museum Talaga Manggung",
         "deskripsi": "Menyimpan benda-benda peninggalan sejarah Kerajaan Talaga Manggung.",
-        "lokasi": "Kecamatan Talaga"
+        "lokasi": "Desa Talagawetan, Kecamatan Talaga, Kabupaten Majalengka",
+        "jam_operasional": "08:00 - 16:00 WIB (Senin Tutup)"
       },
       {
         "nama": "Makam Pangeran Muhammad",
         "deskripsi": "Situs ziarah dan sejarah penyebaran Islam di Majalengka.",
-        "lokasi": "Kecamatan Majalengka"
+        "lokasi": "Jl. Letkol Abd. Gani, Majalengka Wetan, Kecamatan Majalengka, Kabupaten Majalengka",
+        "jam_operasional": "24 jam (Umumnya untuk ziarah)"
       },
       {
         "nama": "Patilasan Prabu Siliwangi",
         "deskripsi": "Hutan lindung yang dipercaya sebagai tempat peristirahatan Prabu Siliwangi.",
-        "lokasi": "Desa Pajajar"
+        "lokasi": "Desa Pajajar, Kecamatan Rajagaluh, Kabupaten Majalengka",
+        "jam_operasional": "07:00 - 17:00 WIB"
       }
     ]
   },
   "budaya": [
     {
-      "nama": "Seni Tari Sampyong",
-      "deskripsi": "Seni adu ketangkasan menggunakan tongkat rotan yang diiringi musik tradisional."
+      "nama": "Seni Sampyong",
+      "deskripsi": "Seni bela diri adu ketangkasan tradisional khas Majalengka yang menggunakan tongkat rotan. Pertarungan ini diiringi alunan musik tradisional yang riuh, seperti kendang, tarompet (terompet Sunda), dan goong.",
+      "asal": "Populer di wilayah selatan Majalengka, terutama di Kecamatan Cikijing dan Talaga."
     },
     {
       "nama": "Gentra Mangkuk",
-      "deskripsi": "Kesenian musik tradisional yang menggunakan alat musik dari perunggu."
+      "deskripsi": "Sebuah ansambel Gamelan Renteng kuno yang sangat khas. Keunikannya terletak pada bilah-bilah saron (alat musik perunggu) yang digantung menggunakan tali, bukan diletakkan di atas dudukan, sehingga menghasilkan gema suara yang unik.",
+      "asal": "Desa Cengal, Kecamatan Maja, Kabupaten Majalengka."
     },
     {
       "nama": "Upacara Adat Seren Taun",
-      "deskripsi": "Upacara syukuran hasil panen yang diadakan setiap tahun."
+      "deskripsi": "Upacara syukuran tahunan sebagai ungkapan rasa terima kasih atas hasil panen (padi) yang melimpah. Ritual ini melibatkan arak-arakan 'leuit' (lumbung padi) dan berbagai pertunjukan seni tradisional.",
+      "pelaksanaan": "Setiap tahun setelah musim panen besar, biasanya dilaksanakan oleh komunitas-komunitas adat."
     },
     {
       "nama": "Mapag Sri",
-      "deskripsi": "Tradisi menyambut masa panen sebagai wujud syukur atas hasil panen padi yang melimpah."
+      "deskripsi": "Ritual adat agraris untuk 'menjemput Dewi Sri' (Dewi Padi), yang dilaksanakan menjelang atau saat awal musim panen raya. Ini adalah wujud syukur dan harapan agar panen berjalan lancar.",
+      "pelaksanaan": "Sangat umum dan dilaksanakan di banyak desa agraris di Majalengka."
     },
     {
       "nama": "Nyiramkeun Pusaka",
-      "deskripsi": "Tradisi tahunan membersihkan benda pusaka peninggalan leluhur di Desa Nunuk Baru."
+      "deskripsi": "Tradisi tahunan 'memandikan' atau membersihkan benda-benda pusaka peninggalan Kerajaan Talaga Manggung. Ritual ini menjadi simbol penghormatan kepada leluhur dan pelestarian sejarah.",
+      "lokasi_pelaksanaan": "Desa Nunuk Baru, Kecamatan Maja, Kabupaten Majalengka.",
+      "waktu": "Setiap bulan Mulud (Rabiul Awal) dalam kalender Hijriah."
     },
     {
       "nama": "Babangkongan",
-      "deskripsi": "Tradisi memanggil hujan dengan gerakan menirukan katak di Desa Surawangi."
+      "deskripsi": "Ritual adat untuk memohon hujan saat musim kemarau panjang. Para peserta akan berdandan dan bergerak menirukan 'bangkong' (katak), berkeliling desa sambil melompat-lompat di area berlumpur.",
+      "lokasi_pelaksanaan": "Desa Surawangi, Kecamatan Jatiwangi, Kabupaten Majalengka."
+    },
+    {
+      "nama": "Rampak Genteng Jatiwangi",
+      "deskripsi": "Sebuah pertunjukan musik perkusi unik yang menggunakan genteng (ubin atap) sebagai alat musik utama. Para pemain memainkan genteng secara bersama-sama (rampak) untuk menghasilkan ritme yang dinamis.",
+      "asal": "Kecamatan Jatiwangi",
+      "catatan": "Kesenian kontemporer ini dipopulerkan oleh komunitas seni seperti Jatiwangi Art Factory (JAF) sebagai cerminan identitas Jatiwangi sebagai sentra industri genteng terbesar."
     }
   ],
+
   "kuliner": {
     "makanan": [
       {
         "nama": "Nasi Tutug Oncom",
-        "deskripsi": "Nasi yang dicampur dengan oncom bakar, biasanya disajikan dengan lauk pauk lainnya.",
-        "daerah": "Umum dijumpai di seluruh Majalengka"
+        "deskripsi": "Nasi hangat yang diaduk ('ditutug' atau ditumbuk) dengan oncom bakar dan bumbu kencur. Biasanya disajikan dengan sambal, lalapan, dan lauk seperti tempe/tahu goreng.",
+        "daerah": "Umum dijumpai di seluruh Majalengka (kuliner khas Sunda)"
       },
       {
         "nama": "Jalakotek",
-        "deskripsi": "Kue sejenis pastel dengan isi tahu dan sayuran, digoreng renyah.",
-        "daerah": "Kecamatan Maja"
-      },
-      {
-        "nama": "Pepes Jeroan",
-        "deskripsi": "Jeroan ikan atau ayam yang dibumbui dan dimasak dengan cara dipepes.",
-        "daerah": "Banyak ditemukan di daerah sekitar waduk Darma"
+        "deskripsi": "Kudapan mirip pastel, namun kulitnya terbuat dari campuran tepung tapioka (aci) dan terigu, sehingga teksturnya kenyal. Isiannya biasanya tahu dan wortel, disajikan dengan bumbu kacang pedas.",
+        "daerah": "Sangat populer dan berasal dari Kecamatan Maja"
       },
       {
         "nama": "Oncom Goreng",
-        "deskripsi": "Oncom yang digoreng dengan tepung, memiliki rasa gurih dan pedas.",
+        "deskripsi": "Oncom yang diiris, dibalut adonan tepung terigu dan tapioka yang dibumbui, lalu digoreng renyah. Sering disebut juga 'Oncom Raos' oleh para penjual.",
         "daerah": "Umum dijumpai di seluruh Majalengka"
       },
       {
         "nama": "Pencok Katel",
-        "deskripsi": "Makanan dari kacang kedelai yang baru tumbuh, disantap mentah dengan sambal.",
+        "deskripsi": "Jenis 'pencok' atau urap mentah. 'Katel' adalah sebutan lokal untuk tauge (kecambah). Terdiri dari tauge dan kacang panjang mentah yang dicampur dengan sambal mentah (bumbu kencur, cabai, gula merah).",
         "daerah": "Umum dijumpai di seluruh Majalengka"
       },
       {
         "nama": "Nasi Lengko",
-        "deskripsi": "Nasi dengan lauk tahu, tempe, tauge, dan disiram bumbu kacang.",
-        "daerah": "Umum dijumpai di seluruh Majalengka"
+        "deskripsi": "Nasi putih dengan lauk sederhana seperti tahu dan tempe goreng (dipotong dadu), tauge rebus, irisan timun, dan disiram bumbu kacang serta kecap manis khas.",
+        "daerah": "Umum dijumpai, (berbagi khas dengan daerah Pantura seperti Cirebon)"
       },
       {
         "nama": "Serabi Oncom",
-        "deskripsi": "Jajanan dari adonan tepung beras dengan taburan oncom pedas.",
-        "daerah": "Umum dijumpai di seluruh Majalengka"
+        "deskripsi": "Jajanan dari adonan tepung beras yang dibakar di atas tungku kecil, disajikan dengan taburan oncom yang dimasak pedas dan gurih.",
+        "daerah": "Umum dijumpai, terutama di pagi hari."
       },
       {
         "nama": "Awug",
-        "deskripsi": "Kue dari tepung beras, kelapa, dan gula merah yang dikukus.",
-        "daerah": "Jajanan pasar, mulai jarang ditemukan"
+        "deskripsi": "Kue tradisional Sunda dari tepung beras, kelapa parut, dan gula merah yang dikukus berlapis-lapis dalam 'aseupan' (kukusan bambu berbentuk kerucut).",
+        "daerah": "Jajanan pasar tradisional"
       },
       {
         "nama": "Jalabia",
-        "deskripsi": "Kue dari tepung ketan dan kelapa, mirip donat, digoreng.",
-        "daerah": "Jajanan pasar, mulai jarang ditemukan"
+        "deskripsi": "Kue dari adonan tepung ketan dan kelapa, dibentuk seperti cincin (mirip donat), digoreng, lalu seringkali dibalut dengan gula merah cair.",
+        "daerah": "Jajanan pasar tradisional"
       }
     ],
     "minuman": [
       {
         "nama": "Kalua Jeruk",
-        "deskripsi": "Minuman segar dari kulit jeruk bali yang diolah menjadi manisan.",
-        "daerah": "Kecamatan Maja"
+        "deskripsi": "Manisan yang terbuat dari kulit jeruk bali yang diolah dan dimasak dengan gula hingga mengering. Rasanya manis dengan sedikit sensasi pahit khas kulit jeruk.",
+        "daerah": "Oleh-oleh khas dari Kecamatan Maja"
       }
     ],
     "oleh_oleh": [
       {
         "nama": "Gula Cakar",
-        "deskripsi": "Gula merah yang dicetak dengan bentuk unik seperti cakar.",
-        "daerah": "Kecamatan Kadipaten"
+        "deskripsi": "Gula merah yang dicetak khusus sehingga memiliki tekstur yang sangat rapuh, berongga, dan mudah larut. Unik karena bentuknya dan cara pembuatannya.",
+        "daerah": "Oleh-oleh khas dari Kecamatan Kadipaten"
       },
       {
         "nama": "Kecap Majalengka",
-        "deskripsi": "Kecap manis dengan cita rasa khas yang legendaris.",
-        "daerah": "Kecamatan Majalengka"
+        "deskripsi": "Kecap manis legendaris dengan cita rasa khas yang kental dan legit, diproduksi secara turun-temurun.",
+        "daerah": "Kecamatan Majalengka",
+        "catatan": "Merek paling terkenal dan legendaris adalah Kecap Manis Segi Tiga."
       },
       {
         "nama": "Mangga Gedong Gincu",
-        "deskripsi": "Mangga khas Majalengka dengan warna kulit kemerahan dan rasa yang manis.",
-        "daerah": "Kecamatan Panyingkiran, Kadipaten, Ligung, dan Jatitujuh"
+        "deskripsi": "Mangga primadona Majalengka dengan warna kulit gradasi kuning kemerahan (gincu), daging buah tebal, aroma wangi, dan rasa yang sangat manis.",
+        "daerah": "Pusat produksi utama ada di Kecamatan Panyingkiran, Kadipaten, Ligung, dan Jatitujuh."
       },
       {
-        "nama": "Opak",
-        "deskripsi": "Kerupuk dari beras ketan atau singkong.",
+        "nama": "Opak Ketan",
+        "deskripsi": "Kerupuk pipih dan renyah yang terbuat dari beras ketan murni, ditumbuk dan dibakar atau dipanggang. Memiliki rasa gurih khas ketan.",
         "daerah": "Kecamatan Lemahsugih"
       },
       {
         "nama": "Keripik Tempe",
-        "deskripsi": "Camilan renyah dan gurih dari tempe yang diiris tipis.",
-        "daerah": "Umum dijumpai di seluruh Majalengka"
+        "deskripsi": "Camilan renyah dan gurih dari tempe yang diiris sangat tipis dan digoreng dengan balutan tepung berbumbu.",
+        "daerah": "Umum dijumpai di pusat oleh-oleh"
       },
       {
         "nama": "Seroja Gurih",
-        "deskripsi": "Camilan renyah berbentuk bunga dengan cita rasa gurih, juga dikenal sebagai Kembang Goyang.",
+        "deskripsi": "Camilan renyah berbentuk bunga (dicetak dengan cetakan 'kembang goyang'). Terbuat dari adonan tepung beras dan santan, memiliki cita rasa gurih.",
         "daerah": "Umum dijumpai di seluruh Majalengka"
       }
     ]

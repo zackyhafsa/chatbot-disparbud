@@ -51,10 +51,8 @@ const staggerContainer = {
 
 export default function DestinasiSection() {
   return (
-    // Kita beri ID "destinasi" agar link di Navbar berfungsi
     <section id="destinasi" className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* --- Judul Section --- */}
         <motion.div
           className="text-center mb-12"
           initial="hidden"
@@ -70,7 +68,6 @@ export default function DestinasiSection() {
           </p>
         </motion.div>
 
-        {/* --- Grid Kartu Destinasi --- */}
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={staggerContainer}
@@ -82,16 +79,15 @@ export default function DestinasiSection() {
             <motion.div
               key={destinasi.id}
               className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col group"
-              variants={fadeInUp} // Setiap kartu akan menggunakan animasi fadeInUp
+              variants={fadeInUp}
               whileHover={{
-                y: -8, // Efek terangkat saat di-hover
-                scale: 1.03, // Sedikit membesar
+                y: -8,
+                scale: 1.03,
                 boxShadow:
                   "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
               }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              {/* Gambar Kartu */}
               <div className="relative h-56 w-full overflow-hidden">
                 <img
                   src={destinasi.imageUrl}
@@ -100,7 +96,6 @@ export default function DestinasiSection() {
                 />
               </div>
 
-              {/* Konten Kartu */}
               <div className="p-6 flex-grow flex flex-col">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{destinasi.title}</h3>
                 <p className="text-gray-600 mb-4 flex-grow">{destinasi.description}</p>

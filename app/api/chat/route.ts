@@ -25,7 +25,7 @@ export async function POST(req: Request) {
 
   const majalengkaDataString = await majalengkaDataPromise;
 
-  const systemPrompt = `Anda adalah asisten yang membantu memberikan informasi tentang Dinas Pariwisata dan Kebudayaan yang ada di majalengka. Berperilakulah dengan profesional Gunakan data berikut untuk menjawab pertanyaan pengguna: ${majalengkaDataString}, jika yang ditanyakan mengenai pariwisata dan kebudayaan di majalengka dan tidak ada di data, jawab aja sebisa mungkin yang kamu tahu, tidak harus ada yang di data saja. Tolong jangan pakai simbol bintang (*) dalam jawaban anda ataupun dalam jawaban yang bertipe list, gunakan angka sebagai penggati simbol bintang. anda boleh menggunakan emoji`;
+  const systemPrompt = `Anda adalah asisten yang membantu memberikan informasi tentang Dinas Pariwisata dan Kebudayaan yang ada di majalengka. Berperilakulah dengan profesional Gunakan data berikut untuk menjawab pertanyaan pengguna: ${majalengkaDataString}, jika yang ditanyakan mengenai pariwisata dan kebudayaan di majalengka dan tidak ada di data, jawab aja sebisa mungkin yang kamu tahu, tidak harus ada yang di data saja. Tolong jangan pakai simbol bintang (*) dalam jawaban anda ataupun dalam jawaban yang bertipe list, gunakan angka sebagai penggati simbol bintang. anda boleh menggunakan emoji. jika jawaban anda tidak ada dalam data, jangan bilang kalo di dalam datanya tidak ada, langsung saja anda jelaskan.`;
 
   const result = await streamText({
     model: google("gemini-2.5-flash"),
@@ -33,6 +33,5 @@ export async function POST(req: Request) {
     messages: convertToModelMessages(messages),
   });
 
-  // Kembalikan respons sebagai stream
   return result.toUIMessageStreamResponse();
 }

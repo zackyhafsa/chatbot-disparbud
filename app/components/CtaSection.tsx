@@ -1,12 +1,9 @@
-// components/CTASection.tsx
-
 "use client";
 
 import Link from "next/link";
 import { motion, Variants } from "framer-motion";
-import { Quote } from "lucide-react"; // Ikon untuk testimoni
+import { Quote } from "lucide-react";
 
-// --- Data Dummy Testimoni ---
 const testimonials = [
   {
     id: 1,
@@ -31,7 +28,6 @@ const testimonials = [
   },
 ];
 
-// --- Variasi Animasi ---
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
@@ -44,15 +40,14 @@ const fadeInUp: Variants = {
   },
 };
 
-// --- Variasi Animasi untuk Marquee ---
 const marqueeVariants: Variants = {
   animate: {
-    x: [0, -1000], // Sesuaikan '-1000' berdasarkan jumlah testimoni
+    x: [0, -1000],
     transition: {
       x: {
         repeat: Infinity,
         repeatType: "loop",
-        duration: 30, // Durasi 1x loop
+        duration: 30,
         ease: "linear",
       },
     },
@@ -60,16 +55,12 @@ const marqueeVariants: Variants = {
 };
 
 export default function CtaSection() {
-  // Kita duplikat testimoninya agar loop-nya mulus
   const duplicatedTestimonials = [...testimonials, ...testimonials];
 
   return (
-    // Kita beri ID "cta" dan gunakan mode gelap
     <section id="cta" className="py-24 bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Grid 5 kolom: 2 untuk CTA, 3 untuk Marquee */}
         <div className="grid grid-cols-1 md:grid-cols-5 gap-16 items-center">
-          {/* --- 1. Kolom CTA (Kiri) --- */}
           <motion.div
             className="md:col-span-2"
             initial="hidden"
@@ -91,7 +82,6 @@ export default function CtaSection() {
             </Link>
           </motion.div>
 
-          {/* --- 2. Kolom Marquee Testimoni (Kanan) --- */}
           <motion.div
             className="md:col-span-3 h-96 relative overflow-hidden"
             initial="hidden"
@@ -99,18 +89,15 @@ export default function CtaSection() {
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeInUp}
           >
-            {/* Efek fade di pinggir (Opsional tapi keren) */}
             <div className="absolute top-0 left-0 w-16 h-full bg-gradient-to-r from-gray-900 to-transparent z-10" />
             <div className="absolute top-0 right-0 w-16 h-full bg-gradient-to-l from-gray-900 to-transparent z-10" />
 
-            {/* Kontainer Marquee */}
             <motion.div
               className="absolute top-0 left-0 flex space-x-6"
               variants={marqueeVariants}
               animate="animate"
             >
               {duplicatedTestimonials.map((item, index) => (
-                // Kartu Testimoni
                 <div
                   key={index}
                   className="w-80 h-auto flex-shrink-0 bg-white/5 

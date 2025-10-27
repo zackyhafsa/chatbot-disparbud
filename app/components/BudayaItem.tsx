@@ -1,9 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { motion, Variants } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 import Button from "./Button";
 
 interface BudayaItemProps {
@@ -42,7 +40,7 @@ export default function BudayaItem({
     },
     visible: {
       opacity: 1,
-      scale: 1, // Selesai di ukuran normal
+      scale: 1,
       transition: { duration: 0.7, ease: "easeOut" },
     },
   };
@@ -58,7 +56,7 @@ export default function BudayaItem({
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
       >
-        <Image src={imageUrl} alt={title} layout="fill" objectFit="cover" />
+        <Image src={imageUrl} alt={title} fill className="object-cover" />
       </motion.div>
 
       <motion.div
