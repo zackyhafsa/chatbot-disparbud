@@ -12,25 +12,23 @@ import { ArrowRight } from "lucide-react";
 const kulinerData = [
   {
     id: 1,
-    title: "Nasi Lengko",
-    description: "Hidangan nasi kaya protein dengan tahu, tempe, tauge, dan saus kacang khas.",
-    imageUrl: "/images/kuliner-1.jpg",
+    title: "Jalakotek",
+    description: "Kue sejenis pastel dengan isi tahu dan sayuran, digoreng renyah.",
+    imageUrl: "/kuliner/jalakotek.jpg",
     link: "#",
   },
   {
     id: 2,
-    title: "Serabi Oncom",
-    description:
-      "Perpaduan sempurna serabi gurih yang dibakar di atas tungku dengan taburan oncom pedas.",
-    imageUrl: "/images/kuliner-2.jpg",
+    title: "Pencok Katel",
+    description: "Makanan dari kacang kedelai yang baru tumbuh, disantap mentah dengan sambal.",
+    imageUrl: "/kuliner/pencok-katel.jpg",
     link: "#",
   },
   {
     id: 3,
-    title: "Mangga Gedong Gincu",
-    description:
-      "Primadona Majalengka, mangga ini terkenal dengan kulitnya yang cantik, aroma wangi, dan rasa manisnya.",
-    imageUrl: "/images/kuliner-3.jpg",
+    title: "Pepes Jeroan",
+    description: "Jeroan ikan atau ayam yang dibumbui dan dimasak dengan cara dipepes.",
+    imageUrl: "/kuliner/pepes-jeroan.jpg",
     link: "#",
   },
 ];
@@ -61,7 +59,7 @@ const staggerContainer: Variants = {
 export default function KulinerSection() {
   return (
     // Kita ganti latar jadi 'bg-gray-50' untuk selang-seling
-    <section id="kuliner" className="py-20 bg-gray-50">
+    <section id="kuliner" className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* --- Judul Section (Tetap sama) --- */}
         <motion.div
@@ -71,7 +69,7 @@ export default function KulinerSection() {
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeInUp}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+          <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-green-400 py-1">
             Cita Rasa Khas Majalengka
           </h2>
           <p className="mt-4 text-lg text-gray-600">
@@ -104,7 +102,7 @@ export default function KulinerSection() {
                 {/* 2. Judul Awal (Di atas Gradien) */}
                 <div
                   className="absolute bottom-0 left-0 w-full p-6 
-                             bg-gradient-to-t from-black/70 to-transparent
+                             bg-gradient-to-t from-black/90 to-transparent
                              transition-all duration-500 ease-in-out
                              group-hover:translate-y-16 group-hover:opacity-0" // Akan slide ke bawah & hilang
                 >
@@ -112,17 +110,12 @@ export default function KulinerSection() {
                 </div>
 
                 {/* 3. Panel Konten yang Tersembunyi */}
-                <div
-                  className="absolute bottom-0 left-0 w-full p-6 bg-white
-                             h-1/2 flex flex-col justify-end
-                             transform translate-y-full transition-transform duration-500 ease-in-out
-                             group-hover:translate-y-0"
-                >
+                <div className="absolute bottom-0 left-0 w-full p-6 bg-white flex flex-col justify-end transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0 rounded-t-3xl">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
                   <p className="text-sm text-gray-600 mb-4">{item.description}</p>
                   <Link
                     href={item.link}
-                    className="inline-flex items-center font-medium text-green-600 hover:text-green-800 self-start"
+                    className="inline-flex items-center font-medium bg-gradient-to-r from-green-800 to-green-600 px-7 py-1 rounded-full text-white hover:bg-gradient-to-l hover:from-green-900 hover:to-green-700 ease-in-out duration-300 shadow-md self-start"
                   >
                     Lihat Detail
                     <ArrowRight className="ml-1.5 h-4 w-4" />

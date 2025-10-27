@@ -8,23 +8,23 @@ type ImageItem = { src: string; alt: string };
 
 const IMAGES: ImageItem[] = [
   {
-    src: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgb9L18SuxPDLlVVL9XqvR-ux9MNVaBEv6n_0_rC_H0k02UxDGfGmzrGKZZ7lmtVeUKIhFY7zQ3ZhJIlVzWtnETvEKusqNtmzZ7TGGNiy3f6N5bSTBxmfW0d7IElxI0Y41cm1CKjjHkNk0/s1600/ragampost-majalengka-panyaweuyan-003.jpg",
+    src: "panyaweyan.jpg",
     alt: "Panyaweyan Majalengka",
   },
   {
-    src: "https://asset.kompas.com/crops/a1yJgkxOKj3-7lv8qVQl8p08X7Y=/0x0:780x520/1200x800/data/photo/2021/12/30/61cd16a5dca28.jpeg",
+    src: "liwet.jpeg",
     alt: "Kuliner Majalengka",
   },
   {
-    src: "https://asset.kompas.com/crops/_tzIJ6Zpdh5VeeemIMT_MB8jqME=/0x7:689x467/750x500/data/photo/2022/06/02/62986065aa565.jpeg",
+    src: "cipanten.jpeg",
     alt: "Cipanten",
   },
   {
-    src: "https://img-global.cpcdn.com/recipes/c782fb6bf3710239/1200x630cq80/photo.jpg",
+    src: "kuliner/jalakotek.jpg",
     alt: "Jalakotek",
   },
   {
-    src: "https://cdn.rri.co.id/berita/24/images/1686227995639-IMG-20230608-WA0007/1686227995639-IMG-20230608-WA0007.jpg",
+    src: "kebudayaan.jpg",
     alt: "Kebudayaan Majalengka",
   },
 ];

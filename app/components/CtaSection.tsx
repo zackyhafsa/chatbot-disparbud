@@ -10,23 +10,23 @@ import { Quote } from "lucide-react"; // Ikon untuk testimoni
 const testimonials = [
   {
     id: 1,
-    name: "Wisatawan Lokal",
+    name: "Wildan Zhilal Manafi",
     quote:
       "Chatbot-nya sangat membantu! Saya bisa merencanakan liburan ke Majalengka dalam 5 menit.",
   },
   {
     id: 2,
-    name: "Pengunjung Baru",
+    name: "Tsaqib Ilham Nur",
     quote: "Informasi destinasi wisatanya lengkap dan akurat. Keren banget!",
   },
   {
     id: 3,
-    name: "Pecinta Kuliner",
+    name: "Irki Septian",
     quote: "Nggak nyangka ada AI yang tahu kuliner tersembunyi. Saya jadi coba Serabi Oncom!",
   },
   {
     id: 4,
-    name: "Mahasiswa",
+    name: "Abrar Wahid",
     quote: "Saya pakai untuk cari info kesenian buat tugas. Jawabannya cepat dan relevan.",
   },
 ];

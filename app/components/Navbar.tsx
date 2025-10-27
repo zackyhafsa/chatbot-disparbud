@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -14,23 +14,65 @@ const navLinks = [
   { href: "/chat", label: "Tanya Asisten" },
 ];
 
+const menuVariants: Variants = {
+  closed: { opacity: 0, y: -20, transition: { duration: 0.2 } },
+  open: { opacity: 1, y: 0, transition: { duration: 0.2 } },
+};
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
   const pathname = usePathname();
+  const [activeHash, setActiveHash] = useState("");
+
+  useEffect(() => {
+    if (pathname !== "/") {
+      setActiveHash("");
+      return;
+    }
+
+    const sectionIds = navLinks.map((link) => link.href.split("#")[1]).filter(Boolean);
+
+    const sections = sectionIds.map((id) => document.getElementById(id)).filter(Boolean);
+
+    if (sections.length === 0) return;
+
+    const observerOptions = {
+      root: null,
+      rootMargin: "-40% 0px -60% 0px",
+      threshold: 0,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Jika section masuk ke zona, set hash aktif
+          setActiveHash("/#" + entry.target.id);
+        }
+      });
+    }, observerOptions);
+
+    // 5. Mulai amati setiap section
+    sections.forEach((section: any) => observer.observe(section));
+
+    // 6. Bersihkan (cleanup) saat komponen unmount
+    return () => {
+      sections.forEach((section: any) => observer.unobserve(section));
+    };
+  }, [pathname]);
 
   useEffect(() => {
     const handleScroll = () => {
-      setHasScrolled(window.scrollY > 10);
+      const scrolled = window.scrollY > 10;
+      setHasScrolled(scrolled);
+
+      if (!scrolled && pathname === "/") {
+        setActiveHash("");
+      }
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const menuVariants = {
-    closed: { opacity: 0, y: -20, transition: { duration: 0.2 } },
-    open: { opacity: 1, y: 0, transition: { duration: 0.2 } },
-  };
+  }, [pathname]);
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 mx-[3%]`}>
@@ -54,7 +96,16 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:space-x-8">
             {navLinks.map((link) => {
-              const isActive = pathname === link.href;
+              let isActive = false;
+
+              if (link.href.startsWith("/#")) {
+                isActive = pathname === "/" && activeHash === link.href;
+              } else if (link.href === "/") {
+                isActive = pathname === "/" && activeHash === "";
+              } else {
+                isActive = pathname === link.href;
+              }
+
               return (
                 <Link
                   key={link.label}
@@ -74,7 +125,7 @@ export default function Navbar() {
             })}
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu */}
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -95,11 +146,19 @@ export default function Navbar() {
             initial="closed"
             animate="open"
             exit="closed"
-            className="md:hidden absolute top-22 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-lg rounded-2xl"
+            className="md:hidden absolute top-20 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-lg rounded-2xl"
           >
             <div className="px-2 py-3 space-y-2 sm:px-3">
               {navLinks.map((link) => {
-                const isActive = pathname === link.href;
+                let isActive = false;
+                if (link.href.startsWith("/#")) {
+                  isActive = pathname === "/" && activeHash === link.href;
+                } else if (link.href === "/") {
+                  isActive = pathname === "/" && activeHash === "";
+                } else {
+                  isActive = pathname === link.href;
+                }
+
                 return (
                   <Link
                     key={link.label}

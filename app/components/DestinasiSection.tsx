@@ -1,8 +1,6 @@
 "use client";
 
-import Link from "next/link";
 import { motion, Variants } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 import Button from "./Button";
 
 const destinasiData = [
@@ -10,24 +8,21 @@ const destinasiData = [
     id: 1,
     title: "Terasering Panyaweuyan",
     description: "Nikmati pemandangan hamparan sawah terasering yang hijau dan menyejukkan mata.",
-    imageUrl:
-      "https://cdn1.katadata.co.id/media/images/thumb/2021/08/16/Terasering_Panyaweuyan-2021_08_16-16_27_29_449c789040b4e44c07a3ee7ace04464f_960x640_thumb.jpg",
+    imageUrl: "panyaweyan2.webp",
     link: "#",
   },
   {
     id: 2,
     title: "Curug Muara Jaya",
     description: "Air terjun tertinggi di Majalengka dengan suasana alam yang asri dan sejuk.",
-    imageUrl:
-      "https://travelspromo.com/wp-content/uploads/2020/03/11-tersorot-matahari-Fitria-Natasya-Putri.jpg",
+    imageUrl: "muara-jaya.jpg",
     link: "#",
   },
   {
     id: 3,
     title: "Situ Cipanten",
     description: "Danau indah dengan air jernih berwarna biru kehijauan dan berbagai wahana air.",
-    imageUrl:
-      "https://asset.kompas.com/crops/1u75ED0Gblk6gSnuejkqyp82R5k=/1x17:974x666/750x500/data/photo/2022/06/02/62985ff92ab3f.jpg",
+    imageUrl: "cipanten2.jpg",
     link: "#",
   },
 ];
@@ -57,7 +52,7 @@ const staggerContainer = {
 export default function DestinasiSection() {
   return (
     // Kita beri ID "destinasi" agar link di Navbar berfungsi
-    <section id="destinasi" className="py-20 bg-gray-50">
+    <section id="destinasi" className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* --- Judul Section --- */}
         <motion.div
