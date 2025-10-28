@@ -101,7 +101,7 @@ export default function HeroTravel() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, ease: "easeOut", duration: 0.6 }}
                 className="bg-gradient-to-r from-green-700 to-green-600 px-8 py-4 max-sm:py-3 rounded-full shadow-md hover:bg-gradient-to-r hover:from-green-800 hover:to-green-700 text-white "
-                onClick={() => router.push("/explore")}
+                onClick={() => router.push("/#destinasi")}
               >
                 Mulai Menjelajah
               </motion.button>

@@ -7,14 +7,16 @@ import KulinerSection from "./components/KulinerSection";
 
 const page = () => {
   return (
-    <main>
-      <HeroSection />
-      <DestinasiSection />
-      <BudayaSection />
-      <KulinerSection />
-      <CtaSection />
+    <>
+      <main>
+        <HeroSection />
+        <DestinasiSection />
+        <BudayaSection />
+        <KulinerSection />
+        <CtaSection />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 };
 

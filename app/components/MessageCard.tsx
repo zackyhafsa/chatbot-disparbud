@@ -58,7 +58,7 @@ export const MessageCard = (props: MessagePropsType) => {
 
   return (
     <div
-      className={` px-6 text-lg shadow-xl py-4 max-w-md w-fit whitespace-pre-line break-words ${
+      className={` px-6 text-lg max-lg:text-base shadow-xl py-4 max-w-lg w-fit whitespace-pre-line break-words ${
         role === "user"
           ? "bg-green-700 text-white ml-auto rounded-b-4xl rounded-tl-4xl rounded-tr-md"
           : "bg-white rounded-b-4xl rounded-tr-4xl rounded-tl-md"

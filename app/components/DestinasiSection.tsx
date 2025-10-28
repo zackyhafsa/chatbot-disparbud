@@ -2,6 +2,7 @@
 
 import { motion, Variants } from "framer-motion";
 import Button from "./Button";
+import { slugify } from "../lib/utils";
 
 const destinasiData = [
   {
@@ -9,14 +10,14 @@ const destinasiData = [
     title: "Terasering Panyaweuyan",
     description: "Nikmati pemandangan hamparan sawah terasering yang hijau dan menyejukkan mata.",
     imageUrl: "panyaweyan2.webp",
-    link: "#",
+    link: "panyaweyan",
   },
   {
     id: 2,
     title: "Curug Muara Jaya",
     description: "Air terjun tertinggi di Majalengka dengan suasana alam yang asri dan sejuk.",
     imageUrl: "muara-jaya.jpg",
-    link: "#",
+    link: "curug",
   },
   {
     id: 3,
@@ -99,7 +100,7 @@ export default function DestinasiSection() {
               <div className="p-6 flex-grow flex flex-col">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{destinasi.title}</h3>
                 <p className="text-gray-600 mb-4 flex-grow">{destinasi.description}</p>
-                <Button link={destinasi.link} label="Jelajahi Sekarang" />
+                <Button link={`/detail/${slugify(destinasi.title)}`} label="Jelajahi Sekarang" />
               </div>
             </motion.div>
           ))}
