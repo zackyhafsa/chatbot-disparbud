@@ -24,11 +24,11 @@ export default function BudayaItem({
   const textVariants: Variants = {
     hidden: {
       opacity: 0,
-      x: isReversed ? 100 : -100,
+      y: isReversed ? 100 : -100,
     },
     visible: {
       opacity: 1,
-      x: 0,
+      y: 0,
       transition: { duration: 0.7, ease: "easeOut" },
     },
   };

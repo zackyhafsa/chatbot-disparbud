@@ -46,7 +46,7 @@ function findItemBySlug(slug: string): ItemData | null {
 // 3. Komponen Halaman (Server Component)
 export default function DetailPage({ params }: { params: { slug: string } }) {
   const item = findItemBySlug(params.slug);
-  console.log(item)
+  console.log(item);
 
   // 4. Jika data tidak ditemukan, tampilkan halaman 404
   if (!item) {
