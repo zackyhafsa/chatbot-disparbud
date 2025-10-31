@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <Link
               href="/"
-              className="text-3xl font-bold text-white hover:text-blue-400 transition-colors"
+              className="text-3xl font-bold text-white hover:text-green-400 transition-colors"
             >
               {APP_NAME}
             </Link>
@@ -27,22 +27,22 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-white uppercase tracking-wider">Jelajahi</h3>
             <ul className="mt-4 space-y-3">
               <li>
-                <Link href="/#destinasi" className="hover:text-blue-400 transition-colors">
+                <Link href="/#destinasi" className="hover:text-green-400 transition-colors">
                   Destinasi
                 </Link>
               </li>
               <li>
-                <Link href="/#budaya" className="hover:text-blue-400 transition-colors">
+                <Link href="/#budaya" className="hover:text-green-400 transition-colors">
                   Budaya
                 </Link>
               </li>
               <li>
-                <Link href="/#kuliner" className="hover:text-blue-400 transition-colors">
+                <Link href="/#kuliner" className="hover:text-green-400 transition-colors">
                   Kuliner
                 </Link>
               </li>
               <li>
-                <Link href="/chat" className="hover:text-blue-400 transition-colors">
+                <Link href="/chat" className="hover:text-green-400 transition-colors">
                   Tanya Asisten
                 </Link>
               </li>
@@ -55,17 +55,17 @@ export default function Footer() {
             </h3>
             <ul className="mt-4 space-y-3">
               <li>
-                <Link href="#" target="_blank" className="hover:text-blue-400 transition-colors">
+                <Link href="#" target="_blank" className="hover:text-green-400 transition-colors">
                   Disparbud Majalengka
                 </Link>
               </li>
               <li>
-                <Link href="#" target="_blank" className="hover:text-blue-400 transition-colors">
+                <Link href="#" target="_blank" className="hover:text-green-400 transition-colors">
                   Pemkab Majalengka
                 </Link>
               </li>
               <li>
-                <Link href="#" target="_blank" className="hover:text-blue-400 transition-colors">
+                <Link href="#" target="_blank" className="hover:text-green-400 transition-colors">
                   Wonderful Indonesia
                 </Link>
               </li>
@@ -80,21 +80,21 @@ export default function Footer() {
               <Link
                 href="#"
                 aria-label="Facebook"
-                className="hover:text-blue-400 transition-colors"
+                className="hover:text-green-400 transition-colors"
               >
                 <Facebook size={24} />
               </Link>
               <Link
                 href="#"
                 aria-label="Instagram"
-                className="hover:text-blue-400 transition-colors"
+                className="hover:text-green-400 transition-colors"
               >
                 <Instagram size={24} />
               </Link>
-              <Link href="#" aria-label="Twitter" className="hover:text-blue-400 transition-colors">
+              <Link href="#" aria-label="Twitter" className="hover:text-green-400 transition-colors">
                 <Twitter size={24} />
               </Link>
-              <Link href="#" aria-label="YouTube" className="hover:text-blue-400 transition-colors">
+              <Link href="#" aria-label="YouTube" className="hover:text-green-400 transition-colors">
                 <Youtube size={24} />
               </Link>
             </div>

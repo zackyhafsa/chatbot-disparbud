@@ -1,4 +1,6 @@
+import { createSystemPrompt } from "@/app/lib/rule";
 import { google } from "@ai-sdk/google";
+import { groq } from "@ai-sdk/groq";
 import { streamText, UIMessage, convertToModelMessages } from "ai";
 import { promises as fs } from "fs";
 import path from "path";
@@ -25,10 +27,11 @@ export async function POST(req: Request) {
 
   const majalengkaDataString = await majalengkaDataPromise;
 
-  const systemPrompt = `Anda adalah asisten yang membantu memberikan informasi tentang Dinas Pariwisata dan Kebudayaan yang ada di majalengka. Berperilakulah dengan profesional Gunakan data berikut untuk menjawab pertanyaan pengguna: ${majalengkaDataString}, jika yang ditanyakan mengenai pariwisata dan kebudayaan di majalengka dan tidak ada di data, jawab aja sebisa mungkin yang kamu tahu, tidak harus ada yang di data saja. Tolong jangan pakai simbol bintang (*) dalam jawaban anda ataupun dalam jawaban yang bertipe list, gunakan angka sebagai penggati simbol bintang. anda boleh menggunakan emoji. jika jawaban anda tidak ada dalam data, jangan bilang kalo di dalam datanya tidak ada, langsung saja anda jelaskan.`;
+  const systemPrompt = createSystemPrompt(majalengkaDataString);
 
   const result = await streamText({
     model: google("gemini-2.5-flash"),
+    // model: groq("llama-3.3-70b-versatile"),
     system: systemPrompt,
     messages: convertToModelMessages(messages),
   });

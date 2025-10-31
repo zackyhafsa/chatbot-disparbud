@@ -1,7 +1,6 @@
 "use client";
 
 import { motion, Variants } from "motion/react";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 type ImageItem = { src: string; alt: string };
@@ -163,7 +162,7 @@ export default function HeroTravel() {
               {/* 4 */}
               <Figure
                 img={IMAGES[3]}
-                className="col-start-4 col-span-2 row-start-5 row-span-2 rounded-4xl"
+                className="col-start-4 col-span-2 row-start-5 row-span-2 rounded-4xl max-md:hidden"
               />
               {/* 5 */}
               <Figure

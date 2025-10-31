@@ -10,7 +10,7 @@ const budayaData = [
     title: "Rampak Genteng Jatiwangi",
     description:
       "Rampak Genteng Jatiwangi merupakan sebuah bentuk kesenian pertunjukan yang melibatkan banyak orang (rampak berarti serempak atau bersama-sama) dalam memainkan atau memanfaatkan genteng sebagai instrumen musik dan juga sebagai bagian dari koreografi atau gerakan tari.",
-    imageUrl: "/rampak_genteng.jpg",
+    imageUrl: "/rampak_genteng.webp",
     linkUrl: "#",
     isReversed: false,
   },

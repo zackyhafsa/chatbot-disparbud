@@ -84,9 +84,10 @@ export default function Navbar() {
           <div className="flex-shrink-0">
             <Link
               href="/"
-              className="text-3xl font-bold text-green-700 hover:text-green-400 transition-colors max-md:text-2xl"
+              className="text-3xl font-bold text-green-800 hover:text-green-400 transition-colors max-md:text-2xl flex items-center"
             >
-              MajaGo
+              <img src="logo/majago-solid.png" alt="" width="50" />
+              <h1>MajaGo</h1>
             </Link>
           </div>
 
@@ -108,7 +109,7 @@ export default function Navbar() {
                   key={link.label}
                   href={link.href}
                   className={`relative font-medium transition-colors group ${
-                    isActive ? "text-green-700" : "text-gray-800 hover:text-green-700"
+                    isActive ? "text-green-800" : "text-gray-800 hover:text-green-700"
                   }`}
                 >
                   {link.label}
