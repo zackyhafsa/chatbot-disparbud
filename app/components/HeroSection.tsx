@@ -44,7 +44,7 @@ export default function HeroTravel() {
   const router = useRouter();
 
   return (
-    <section className="relative overflow-hidden bg-[rgb(248,251,255)]">
+    <section className="relative overflow-hidden bg-[rgb(248,251,255)]" id="home">
       <div aria-hidden className="pointer-events-none absolute inset-0">
         <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-sky-100/60 blur-2xl " />
         <div className="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-blue-100/60 blur-2xl " />

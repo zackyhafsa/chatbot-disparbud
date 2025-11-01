@@ -89,7 +89,7 @@ export default function DestinasiSection() {
               }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <div className="relative h-56 w-full overflow-hidden rounded-xl group-hover:rounded-none group-active:rounded-none transition-all duration-500 ease-in-out">
+              <div className="relative h-56 w-full overflow-hidden rounded-xl transition-all duration-500 ease-in-out">
                 <img
                   src={destinasi.imageUrl}
                   alt={destinasi.title}
@@ -97,7 +97,7 @@ export default function DestinasiSection() {
                 />
               </div>
 
-              <div className="group-active:p-6 group-hover:p-6 pt-2 flex flex-col transition-all duration-500 ease-in-out">
+              <div className="p-6 flex flex-col transition-all duration-500 ease-in-out">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{destinasi.title}</h3>
                 <p className="text-gray-600 mb-4 flex-grow">{destinasi.description}</p>
                 <Button link={`/detail/${slugify(destinasi.title)}`} label="Jelajahi Sekarang" />

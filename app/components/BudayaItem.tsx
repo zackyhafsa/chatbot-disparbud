@@ -56,7 +56,13 @@ export default function BudayaItem({
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
       >
-        <Image src={imageUrl} alt={title} fill className="object-cover" />
+        <Image
+          src={imageUrl}
+          alt={title}
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
       </motion.div>
 
       <motion.div
