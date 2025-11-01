@@ -52,7 +52,7 @@ const staggerContainer = {
 
 export default function DestinasiSection() {
   return (
-    <section id="destinasi" className="py-24 bg-gray-50">
+    <section id="destinasi" className="py-24 bg-gray-50 lg:h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-12"
@@ -70,7 +70,7 @@ export default function DestinasiSection() {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4"
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
@@ -79,7 +79,7 @@ export default function DestinasiSection() {
           {destinasiData.map((destinasi) => (
             <motion.div
               key={destinasi.id}
-              className="hover:bg-white focus:bg-white rounded-xl overflow-hidden flex flex-col group"
+              className="hover:bg-white active:bg-white rounded-xl overflow-hidden flex flex-col group"
               variants={fadeInUp}
               whileHover={{
                 y: -8,
@@ -89,7 +89,7 @@ export default function DestinasiSection() {
               }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <div className="relative h-56 w-full overflow-hidden">
+              <div className="relative h-56 w-full overflow-hidden rounded-xl group-hover:rounded-none group-active:rounded-none transition-all duration-500 ease-in-out">
                 <img
                   src={destinasi.imageUrl}
                   alt={destinasi.title}
@@ -97,7 +97,7 @@ export default function DestinasiSection() {
                 />
               </div>
 
-              <div className="p-6 flex-grow flex flex-col">
+              <div className="group-hover:p-6 pt-2 flex flex-col transition-all duration-500 ease-in-out">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{destinasi.title}</h3>
                 <p className="text-gray-600 mb-4 flex-grow">{destinasi.description}</p>
                 <Button link={`/detail/${slugify(destinasi.title)}`} label="Jelajahi Sekarang" />
