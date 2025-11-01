@@ -1,3 +1,4 @@
+import { Sparkles } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 type MessagePropsType = {
@@ -12,6 +13,8 @@ export const MessageCard = (props: MessagePropsType) => {
   const targetTextRef = useRef("");
 
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
+
+  const wasStreamingRef = useRef(isStreaming);
 
   const renderWithBold = (text: string) => {
     const parts = text.split(/(\*\*.*?\*\*|\*.*?\*)/g);
@@ -28,11 +31,9 @@ export const MessageCard = (props: MessagePropsType) => {
   };
 
   useEffect(() => {
-    if (!isStreaming) {
+    targetTextRef.current = message;
+    if (!wasStreamingRef.current) {
       setDisplayedText(message);
-      targetTextRef.current = message;
-    } else {
-      targetTextRef.current = message;
     }
   }, [message, isStreaming]);
 
@@ -42,6 +43,9 @@ export const MessageCard = (props: MessagePropsType) => {
         const targetText = targetTextRef.current;
 
         if (prevDisplayedText.length === targetText.length) {
+          if (intervalRef.current) {
+            clearInterval(intervalRef.current);
+          }
           return prevDisplayedText;
         }
 
@@ -58,13 +62,20 @@ export const MessageCard = (props: MessagePropsType) => {
 
   return (
     <div
-      className={` px-6 text-lg max-lg:text-base shadow-xl py-4 max-w-lg w-fit whitespace-pre-line break-words ${
+      className={` text-lg max-lg:text-base  py-4  w-fit whitespace-pre-line break-words ${
         role === "user"
-          ? "bg-green-700 text-white ml-auto rounded-b-4xl rounded-tl-4xl rounded-tr-md"
-          : "bg-white rounded-b-4xl rounded-tr-4xl rounded-tl-md"
+          ? "px-6 bg-green-700 text-white ml-auto rounded-l-4xl rounded-tr-4xl rounded-br-md max-w-lg shadow-xl"
+          : ""
       }`}
     >
-      {renderWithBold(displayedText)}
+      {role === "assistant" ? (
+        <div className="flex gap-3">
+          <Sparkles size={25} className="text-green-800 shrink-0 mt-2 border border-green-600 rounded-full p-1 shadow-green-200 shadow-md" />
+          <div>{renderWithBold(displayedText)}</div>
+        </div>
+      ) : (
+        renderWithBold(displayedText)
+      )}
 
       {isStreaming && role === "assistant" && <span className="blinking-cursor"></span>}
     </div>
