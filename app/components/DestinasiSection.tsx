@@ -79,7 +79,7 @@ export default function DestinasiSection() {
           {destinasiData.map((destinasi) => (
             <motion.div
               key={destinasi.id}
-              className="hover:bg-white rounded-xl overflow-hidden flex flex-col group"
+              className="hover:bg-white focus:bg-white rounded-xl overflow-hidden flex flex-col group"
               variants={fadeInUp}
               whileHover={{
                 y: -8,
