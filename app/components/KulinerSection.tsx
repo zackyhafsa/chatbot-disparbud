@@ -96,8 +96,8 @@ export default function KulinerSection() {
                 >
                   <h3 className="text-2xl font-bold text-white">{item.title}</h3>
                 </div>
-
-                <div className="absolute bottom-0 left-0 w-full p-6 bg-white flex flex-col justify-end transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0 rounded-t-3xl">
+                {/* hidden element */}
+                <div className="absolute bottom-0 left-0 w-full p-6 bg-white flex flex-col justify-end transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0 rounded-t-3xl group-active:translate-y-0">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
                   <p className="text-sm text-gray-600 mb-4">{item.description}</p>
                   <Link

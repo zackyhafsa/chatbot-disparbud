@@ -18,9 +18,6 @@ export default function Footer() {
             <p className="mt-4 max-w-xs">
               Sistem Informasi Pariwisata Majalengka dilengkapi Asisten Virtual AI.
             </p>
-            <p className="mt-2 text-sm text-gray-500">
-              Sebuah Project KP untuk Dinas Pariwisata dan Kebudayaan Majalengka.
-            </p>
           </div>
 
           <div>
@@ -91,10 +88,18 @@ export default function Footer() {
               >
                 <Instagram size={24} />
               </Link>
-              <Link href="#" aria-label="Twitter" className="hover:text-green-400 transition-colors">
+              <Link
+                href="#"
+                aria-label="Twitter"
+                className="hover:text-green-400 transition-colors"
+              >
                 <Twitter size={24} />
               </Link>
-              <Link href="#" aria-label="YouTube" className="hover:text-green-400 transition-colors">
+              <Link
+                href="#"
+                aria-label="YouTube"
+                className="hover:text-green-400 transition-colors"
+              >
                 <Youtube size={24} />
               </Link>
             </div>
@@ -106,8 +111,8 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} {APP_NAME}. All rights reserved.
           </p>
           <p className="text-sm mt-4 sm:mt-0">
-            Dibuat dengan ❤️ oleh <span className="font-semibold text-white">Masjek</span> untuk
-            Majalengka.
+            Dibuat dengan ❤️ oleh <span className="font-semibold text-white">Zacky Hafsari</span>{" "}
+            untuk Majalengka.
           </p>
         </div>
       </div>
