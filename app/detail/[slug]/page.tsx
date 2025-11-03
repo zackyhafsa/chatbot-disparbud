@@ -25,7 +25,7 @@ function findItemBySlug(slug: string): ItemData | null {
     ...pariwisata.sejarah_dan_budaya,
     ...budaya,
     ...kuliner.makanan,
-    ...kuliner.minuman,
+    ...kuliner.manisan,
     ...kuliner.oleh_oleh,
   ];
   return allItems.find((it) => slugify(it.nama) === slug) || null;

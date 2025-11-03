@@ -133,6 +133,12 @@
       "deskripsi": "Sebuah pertunjukan musik perkusi unik yang menggunakan genteng (ubin atap) sebagai alat musik utama. Para pemain memainkan genteng secara bersama-sama (rampak) untuk menghasilkan ritme yang dinamis.",
       "asal": "Kecamatan Jatiwangi",
       "catatan": "Kesenian kontemporer ini dipopulerkan oleh komunitas seni seperti Jatiwangi Art Factory (JAF) sebagai cerminan identitas Jatiwangi sebagai sentra industri genteng terbesar."
+    },
+    {
+      "nama": "Seni Tari Sampyong",
+      "deskripsi": "Meskipun sering disebut 'tari', Sampyong pada intinya adalah seni adu ketangkasan tradisional Majalengka. Ini adalah pertarungan simbolis antara dua pria yang menggunakan tongkat rotan ('sampyong') sebagai senjata. Pertunjukan ini diiringi alunan musik yang dinamis dari kendang, tarompet (terompet Sunda), dan goong untuk membangkitkan semangat.",
+      "asal": "Populer di wilayah selatan Majalengka, terutama di Kecamatan Cikijing dan Talaga.",
+      "catatan": "Seni ini menguji keberanian, keterampilan, dan sportivitas. Sering ditampilkan dalam acara hajatan, perayaan hari besar, atau festival budaya."
     }
   ],
 
@@ -177,9 +183,19 @@
         "nama": "Jalabia",
         "deskripsi": "Kue dari adonan tepung ketan dan kelapa, dibentuk seperti cincin (mirip donat), digoreng, lalu seringkali dibalut dengan gula merah cair.",
         "daerah": "Jajanan pasar tradisional"
+      },
+      {
+        "nama": "Hampas Kecap",
+        "deskripsi": "Hidangan unik yang terbuat dari ampas (sisa) kedelai dari proses pembuatan kecap. Ampas ini ditumis (dioseng) dengan bumbu rempah seperti bawang, cabai, dan seringkali daun bawang, menghasilkan lauk nasi yang gurih dan pedas.",
+        "daerah": "Khas ditemukan di daerah sentra produksi kecap, seperti Kecamatan Majalengka dan Kadipaten."
+      },
+      {
+        "nama": "Kicimpring",
+        "deskripsi": "Camilan kerupuk renyah yang terbuat dari singkong (sampeu) yang diparut, dibumbui (biasanya dengan bawang putih dan ketumbar), dikukus, lalu diiris tipis dan dijemur sebelum digoreng. Rasanya gurih dan teksturnya sangat renyah.",
+        "daerah": "Umum ditemukan di pasar tradisional dan pusat oleh-oleh di seluruh Majalengka."
       }
     ],
-    "minuman": [
+    "manisan": [
       {
         "nama": "Kalua Jeruk",
         "deskripsi": "Manisan yang terbuat dari kulit jeruk bali yang diolah dan dimasak dengan gula hingga mengering. Rasanya manis dengan sedikit sensasi pahit khas kulit jeruk.",

@@ -1,6 +1,5 @@
-import { createSystemPrompt } from "@/app/lib/rule";
+import { createSystemPrompt } from "@/app/lib/prompt";
 import { google } from "@ai-sdk/google";
-import { groq } from "@ai-sdk/groq";
 import { streamText, UIMessage, convertToModelMessages } from "ai";
 import { promises as fs } from "fs";
 import path from "path";
@@ -31,7 +30,6 @@ export async function POST(req: Request) {
 
   const result = await streamText({
     model: google("gemini-2.5-flash"),
-    // model: groq("llama-3.3-70b-versatile"),
     system: systemPrompt,
     messages: convertToModelMessages(messages),
   });

@@ -23,9 +23,9 @@ const kulinerData = [
   },
   {
     id: 3,
-    title: "Pepes Jeroan",
-    description: "Jeroan ikan atau ayam yang dibumbui dan dimasak dengan cara dipepes.",
-    imageUrl: "/kuliner/pepes-jeroan.jpg",
+    title: "Hampas Kecap",
+    description: "Hampas Kecap adalah hidangan unik khas Majalengka yang terbuat dari ampas (sisa) kedelai dari proses pembuatan kecap.",
+    imageUrl: "/kuliner/hampas-kecap.jpg",
     link: "#",
   },
 ];
