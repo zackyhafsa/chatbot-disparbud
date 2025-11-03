@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 import Button from "./Button";
+import { slugify } from "../lib/utils";
+
 
 interface BudayaItemProps {
   category: string;
@@ -80,7 +82,7 @@ export default function BudayaItem({
           </span>
           <h3 className="mt-2 text-4xl font-bold text-gray-900">{title}</h3>
           <p className="mt-4 text-gray-600 text-lg max-w-lg">{description}</p>
-          <Button link={linkUrl} label="Pelajari Selengkapnya" className="mt-6" />
+          <Button link={`/detail/${slugify(linkUrl)}`} label="Pelajari Selengkapnya" className="mt-6" />
         </div>
       </motion.div>
     </div>

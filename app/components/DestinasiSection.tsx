@@ -79,15 +79,8 @@ export default function DestinasiSection() {
           {destinasiData.map((destinasi) => (
             <motion.div
               key={destinasi.id}
-              className="hover:bg-white active:bg-white rounded-xl overflow-hidden flex flex-col group"
+              className="hover:bg-white p-4 active:bg-white rounded-3xl overflow-hidden flex flex-col group hover:shadow-xl transition-all duration-300 ease-in-out"
               variants={fadeInUp}
-              whileHover={{
-                y: -8,
-                scale: 1.03,
-                boxShadow:
-                  "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
-              }}
-              transition={{ type: "spring", stiffness: 300 }}
             >
               <div className="relative h-56 w-full overflow-hidden rounded-xl transition-all duration-500 ease-in-out">
                 <img
@@ -97,7 +90,7 @@ export default function DestinasiSection() {
                 />
               </div>
 
-              <div className="p-6 flex flex-col transition-all duration-500 ease-in-out">
+              <div className=" pt-3  flex flex-col transition-all duration-500 ease-in-out">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{destinasi.title}</h3>
                 <p className="text-gray-600 mb-4 flex-grow">{destinasi.description}</p>
                 <Button link={`/detail/${slugify(destinasi.title)}`} label="Jelajahi Sekarang" />

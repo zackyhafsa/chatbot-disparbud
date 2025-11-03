@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, Variants } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { slugify } from "../lib/utils";
 
 const kulinerData = [
   {
@@ -102,7 +103,7 @@ export default function KulinerSection() {
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
                   <p className="text-sm text-gray-600 mb-4">{item.description}</p>
                   <Link
-                    href={item.link}
+                    href={`/detail/${slugify(item.title)}`}
                     className="inline-flex items-center font-medium bg-gradient-to-r from-green-800 to-green-600 px-7 py-1 rounded-full text-white hover:bg-gradient-to-l hover:from-green-900 hover:to-green-700 ease-in-out duration-300 shadow-md self-start"
                   >
                     Lihat Detail

@@ -64,7 +64,7 @@ export default function BudayaSection() {
               title={item.title}
               description={item.description}
               imageUrl={item.imageUrl}
-              linkUrl={item.linkUrl}
+              linkUrl={item.title}
               isReversed={item.isReversed}
             />
           ))}
