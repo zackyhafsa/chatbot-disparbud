@@ -89,11 +89,8 @@ export default function ChatInput({
                 initial="initial"
                 animate="animate"
                 exit="exit"
-                disabled={!input.trim() || thinking}
-                className="bg-green-700 text-white p-3 rounded-full 
-                           flex items-center justify-center
-                           disabled:opacity-50 disabled:cursor-not-allowed
-                           hover:bg-green-800 transition-colors"
+                disabled={!input.trim() || thinking }
+                className={`${!input.trim() || thinking ? "scale-0" : "scale-100 bg-green-700 text-white"} p-3 rounded-full flex items-center justify-center disabled:cursor-not-allowed hover:bg-green-800 transition-all duration-300 ease-in-out`}
                 aria-label="Kirim"
               >
                 <ArrowUp size={20} />
