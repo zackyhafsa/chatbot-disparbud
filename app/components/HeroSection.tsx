@@ -60,11 +60,11 @@ export default function HeroTravel() {
               variants={fadeInUp}
               className="text-balance text-4xl font-bold leading-tight text-gray-800 tracking-tight sm:text-5xl md:text-6xl max-lg:text-center "
             >
-              Jelajahi{" "}
+              Selamat Datang di{" "}
               <span className="bg-gradient-to-r from-sky-500 to-green-600 bg-clip-text text-transparent">
-                Kuliner, Budaya dan Kesenian
+                Portal Digital
               </span>{" "}
-              di Majalengka
+              Desa Tejamulya
             </motion.h1>
 
             <motion.p
@@ -75,8 +75,8 @@ export default function HeroTravel() {
               transition={{ delay: 0.2, ease: "easeOut", duration: 0.6 }}
               className="mt-4 text-pretty text-neutral-600 sm:text-lg max-lg:text-center"
             >
-              Plan and book your perfect trip with expert advice, travel tips, destination info, and
-              inspiration from us.
+              Akses layanan publik, administrasi, dan informasi resmi desa dengan lebih cepat,
+              transparan, dan inklusif.
             </motion.p>
             <svg
               aria-hidden
@@ -111,7 +111,7 @@ export default function HeroTravel() {
                 className="bg-gradient-to-r from-sky-700 to-sky-600 text-white px-8 py-4 max-sm:py-3 rounded-full shadow-md hover:bg-gradient-to-r hover:from-sky-800 hover:to-sky-700 max-md:px-5"
                 onClick={() => router.push("/chat")}
               >
-                Tanya MajaGo
+                Tanya Tejamulya
               </motion.button>
             </div>
           </div>
