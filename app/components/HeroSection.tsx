@@ -60,7 +60,7 @@ export default function HeroTravel() {
               variants={fadeInUp}
               className="text-balance text-4xl font-bold leading-tight text-gray-800 tracking-tight sm:text-5xl md:text-6xl max-lg:text-center "
             >
-              z{" "}
+              Jelajahi{" "}
               <span className="bg-gradient-to-r from-sky-500 to-green-600 bg-clip-text text-transparent">
                 Kuliner, Budaya dan Kesenian
               </span>{" "}
