@@ -87,7 +87,7 @@ export default function Navbar() {
               className="text-3xl font-bold text-green-800 hover:text-green-400 transition-colors max-md:text-2xl flex items-center"
             >
               <img src="logo/majago-solid.png" alt="" width="50" />
-              <h1>MajaGo</h1>
+              <h1>Tejamulya</h1>
             </Link>
           </div>
 
