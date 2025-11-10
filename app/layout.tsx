@@ -3,7 +3,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 
 export const metadata: Metadata = {
-  title: "MajaGo",
+  title: "Tejamulya",
   description: "Chatbot Wisata Majalengka dengan AI",
 };
 
