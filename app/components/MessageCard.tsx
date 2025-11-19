@@ -1,5 +1,5 @@
 import { Sparkles } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 type MessagePropsType = {
   role: "assistant" | "user";
@@ -9,12 +9,13 @@ type MessagePropsType = {
 
 export const MessageCard = (props: MessagePropsType) => {
   const { role, message, isStreaming = false } = props;
-  const [displayedText, setDisplayedText] = useState(isStreaming ? "" : message);
-  const targetTextRef = useRef("");
+  const [shouldAnimate, setShouldAnimate] = useState(isStreaming);
 
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
-
-  const wasStreamingRef = useRef(isStreaming);
+  useEffect(() => {
+    if (isStreaming) {
+      setShouldAnimate(true);
+    }
+  }, [isStreaming]);
 
   const renderWithBold = (text: string) => {
     const parts = text.split(/(\*\*.*?\*\*|\*.*?\*)/g);
@@ -30,36 +31,6 @@ export const MessageCard = (props: MessagePropsType) => {
     });
   };
 
-  useEffect(() => {
-    targetTextRef.current = message;
-    if (!wasStreamingRef.current) {
-      setDisplayedText(message);
-    }
-  }, [message, isStreaming]);
-
-  useEffect(() => {
-    intervalRef.current = setInterval(() => {
-      setDisplayedText((prevDisplayedText) => {
-        const targetText = targetTextRef.current;
-
-        if (prevDisplayedText.length === targetText.length) {
-          if (intervalRef.current) {
-            clearInterval(intervalRef.current);
-          }
-          return prevDisplayedText;
-        }
-
-        return targetText.substring(0, prevDisplayedText.length + 1);
-      });
-    }, 5);
-
-    return () => {
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current);
-      }
-    };
-  }, []);
-
   return (
     <div
       className={` text-lg max-lg:text-base  py-4  w-fit whitespace-pre-line break-words ${
@@ -74,13 +45,31 @@ export const MessageCard = (props: MessagePropsType) => {
             size={30}
             className="text-green-800 shrink-0 mt-2 border border-green-600 rounded-full p-1 shadow-green-200 shadow-md"
           />
-          <div>{renderWithBold(displayedText)}</div>
+          <div
+            style={{
+              opacity: shouldAnimate ? 0 : 1,
+              animation: shouldAnimate ? "fadeIn 0.5s ease-out forwards" : "none",
+            }}
+          >
+            {renderWithBold(message)}
+          </div>
         </div>
       ) : (
-        renderWithBold(displayedText)
+        renderWithBold(message)
       )}
 
       {isStreaming && role === "assistant" && <span className="blinking-cursor"></span>}
+
+      <style jsx>{`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+      `}</style>
     </div>
   );
 };
