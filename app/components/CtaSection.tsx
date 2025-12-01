@@ -1,8 +1,13 @@
 "use client";
 
+import { useRef } from "react";
 import Link from "next/link";
-import { motion, Variants } from "framer-motion";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Quote } from "lucide-react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const testimonials = [
   {
@@ -28,46 +33,65 @@ const testimonials = [
   },
 ];
 
-const fadeInUp: Variants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut",
-    },
-  },
-};
-
-const marqueeVariants: Variants = {
-  animate: {
-    x: [0, -1000],
-    transition: {
-      x: {
-        repeat: Infinity,
-        repeatType: "loop",
-        duration: 60,
-        ease: "linear",
-      },
-    },
-  },
-};
-
 export default function CtaSection() {
   const duplicatedTestimonials = [...testimonials, ...testimonials];
+  const containerRef = useRef<HTMLElement>(null);
+  const marqueeRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(
+    () => {
+      // Fade In Up for Content
+      gsap.fromTo(
+        ".cta-content",
+        { y: 50, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ".cta-content",
+            start: "top 80%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+
+      // Fade In Up for Testimonials Container
+      gsap.fromTo(
+        ".cta-testimonials-container",
+        { y: 50, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ".cta-testimonials-container",
+            start: "top 80%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+
+      // Marquee Animation
+      if (marqueeRef.current) {
+        gsap.to(marqueeRef.current, {
+          x: "-50%",
+          ease: "none",
+          duration: 40,
+          repeat: -1,
+        });
+      }
+    },
+    { scope: containerRef }
+  );
 
   return (
-    <section id="cta" className="py-24 bg-gray-900 text-white">
+    <section ref={containerRef} id="cta" className="py-24 bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-16 items-center">
-          <motion.div
-            className="md:col-span-2"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={fadeInUp}
-          >
+          <div className="cta-content md:col-span-2">
             <span className="text-sm font-semibold text-green-400 uppercase">Asisten Virtual</span>
             <h2 className="mt-4 text-4xl md:text-5xl font-bold">Masih Bingung?</h2>
             <p className="mt-4 text-lg text-gray-300">
@@ -76,27 +100,17 @@ export default function CtaSection() {
             </p>
             <Link
               href="/chat"
-              className="mt-8 inline-block bg-green-600 text-white font-semibold px-8 py-3 rounded-full text-lg hover:bg-green-700 transition-all duration-300 transform hover:scale-105"
+              className="mt-8 inline-block bg-green-600 text-white font-semibold px-8 py-3 rounded-full text-lg hover:bg-green-700 transition-all duration-300 transform hover:scale-105 active:scale-95"
             >
               Tanya Asisten AI Sekarang
             </Link>
-          </motion.div>
+          </div>
 
-          <motion.div
-            className="md:col-span-3 h-96 relative overflow-hidden"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={fadeInUp}
-          >
+          <div className="cta-testimonials-container md:col-span-3 h-96 relative overflow-hidden">
             <div className="absolute top-0 left-0 w-16 h-full bg-gradient-to-r from-gray-900 to-transparent z-10" />
             <div className="absolute top-0 right-0 w-16 h-full bg-gradient-to-l from-gray-900 to-transparent z-10" />
 
-            <motion.div
-              className="absolute top-0 left-0 flex space-x-6"
-              variants={marqueeVariants}
-              animate="animate"
-            >
+            <div ref={marqueeRef} className="absolute top-0 left-0 flex space-x-6 w-max">
               {duplicatedTestimonials.map((item, index) => (
                 <div
                   key={index}
@@ -109,8 +123,8 @@ export default function CtaSection() {
                   <p className="mt-4 font-semibold text-white">- {item.name}</p>
                 </div>
               ))}
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

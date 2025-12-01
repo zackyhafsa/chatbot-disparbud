@@ -92,10 +92,9 @@ export default function DestinasiSection() {
                   <img
                     src={destinasi.imageUrl}
                     alt={destinasi.title}
-                    className="transition-transform duration-500 ease-in-out group-hover:scale-110"
+                    className="transition-transform duration-500 ease-in-out group-hover:scale-110 group-active:scale-110"
                   />
-                </div>
-
+                </div>{" "}
                 <div className=" pt-3  flex flex-col transition-all duration-500 ease-in-out">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{destinasi.title}</h3>
                   <p className="text-gray-600 mb-4 flex-grow">{destinasi.description}</p>

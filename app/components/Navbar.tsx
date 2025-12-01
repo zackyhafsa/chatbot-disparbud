@@ -1,10 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
-import { motion, AnimatePresence, Variants } from "framer-motion";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -14,16 +15,33 @@ const navLinks = [
   { href: "/chat", label: "Tanya Asisten" },
 ];
 
-const menuVariants: Variants = {
-  closed: { opacity: 0, y: -20, transition: { duration: 0.2 } },
-  open: { opacity: 1, y: 0, transition: { duration: 0.2 } },
-};
-
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
   const pathname = usePathname();
   const [activeHash, setActiveHash] = useState("");
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(
+    () => {
+      if (isOpen) {
+        gsap.to(menuRef.current, {
+          y: 0,
+          autoAlpha: 1,
+          duration: 0.3,
+          ease: "power2.out",
+        });
+      } else {
+        gsap.to(menuRef.current, {
+          y: -20,
+          autoAlpha: 0,
+          duration: 0.3,
+          ease: "power2.in",
+        });
+      }
+    },
+    { dependencies: [isOpen] }
+  );
 
   useEffect(() => {
     if (pathname !== "/") {
@@ -84,7 +102,7 @@ export default function Navbar() {
           <div className="flex-shrink-0">
             <Link
               href="/"
-              className="text-3xl font-bold text-green-800 hover:text-green-400 transition-colors max-md:text-2xl flex items-center"
+              className="text-3xl font-bold text-green-800 hover:text-green-400 transition-colors max-md:text-2xl flex items-center active:scale-95"
             >
               <img src="logo/majago-solid.png" alt="" width="50" />
               <h1>MajaGo</h1>
@@ -137,45 +155,38 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu Dropdown */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            variants={menuVariants}
-            initial="closed"
-            animate="open"
-            exit="closed"
-            className="md:hidden absolute top-20 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-lg rounded-2xl"
-          >
-            <div className="px-2 py-3 space-y-2 sm:px-3">
-              {navLinks.map((link) => {
-                let isActive = false;
-                if (link.href.startsWith("/#")) {
-                  isActive = pathname === "/" && activeHash === link.href;
-                } else if (link.href === "/") {
-                  isActive = pathname === "/" && activeHash === "";
-                } else {
-                  isActive = pathname === link.href;
-                }
+      <div
+        ref={menuRef}
+        className="md:hidden absolute top-20 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-lg rounded-2xl opacity-0 invisible -translate-y-5"
+      >
+        <div className="px-2 py-3 space-y-2 sm:px-3">
+          {navLinks.map((link) => {
+            let isActive = false;
+            if (link.href.startsWith("/#")) {
+              isActive = pathname === "/" && activeHash === link.href;
+            } else if (link.href === "/") {
+              isActive = pathname === "/" && activeHash === "";
+            } else {
+              isActive = pathname === link.href;
+            }
 
-                return (
-                  <Link
-                    key={link.label}
-                    href={link.href}
-                    onClick={() => setIsOpen(false)}
-                    className={`block px-4 py-3 rounded-xl text-base font-medium transition-colors ${
-                      isActive
-                        ? "text-green-800 bg-green-300"
-                        : "text-gray-800 hover:text-green-800 hover:bg-green-300"
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
-                );
-              })}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            return (
+              <Link
+                key={link.label}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className={`block px-4 py-3 rounded-xl text-base font-medium transition-colors active:bg-green-300 ${
+                  isActive
+                    ? "text-green-800 bg-green-300"
+                    : "text-gray-800 hover:text-green-800 hover:bg-green-300"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
+        </div>
+      </div>
     </nav>
   );
 }

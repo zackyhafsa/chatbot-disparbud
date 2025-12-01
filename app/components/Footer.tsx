@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <Link
               href="/"
-              className="text-3xl font-bold text-white hover:text-green-400 transition-colors"
+              className="text-3xl font-bold text-white hover:text-green-400 transition-colors active:text-green-500"
             >
               {APP_NAME}
             </Link>
@@ -24,22 +24,34 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-white uppercase tracking-wider">Jelajahi</h3>
             <ul className="mt-4 space-y-3">
               <li>
-                <Link href="/#destinasi" className="hover:text-green-400 transition-colors">
+                <Link
+                  href="/#destinasi"
+                  className="hover:text-green-400 transition-colors active:text-green-500"
+                >
                   Destinasi
                 </Link>
               </li>
               <li>
-                <Link href="/#budaya" className="hover:text-green-400 transition-colors">
+                <Link
+                  href="/#budaya"
+                  className="hover:text-green-400 transition-colors active:text-green-500"
+                >
                   Budaya
                 </Link>
               </li>
               <li>
-                <Link href="/#kuliner" className="hover:text-green-400 transition-colors">
+                <Link
+                  href="/#kuliner"
+                  className="hover:text-green-400 transition-colors active:text-green-500"
+                >
                   Kuliner
                 </Link>
               </li>
               <li>
-                <Link href="/chat" className="hover:text-green-400 transition-colors">
+                <Link
+                  href="/chat"
+                  className="hover:text-green-400 transition-colors active:text-green-500"
+                >
                   Tanya Asisten
                 </Link>
               </li>
@@ -52,17 +64,29 @@ export default function Footer() {
             </h3>
             <ul className="mt-4 space-y-3">
               <li>
-                <Link href="#" target="_blank" className="hover:text-green-400 transition-colors">
+                <Link
+                  href="#"
+                  target="_blank"
+                  className="hover:text-green-400 transition-colors active:text-green-500"
+                >
                   Disparbud Majalengka
                 </Link>
               </li>
               <li>
-                <Link href="#" target="_blank" className="hover:text-green-400 transition-colors">
+                <Link
+                  href="#"
+                  target="_blank"
+                  className="hover:text-green-400 transition-colors active:text-green-500"
+                >
                   Pemkab Majalengka
                 </Link>
               </li>
               <li>
-                <Link href="#" target="_blank" className="hover:text-green-400 transition-colors">
+                <Link
+                  href="#"
+                  target="_blank"
+                  className="hover:text-green-400 transition-colors active:text-green-500"
+                >
                   Wonderful Indonesia
                 </Link>
               </li>
@@ -77,28 +101,28 @@ export default function Footer() {
               <Link
                 href="#"
                 aria-label="Facebook"
-                className="hover:text-green-400 transition-colors"
+                className="hover:text-green-400 transition-colors active:scale-90 transform"
               >
                 <Facebook size={24} />
               </Link>
               <Link
                 href="#"
                 aria-label="Instagram"
-                className="hover:text-green-400 transition-colors"
+                className="hover:text-green-400 transition-colors active:scale-90 transform"
               >
                 <Instagram size={24} />
               </Link>
               <Link
                 href="#"
                 aria-label="Twitter"
-                className="hover:text-green-400 transition-colors"
+                className="hover:text-green-400 transition-colors active:scale-90 transform"
               >
                 <Twitter size={24} />
               </Link>
               <Link
                 href="#"
                 aria-label="YouTube"
-                className="hover:text-green-400 transition-colors"
+                className="hover:text-green-400 transition-colors active:scale-90 transform"
               >
                 <Youtube size={24} />
               </Link>

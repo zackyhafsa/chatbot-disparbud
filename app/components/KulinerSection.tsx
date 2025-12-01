@@ -101,14 +101,15 @@ export default function KulinerSection() {
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="absolute inset-0 transition-transform duration-500 ease-in-out 
-                             group-hover:scale-110 object-cover"
+                             group-hover:scale-110 group-active:scale-110 object-cover"
                 />
 
                 <div
                   className="absolute bottom-0 left-0 w-full p-6 
                              bg-gradient-to-t from-black/90 to-transparent
                              transition-all duration-500 ease-in-out
-                             group-hover:translate-y-16 group-hover:opacity-0"
+                             group-hover:translate-y-16 group-hover:opacity-0
+                             group-active:translate-y-16 group-active:opacity-0"
                 >
                   <h3 className="text-2xl font-bold text-white">{item.title}</h3>
                 </div>
@@ -118,7 +119,7 @@ export default function KulinerSection() {
                   <p className="text-sm text-gray-600 mb-4">{item.description}</p>
                   <Link
                     href={`/detail/${slugify(item.title)}`}
-                    className="inline-flex items-center font-medium bg-gradient-to-r from-green-800 to-green-600 px-7 py-1 rounded-full text-white hover:bg-gradient-to-l hover:from-green-900 hover:to-green-700 ease-in-out duration-300 shadow-md self-start"
+                    className="inline-flex items-center font-medium bg-gradient-to-r from-green-800 to-green-600 px-7 py-1 rounded-full text-white hover:bg-gradient-to-l hover:from-green-900 hover:to-green-700 active:scale-95 ease-in-out duration-300 shadow-md self-start"
                   >
                     Lihat Detail
                     <ArrowRight className="ml-1.5 h-4 w-4" />

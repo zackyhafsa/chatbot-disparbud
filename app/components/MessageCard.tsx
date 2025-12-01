@@ -1,5 +1,8 @@
 import { Sparkles } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 type MessagePropsType = {
   role: "assistant" | "user";
@@ -16,6 +19,22 @@ export const MessageCard = (props: MessagePropsType) => {
       setShouldAnimate(true);
     }
   }, [isStreaming]);
+
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    gsap.fromTo(
+      ".user-message",
+      { opacity: 0, y: 20, scale: 0.95 },
+      {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        duration: 0.4,
+        ease: "power2.out",
+      }
+    );
+  });
 
   const renderWithBold = (text: string) => {
     const parts = text.split(/(\*\*.*?\*\*|\*.*?\*)/g);
@@ -35,7 +54,7 @@ export const MessageCard = (props: MessagePropsType) => {
     <div
       className={` text-lg max-lg:text-base  py-4  w-fit whitespace-pre-line break-words ${
         role === "user"
-          ? "px-6 bg-green-700 text-white ml-auto rounded-l-4xl rounded-tr-4xl rounded-br-md max-w-lg shadow-xl max-md:rounded-l-3xl max-md:rounded-tr-3xl max-md:rounded-br-md max-md:p-4"
+          ? "user-message px-6 bg-green-700 text-white ml-auto rounded-l-4xl rounded-tr-4xl rounded-br-md max-w-lg shadow-xl max-md:rounded-l-3xl max-md:rounded-tr-3xl max-md:rounded-br-md max-md:p-4"
           : ""
       }`}
     >

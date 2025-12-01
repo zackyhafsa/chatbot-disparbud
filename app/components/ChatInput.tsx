@@ -3,10 +3,11 @@
 "use client";
 
 import { ArrowUp, Square } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useRef, useState } from "react";
 import { FormEvent, KeyboardEvent } from "react";
-import { useState } from "react";
 import Textarea from "react-textarea-autosize";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 interface ChatInputProps {
   input: string;
@@ -38,11 +39,33 @@ export default function ChatInput({
     }
   };
 
-  const buttonVariants = {
-    initial: { opacity: 0, scale: 0.5 },
-    animate: { opacity: 1, scale: 1 },
-    exit: { opacity: 0, scale: 0.5 },
-  };
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
+  useGSAP(() => {
+    if (thinking && buttonRef.current) {
+      gsap.fromTo(
+        buttonRef.current,
+        { scale: 0, opacity: 0, rotate: -180 },
+        { scale: 1, opacity: 1, rotate: 0, duration: 0.4, ease: "back.out(1.7)" }
+      );
+    }
+  }, [thinking]);
+
+  useGSAP(() => {
+    if (!thinking && buttonRef.current) {
+      if (input.trim()) {
+        gsap.to(buttonRef.current, {
+          scale: 1,
+          opacity: 1,
+          rotate: 0,
+          duration: 0.4,
+          ease: "back.out(1.7)",
+        });
+      } else {
+        gsap.to(buttonRef.current, { scale: 0, opacity: 0, duration: 0.3 });
+      }
+    }
+  }, [input, thinking]);
 
   return (
     <div className="fixed right-0 left-0 bottom-0 py-4 bg-transparent">
@@ -64,39 +87,29 @@ export default function ChatInput({
         />
 
         <div className="relative w-12 h-12 flex-shrink-0 flex items-center justify-center">
-          <AnimatePresence mode="wait">
-            {thinking ? (
-              <motion.button
-                key="stop"
-                type="button"
-                variants={buttonVariants}
-                initial="initial"
-                animate="animate"
-                exit="exit"
-                onClick={stop}
-                className="bg-red-500 text-white p-3 rounded-full 
+          {thinking ? (
+            <button
+              ref={buttonRef}
+              type="button"
+              onClick={stop}
+              className="bg-red-500 text-white p-3 rounded-full 
                            flex items-center justify-center
-                           hover:bg-red-600 transition-colors"
-                aria-label="Hentikan"
-              >
-                <Square size={20} />
-              </motion.button>
-            ) : (
-              <motion.button
-                key="send"
-                type="submit"
-                variants={buttonVariants}
-                initial="initial"
-                animate="animate"
-                exit="exit"
-                disabled={!input.trim() || thinking }
-                className={`${!input.trim() || thinking ? "scale-0" : "scale-100 bg-green-700 text-white"} p-3 rounded-full flex items-center justify-center disabled:cursor-not-allowed hover:bg-green-800 transition-all duration-300 ease-in-out`}
-                aria-label="Kirim"
-              >
-                <ArrowUp size={20} />
-              </motion.button>
-            )}
-          </AnimatePresence>
+                           hover:bg-red-600 transition-colors active:scale-95"
+              aria-label="Hentikan"
+            >
+              <Square size={20} />
+            </button>
+          ) : (
+            <button
+              ref={buttonRef}
+              type="submit"
+              disabled={!input.trim() || thinking}
+              className={`bg-green-700 text-white p-3 rounded-full flex items-center justify-center disabled:cursor-not-allowed hover:bg-green-800 transition-colors scale-0 opacity-0 active:scale-95`}
+              aria-label="Kirim"
+            >
+              <ArrowUp size={20} />
+            </button>
+          )}
         </div>
       </form>
     </div>

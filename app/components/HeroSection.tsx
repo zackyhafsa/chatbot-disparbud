@@ -131,13 +131,13 @@ export default function HeroTravel() {
             {/* CTA Button */}
             <div className=" mt-10 flex gap-4 max-lg:justify-center">
               <button
-                className="hero-btn bg-gradient-to-r from-green-700 to-green-600 px-8 py-4 max-sm:py-3 rounded-full shadow-md hover:bg-gradient-to-r hover:from-green-800 hover:to-green-700 text-white max-md:px-5"
+                className="hero-btn bg-gradient-to-r from-green-700 to-green-600 px-8 py-4 max-sm:py-3 rounded-full shadow-md hover:bg-gradient-to-r hover:from-green-800 hover:to-green-700 active:scale-95 transition-transform duration-200 text-white max-md:px-5"
                 onClick={() => router.push("/#destinasi")}
               >
                 Mulai Menjelajah
               </button>
               <button
-                className="hero-btn bg-gradient-to-r from-sky-700 to-sky-600 text-white px-8 py-4 max-sm:py-3 rounded-full shadow-md hover:bg-gradient-to-r hover:from-sky-800 hover:to-sky-700 max-md:px-5"
+                className="hero-btn bg-gradient-to-r from-sky-700 to-sky-600 text-white px-8 py-4 max-sm:py-3 rounded-full shadow-md hover:bg-gradient-to-r hover:from-sky-800 hover:to-sky-700 active:scale-95 transition-transform duration-200 max-md:px-5"
                 onClick={() => router.push("/chat")}
               >
                 Tanya MajaGo
