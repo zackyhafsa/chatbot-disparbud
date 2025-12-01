@@ -4,7 +4,7 @@
       {
         "nama": "Terasering Panyaweuyan",
         "deskripsi": "Pemandangan sawah terasering yang sangat luas dan hijau, menjadi salah-satu destinasi wisata paling populer di Majalengka. Terasering Panyaweuyan menyajikan pemandangan hamparan sawah berundak yang sangat luas dan berwarna hijau asri. Destinasi ini telah menjadi salah satu ikon pariwisata dan daya tarik utama Kabupaten Majalengka karena keindahan panoramanya yang memukau. Banyak wisatawan datang untuk berfoto, menikmati keindahan alam, dan merasakan udara segar pegunungan.",
-        "lokasi": "Sukasari Kidul, Kecamatan Argapura, Kabupaten Majalengka",
+        "lokasi": "Desa Sukasari Kidul dan Desa Tejamulya, Kecamatan Argapura, Kabupaten Majalengka",
         "harga": "Rp. 12.000 per orang",
         "jam_operasional": "06:00 - 17:00 WIB (Waktu terbaik untuk berkunjung adalah pagi hari)"
       },
@@ -32,7 +32,7 @@
       {
         "nama": "Cikadongdong River Tubing",
         "deskripsi": "Wisata petualangan menyusuri sungai dengan menggunakan ban.",
-        "lokasi": "Desa Cikadongdong, Kecamatan Cingambul, Kabupaten Majalengka",
+        "lokasi": "Desa Payung, Kecamatan Rajagaluh, Kabupaten Majalengka",
         "harga": "Rp. 5.000 per orang. Paket River Tubing Reguler (350m) Rp30.000/orang. Paket River Tubing Extreme (1km) Rp100.000/orang",
         "jam_operasional": "08:00 - 16:00 WIB (Reservasi disarankan)"
       },
@@ -53,7 +53,7 @@
       {
         "nama": "Curug Muara Jaya",
         "deskripsi": "Curug Muara Jaya adalah salah satu air terjun yang indah di Majalengka, seringkali juga dikenal dengan nama Curug Ciputra. Air terjun ini berlokasi di daerah Argalingga, Kecamatan Argapura, Kabupaten Majalengka, tidak jauh dari kawasan Terasering Panyaweuyan.",
-        "lokasi": "Argalingga, Kecamatan Argapura, Kabupaten Majalengka",
+        "lokasi": "Desa Argamukti, Kecamatan Argapura, Kabupaten Majalengka",
         "harga": "Rp 10.000 hingga Rp 20.000 per orang.",
         "jam_operasional": "08:00 WIB - 17:00 WIB"
       }
@@ -69,7 +69,7 @@
       {
         "nama": "Paraland Majalengka",
         "deskripsi": "Menawarkan olahraga paralayang dengan pemandangan kota Majalengka dari ketinggian.",
-        "lokasi": "Gunung Panten, Munjul, Kecamatan Majalengka, Kabupaten Majalengka",
+        "lokasi": "Gunung Panten, Desa Sidamukti, Kecamatan Majalengka, Kabupaten Majalengka",
         "harga": "mulai dari sekitar Rp15.000 per orang untuk hari biasa dan Rp20.000 per orang untuk akhir pekan",
         "catatan": "Harga ini adalah untuk masuk ke area Paraland saja dan belum termasuk biaya untuk aktivitas lain.",
         "jam_operasional": "08:00 - 17:00 WIB"
@@ -120,7 +120,7 @@
     {
       "nama": "Nyiramkeun Pusaka",
       "deskripsi": "Tradisi tahunan 'memandikan' atau membersihkan benda-benda pusaka peninggalan Kerajaan Talaga Manggung. Ritual ini menjadi simbol penghormatan kepada leluhur dan pelestarian sejarah.",
-      "lokasi_pelaksanaan": "Desa Nunuk Baru, Kecamatan Maja, Kabupaten Majalengka.",
+      "lokasi_pelaksanaan": "Museum Talaga Manggung, Desa Talagawetan, Kecamatan Talaga, Kabupaten Majalengka.",
       "waktu": "Setiap bulan Mulud (Rabiul Awal) dalam kalender Hijriah."
     },
     {
@@ -206,7 +206,7 @@
       {
         "nama": "Gula Cakar",
         "deskripsi": "Gula merah yang dicetak khusus sehingga memiliki tekstur yang sangat rapuh, berongga, dan mudah larut. Unik karena bentuknya dan cara pembuatannya.",
-        "daerah": "Oleh-oleh khas dari Kecamatan Kadipaten"
+        "daerah": "Oleh-oleh khas dari Kecamatan Maja"
       },
       {
         "nama": "Kecap Majalengka",

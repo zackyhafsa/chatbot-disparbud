@@ -2,9 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion, Variants } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { slugify } from "../lib/utils";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
+
+gsap.registerPlugin(useGSAP);
 
 const kulinerData = [
   {
@@ -24,62 +28,72 @@ const kulinerData = [
   {
     id: 3,
     title: "Hampas Kecap",
-    description: "Hampas Kecap adalah hidangan unik khas Majalengka yang terbuat dari ampas (sisa) kedelai dari proses pembuatan kecap.",
+    description:
+      "Hampas Kecap adalah hidangan unik khas Majalengka yang terbuat dari ampas (sisa) kedelai dari proses pembuatan kecap.",
     imageUrl: "/kuliner/hampas-kecap.jpg",
     link: "#",
   },
 ];
 
-const fadeInUp: Variants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut",
-    },
-  },
-};
-
-const staggerContainer: Variants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
-
 export default function KulinerSection() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(
+    () => {
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      tl.fromTo(
+        ".kuliner-header",
+        {
+          y: 50,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          stagger: 0.2,
+          ease: "power3.inOut",
+        }
+      );
+
+      tl.fromTo(
+        ".kuliner-card",
+        { y: 50, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          stagger: 0.3,
+          ease: "power3.inOut",
+        }
+      );
+    },
+    { scope: containerRef }
+  );
+
   return (
-    <section id="kuliner" className="py-24 bg-gray-50">
+    <section ref={containerRef} id="kuliner" className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          className="text-center mb-12"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={fadeInUp}
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-green-400 py-1">
+        <div className=" text-center mb-12">
+          <h2 className="kuliner-header text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-green-400 py-1">
             Cita Rasa Khas Majalengka
           </h2>
-          <p className="mt-4 text-lg text-gray-600">
+          <p className="kuliner-header mt-4 text-lg text-gray-600">
             Manjakan lidah Anda dengan kuliner otentik "Kota Angin".
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {kulinerData.map((item) => (
-            <motion.div variants={fadeInUp} key={item.id}>
+            <div key={item.id} className="kuliner-card">
               <div className="relative h-96 rounded-2xl shadow-lg overflow-hidden group">
                 <Image
                   src={item.imageUrl}
@@ -111,9 +125,9 @@ export default function KulinerSection() {
                   </Link>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

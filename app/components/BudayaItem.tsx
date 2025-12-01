@@ -1,10 +1,14 @@
 "use client";
 
+import { useRef } from "react";
 import Image from "next/image";
-import { motion, Variants } from "framer-motion";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Button from "./Button";
 import { slugify } from "../lib/utils";
 
+gsap.registerPlugin(ScrollTrigger);
 
 interface BudayaItemProps {
   category: string;
@@ -23,40 +27,52 @@ export default function BudayaItem({
   linkUrl,
   isReversed = false,
 }: BudayaItemProps) {
-  const textVariants: Variants = {
-    hidden: {
-      opacity: 0,
-      y: isReversed ? 100 : -100,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.7, ease: "easeOut" },
-    },
-  };
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  const imageVariants: Variants = {
-    hidden: {
-      opacity: 0,
-      scale: 0.8,
+  useGSAP(
+    () => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 70%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse",
+        },
+      });
+
+      tl.fromTo(
+        ".budaya-image",
+        { scale: 0.8, opacity: 0 },
+        {
+          scale: 1,
+          opacity: 1,
+          duration: 1.2,
+          ease: "power3.out",
+        }
+      ).fromTo(
+        ".budaya-text",
+        { y: isReversed ? -50 : 50, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1.2,
+          ease: "power3.out",
+        },
+        "-=0.6"
+      );
     },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: { duration: 0.7, ease: "easeOut" },
-    },
-  };
+    { scope: containerRef }
+  );
 
   return (
-    <div className="relative grid grid-cols-1 md:grid-cols-10 gap-10 items-center min-h-[450px]">
-      <motion.div
-        className={`relative w-full h-[450px] rounded-2xl overflow-hidden shadow-xl 
+    <div
+      ref={containerRef}
+      className="relative grid grid-cols-1 md:grid-cols-10 gap-10 items-center min-h-[450px]"
+    >
+      <div
+        className={`budaya-image relative w-full h-[450px] rounded-2xl overflow-hidden shadow-xl 
                    md:col-span-6 ${isReversed ? "md:col-start-5" : "md:col-start-1"}
                    md:row-start-1`}
-        variants={imageVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
       >
         <Image
           src={imageUrl}
@@ -65,16 +81,12 @@ export default function BudayaItem({
           className="object-cover"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
-      </motion.div>
+      </div>
 
-      <motion.div
-        className={`relative z-10 flex flex-col justify-center h-full
+      <div
+        className={`budaya-text relative z-10 flex flex-col justify-center h-full
                    md:col-span-4 ${isReversed ? "md:col-start-1 md:text-right" : "md:col-start-7"}
                    md:row-start-1`}
-        variants={textVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
       >
         <div className={isReversed ? "md:items-end" : "md:items-start"}>
           <span className="text-sm font-semibold text-blue-600 uppercase tracking-wider">
@@ -82,9 +94,13 @@ export default function BudayaItem({
           </span>
           <h3 className="mt-2 text-4xl font-bold text-gray-900">{title}</h3>
           <p className="mt-4 text-gray-600 text-lg max-w-lg">{description}</p>
-          <Button link={`/detail/${slugify(linkUrl)}`} label="Pelajari Selengkapnya" className="mt-6" />
+          <Button
+            link={`/detail/${slugify(linkUrl)}`}
+            label="Pelajari Selengkapnya"
+            className="mt-6"
+          />
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }

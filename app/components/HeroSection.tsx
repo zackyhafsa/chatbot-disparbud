@@ -1,7 +1,9 @@
 "use client";
 
-import { motion, Variants } from "motion/react";
 import { useRouter } from "next/navigation";
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 type ImageItem = { src: string; alt: string };
 
@@ -28,60 +30,93 @@ const IMAGES: ImageItem[] = [
   },
 ];
 
-const fadeInUp: Variants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut",
-    },
-  },
-};
-
 export default function HeroTravel() {
   const router = useRouter();
+  const containerRef = useRef<HTMLElement>(null);
+
+  useGSAP(
+    () => {
+      const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+
+      tl.from(".hero-title", {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+      })
+        .from(
+          ".hero-desc",
+          {
+            y: 30,
+            opacity: 0,
+            duration: 0.8,
+          },
+          "-=0.6"
+        )
+        .from(
+          ".hero-btn",
+          {
+            y: 20,
+            opacity: 0,
+            duration: 0.6,
+            stagger: 0.2,
+          },
+          "-=0.4"
+        )
+        .from(
+          ".hero-image-item",
+          {
+            scale: 0.8,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.1,
+            ease: "back.out(1.7)",
+          },
+          "-=0.4"
+        )
+        .from(
+          ".hero-decoration",
+          {
+            opacity: 0,
+            scale: 0,
+            duration: 1,
+            stagger: 0.2,
+          },
+          "-=1"
+        );
+    },
+    { scope: containerRef }
+  );
 
   return (
-    <section className="relative overflow-hidden bg-[rgb(248,251,255)]" id="home">
+    <section
+      ref={containerRef}
+      className="relative overflow-hidden bg-[rgb(248,251,255)]"
+      id="home"
+    >
       <div aria-hidden className="pointer-events-none absolute inset-0">
         <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-sky-100/60 blur-2xl " />
         <div className="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-blue-100/60 blur-2xl " />
       </div>
 
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:py-72 lg:h-screen flex items-center max-lg:pt-32">
+      <div className="mx-[8%] px-6 py-16 lg:py-72 lg:h-screen flex items-center max-lg:pt-32">
         <div className="grid items-center gap-10 lg:grid-cols-2">
           <div className="relative">
-            <motion.h1
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              variants={fadeInUp}
-              className="text-balance text-4xl font-bold leading-tight text-gray-800 tracking-tight sm:text-5xl md:text-6xl max-lg:text-center "
-            >
+            <h1 className="hero-title text-balance text-4xl font-bold leading-tight text-gray-800 tracking-tight sm:text-5xl md:text-6xl max-lg:text-center ">
               Jelajahi{" "}
               <span className="bg-gradient-to-r from-sky-500 to-green-600 bg-clip-text text-transparent">
                 Kuliner, Budaya dan Kesenian
               </span>{" "}
               di Majalengka
-            </motion.h1>
+            </h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ delay: 0.2, ease: "easeOut", duration: 0.6 }}
-              className="mt-4 text-pretty text-neutral-600 sm:text-lg max-lg:text-center"
-            >
+            <p className="hero-desc mt-4 text-pretty text-neutral-600 sm:text-lg max-lg:text-center">
               Plan and book your perfect trip with expert advice, travel tips, destination info, and
               inspiration from us.
-            </motion.p>
+            </p>
             <svg
               aria-hidden
               viewBox="0 0 240 120"
-              className="absolute -right-12 top-24 hidden h-24 w-40 text-yellow-400 lg:block"
+              className="hero-decoration absolute -right-12 top-24 hidden h-24 w-40 text-yellow-400 lg:block"
             >
               <path
                 d="M5 5 C120 20, 120 100, 235 110"
@@ -95,24 +130,18 @@ export default function HeroTravel() {
 
             {/* CTA Button */}
             <div className=" mt-10 flex gap-4 max-lg:justify-center">
-              <motion.button
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4, ease: "easeOut", duration: 0.6 }}
-                className="bg-gradient-to-r from-green-700 to-green-600 px-8 py-4 max-sm:py-3 rounded-full shadow-md hover:bg-gradient-to-r hover:from-green-800 hover:to-green-700 text-white max-md:px-5"
+              <button
+                className="hero-btn bg-gradient-to-r from-green-700 to-green-600 px-8 py-4 max-sm:py-3 rounded-full shadow-md hover:bg-gradient-to-r hover:from-green-800 hover:to-green-700 text-white max-md:px-5"
                 onClick={() => router.push("/#destinasi")}
               >
                 Mulai Menjelajah
-              </motion.button>
-              <motion.button
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6, ease: "easeOut", duration: 0.6 }}
-                className="bg-gradient-to-r from-sky-700 to-sky-600 text-white px-8 py-4 max-sm:py-3 rounded-full shadow-md hover:bg-gradient-to-r hover:from-sky-800 hover:to-sky-700 max-md:px-5"
+              </button>
+              <button
+                className="hero-btn bg-gradient-to-r from-sky-700 to-sky-600 text-white px-8 py-4 max-sm:py-3 rounded-full shadow-md hover:bg-gradient-to-r hover:from-sky-800 hover:to-sky-700 max-md:px-5"
                 onClick={() => router.push("/chat")}
               >
                 Tanya MajaGo
-              </motion.button>
+              </button>
             </div>
           </div>
 
@@ -121,7 +150,7 @@ export default function HeroTravel() {
             <svg
               aria-hidden
               viewBox="0 0 600 600"
-              className="pointer-events-none absolute -left-6 -top-8 hidden h-[560px] w-[560px] text-blue-200 lg:block "
+              className="hero-decoration pointer-events-none absolute -left-6 -top-8 hidden h-[560px] w-[560px] text-blue-200 lg:block "
             >
               <rect
                 x="40"
@@ -136,46 +165,39 @@ export default function HeroTravel() {
               />
             </svg>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ delay: 0.8, ease: "easeOut", duration: 0.6 }}
-              className="mx-auto grid h-[520px] w-[520px] grid-cols-6 grid-rows-6 gap-4 max-lg:scale-90 max-md:h-[420px] max-lg:w-full max-md:grid-cols-4 max-md:grid-rows-6 z-[1] relative"
-            >
+            <div className="mx-auto grid h-[520px] w-[520px] grid-cols-6 grid-rows-6 gap-4 max-lg:scale-90 max-md:h-[420px] max-lg:w-full max-md:grid-cols-4 max-md:grid-rows-6 z-[1] relative">
               {/* 1 */}
               <Figure
                 img={IMAGES[0]}
-                className="col-start-1 col-span-3 row-start-1 row-span-3 rounded-l-4xl rounded-tr-4xl"
+                className="hero-image-item col-start-1 col-span-3 row-start-1 row-span-3 rounded-l-4xl rounded-tr-4xl"
               />
               {/* 2 */}
               <Figure
                 img={IMAGES[1]}
-                className="col-start-4 col-span-3 row-start-1 row-span-4 rounded-r-4xl rounded-tl-4xl"
+                className="hero-image-item col-start-4 col-span-3 row-start-1 row-span-4 rounded-r-4xl rounded-tl-4xl"
               />
               {/* 3 */}
               <Figure
                 img={IMAGES[2]}
-                className="col-start-1 col-span-3 row-start-4 row-span-3 rounded-l-4xl rounded-br-4xl"
+                className="hero-image-item col-start-1 col-span-3 row-start-4 row-span-3 rounded-l-4xl rounded-br-4xl"
               />
               {/* 4 */}
               <Figure
                 img={IMAGES[3]}
-                className="col-start-4 col-span-2 row-start-5 row-span-2 rounded-4xl max-md:hidden"
+                className="hero-image-item col-start-4 col-span-2 row-start-5 row-span-2 rounded-4xl max-md:hidden"
               />
               {/* 5 */}
               <Figure
                 img={IMAGES[4]}
-                className="col-start-6 col-span-1 row-start-5 row-span-2 rounded-r-4xl rounded-bl-4xl"
+                className="hero-image-item col-start-6 col-span-1 row-start-5 row-span-2 rounded-r-4xl rounded-bl-4xl"
               />
-            </motion.div>
+            </div>
 
             {/* small yellow "wifi" swoosh */}
             <svg
               aria-hidden
               viewBox="0 0 64 64"
-              className="absolute -right-3 top-6 hidden h-10 w-10 text-yellow-400 lg:block"
+              className="hero-decoration absolute -right-3 top-6 hidden h-10 w-10 text-yellow-400 lg:block"
             >
               <path
                 d="M12 44c16-16 24-16 40 0"
