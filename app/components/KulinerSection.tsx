@@ -2,36 +2,33 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { slugify } from "../lib/utils";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
 
-gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 const kulinerData = [
   {
     id: 1,
     title: "Jalakotek",
-    description: "Kue sejenis pastel dengan isi tahu dan sayuran, digoreng renyah.",
+    description: "Kue sejenis pastel dengan isi tahu dan sayuran, digoreng renyah hingga keemasan.",
     imageUrl: "/kuliner/jalakotek.jpg",
-    link: "#",
   },
   {
     id: 2,
     title: "Pencok Katel",
-    description: "Makanan dari kacang kedelai yang baru tumbuh, disantap mentah dengan sambal.",
+    description: "Makanan dari kacang kedelai yang baru tumbuh, disantap segar dengan sambal khas.",
     imageUrl: "/kuliner/pencok-katel.jpg",
-    link: "#",
   },
   {
     id: 3,
     title: "Hampas Kecap",
-    description:
-      "Hampas Kecap adalah hidangan unik khas Majalengka yang terbuat dari ampas (sisa) kedelai dari proses pembuatan kecap.",
+    description: "Hidangan unik dari ampas kedelai sisa pembuatan kecap dengan cita rasa gurih.",
     imageUrl: "/kuliner/hampas-kecap.jpg",
-    link: "#",
   },
 ];
 
@@ -40,39 +37,38 @@ export default function KulinerSection() {
 
   useGSAP(
     () => {
-      let tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play none none reverse",
-        },
-      });
-
-      tl.fromTo(
-        ".kuliner-header",
-        {
-          y: 50,
-          opacity: 0,
-        },
+      // Header animation
+      gsap.fromTo(
+        ".kuliner-header-content",
+        { y: 40, opacity: 0 },
         {
           y: 0,
           opacity: 1,
           duration: 0.8,
-          stagger: 0.2,
-          ease: "power3.inOut",
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ".kuliner-header",
+            start: "top 85%",
+            toggleActions: "play none none reverse",
+          },
         }
       );
 
-      tl.fromTo(
+      // Cards animation
+      gsap.fromTo(
         ".kuliner-card",
-        { y: 50, opacity: 0 },
+        { y: 60, opacity: 0 },
         {
           y: 0,
           opacity: 1,
-          duration: 1,
-          stagger: 0.3,
-          ease: "power3.inOut",
+          duration: 0.8,
+          ease: "power3.out",
+          stagger: 0.12,
+          scrollTrigger: {
+            trigger: ".kuliner-cards",
+            start: "top 80%",
+            toggleActions: "play none none reverse",
+          },
         }
       );
     },
@@ -80,54 +76,81 @@ export default function KulinerSection() {
   );
 
   return (
-    <section ref={containerRef} id="kuliner" className="py-24 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className=" text-center mb-12">
-          <h2 className="kuliner-header text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-green-400 py-1">
-            Cita Rasa Khas Majalengka
-          </h2>
-          <p className="kuliner-header mt-4 text-lg text-gray-600">
-            Manjakan lidah Anda dengan kuliner otentik "Kota Angin".
-          </p>
+    <section ref={containerRef} id="kuliner" className="py-20 md:py-28 bg-white">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="kuliner-header mb-12 md:mb-16">
+          <div className="kuliner-header-content flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+            <div>
+              <p className="text-sm font-medium text-green-600 uppercase tracking-widest mb-3">
+                Kuliner Khas
+              </p>
+              <h2 className="text-3xl md:text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-green-400 leading-tight">
+                Cita Rasa Majalengka
+              </h2>
+            </div>
+            <p className="text-gray-600 max-w-md text-base leading-relaxed">
+              Manjakan lidah dengan kelezatan kuliner otentik dari "Kota Angin".
+            </p>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {kulinerData.map((item) => (
-            <div key={item.id} className="kuliner-card">
-              <div className="relative h-96 rounded-2xl shadow-lg overflow-hidden group">
-                <Image
-                  src={item.imageUrl}
-                  alt={item.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="absolute inset-0 transition-transform duration-500 ease-in-out 
-                             group-hover:scale-110 group-active:scale-110 object-cover"
-                />
-
-                <div
-                  className="absolute bottom-0 left-0 w-full p-6 
-                             bg-gradient-to-t from-black/90 to-transparent
-                             transition-all duration-500 ease-in-out
-                             group-hover:translate-y-16 group-hover:opacity-0
-                             group-active:translate-y-16 group-active:opacity-0"
-                >
-                  <h3 className="text-2xl font-bold text-white">{item.title}</h3>
+        {/* Cards Grid */}
+        <div className="kuliner-cards grid grid-cols-1 md:grid-cols-3 gap-6">
+          {kulinerData.map((item, index) => (
+            <Link
+              key={item.id}
+              href={`/detail/${slugify(item.title)}`}
+              className="kuliner-card group block"
+            >
+              <div className="relative bg-gray-50 rounded-2xl overflow-hidden border border-gray-100 hover:border-green-200 transition-colors duration-300">
+                {/* Image */}
+                <div className="relative h-64 overflow-hidden">
+                  <Image
+                    src={item.imageUrl}
+                    alt={item.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 group-active:scale-105"
+                  />
+                  {/* Number Badge */}
+                  <div className="absolute top-4 left-4">
+                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white/90 backdrop-blur-sm text-xs font-medium text-gray-700">
+                      0{index + 1}
+                    </span>
+                  </div>
                 </div>
-                {/* hidden element */}
-                <div className="absolute bottom-0 left-0 w-full p-6 bg-white flex flex-col justify-end transform translate-y-full transition-transform duration-500 ease-in-out group-hover:translate-y-0 rounded-t-3xl group-active:translate-y-0">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
-                  <p className="text-sm text-gray-600 mb-4">{item.description}</p>
-                  <Link
-                    href={`/detail/${slugify(item.title)}`}
-                    className="inline-flex items-center font-medium bg-gradient-to-r from-green-800 to-green-600 px-7 py-1 rounded-full text-white hover:bg-gradient-to-l hover:from-green-900 hover:to-green-700 active:scale-95 ease-in-out duration-300 shadow-md self-start"
-                  >
-                    Lihat Detail
-                    <ArrowRight className="ml-1.5 h-4 w-4" />
-                  </Link>
+
+                {/* Content */}
+                <div className="p-5">
+                  <div className="flex items-start justify-between gap-3 mb-3">
+                    <h3 className="text-xl font-semibold text-gray-900 group-hover:text-green-700 transition-colors duration-300">
+                      {item.title}
+                    </h3>
+                    <ArrowUpRight
+                      size={18}
+                      className="flex-shrink-0 text-gray-400 group-hover:text-green-600 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 mt-1"
+                    />
+                  </div>
+                  <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
+        </div>
+
+        {/* View All Link */}
+        <div className="flex justify-center mt-12">
+          <Link
+            href="/chat"
+            className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-green-700 hover:text-green-800 transition-colors duration-300 group"
+          >
+            <span>Tanyakan kuliner lainnya ke AI</span>
+            <ArrowUpRight
+              size={16}
+              className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+            />
+          </Link>
         </div>
       </div>
     </section>
