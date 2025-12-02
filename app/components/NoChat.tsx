@@ -1,9 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { Globe } from "lucide-react";
+import { ArrowUpRight, Compass, MapPin, Utensils, Music } from "lucide-react";
 import React, { useRef } from "react";
-
-gsap.registerPlugin(useGSAP);
 
 interface NoChatProps {
   onExampleClick: (prompt: string) => void;
@@ -12,55 +10,88 @@ interface NoChatProps {
 const NoChat: React.FC<NoChatProps> = ({ onExampleClick }) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  useGSAP(() => {
-    let tl = gsap.timeline();
+  useGSAP(
+    () => {
+      const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
-    tl.fromTo(
-      ".no-chat-header",
-      { y: 20, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        ease: "power3.inOut",
-        duration: 0.8,
-        stagger: 0.1,
-      }
-    );
-  });
+      tl.fromTo(
+        ".no-chat-icon",
+        { scale: 0.8, opacity: 0 },
+        { scale: 1, opacity: 1, duration: 0.5 }
+      )
+        .fromTo(
+          ".no-chat-title",
+          { y: 20, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.5 },
+          "-=0.2"
+        )
+        .fromTo(
+          ".no-chat-subtitle",
+          { y: 15, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.4 },
+          "-=0.2"
+        )
+        .fromTo(
+          ".no-chat-card",
+          { y: 20, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.4, stagger: 0.08 },
+          "-=0.2"
+        );
+    },
+    { scope: containerRef }
+  );
 
   const examplePrompts = [
-    "Apa saja makanan yang sering dijumpai di Majalengka?",
-    "Ada Wisata apa saja yang ada di Majalengka?",
-    "Kebudayaan yang masih Lestari di Majalengka",
-    "Apa saja kesenian yang ada di Majalengka?",
+    {
+      icon: Utensils,
+      text: "Kuliner khas apa yang wajib dicoba di Majalengka?",
+    },
+    {
+      icon: MapPin,
+      text: "Rekomendasi wisata alam di Majalengka",
+    },
+    {
+      icon: Music,
+      text: "Kesenian tradisional yang ada di Majalengka",
+    },
+    {
+      icon: Compass,
+      text: "Itinerary 2 hari di Majalengka",
+    },
   ];
 
   return (
-    <div
-      ref={containerRef}
-      className="flex flex-col items-center justify-center h-full text-center text-gray-800 px-4"
-    >
-      <div className="no-chat-header mb-4">
-        <Globe className="size-25 text-green-700" />
+    <div ref={containerRef} className="flex flex-col items-center justify-center h-full px-4 py-12">
+      {/* Icon */}
+      <div className="no-chat-icon w-14 h-14 rounded-2xl bg-green-100 flex items-center justify-center mb-6">
+        <Compass className="w-7 h-7 text-gray-700" />
       </div>
-      <h1 className="no-chat-header text-2xl md:text-4xl pb-1 font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-700 to-green-800">
-        MajaGo
+
+      {/* Title */}
+      <h1 className="no-chat-title text-2xl md:text-3xl font-semibold text-gray-900 mb-2">
+        Asisten Wisata Majalengka
       </h1>
-      <p className=" no-chat-header mt-2 mb-8 text-sm md:text-base text-gray-800 font-semibold">
-        Siap membantu Anda menjelajahi{" "}
-        <span className="underline decoration-2 font-bold decoration-green-700">
-          Keindahan Majalengka!
-        </span>
+
+      {/* Subtitle */}
+      <p className="no-chat-subtitle text-gray-500 text-center max-w-md mb-10">
+        Tanyakan apapun tentang destinasi, kuliner, dan budaya Majalengka
       </p>
 
-      <div className="w-full max-w-lg mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm">
+      {/* Prompt Cards */}
+      <div className="w-full max-w-xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {examplePrompts.map((prompt, index) => (
-            <div key={index} onClick={() => onExampleClick(prompt)} className="no-chat-header">
-              <div className="bg-white/30 font-semibold backdrop-blur-sm p-4 rounded-xl border-2 hover:scale-105 border-green-700/80 hover:border-green-700 hover:border-2 hover:bg-white/80 transition-all ease-in-out duration-300 cursor-pointer text-left shadow-lg">
-                {prompt}
-              </div>
-            </div>
+            <button
+              key={index}
+              onClick={() => onExampleClick(prompt.text)}
+              className="no-chat-card group flex items-start gap-3 p-4 bg-green-50 hover:bg-green-100 rounded-xl border border-green-200 hover:border-green-300 transition-all duration-300 text-left active:scale-[0.98]"
+            >
+              <prompt.icon className="w-5 h-5 text-gray-400 group-hover:text-gray-600 flex-shrink-0 mt-0.5 transition-colors" />
+              <span className="text-sm text-gray-700 group-hover:text-gray-900 flex-1 transition-colors">
+                {prompt.text}
+              </span>
+              <ArrowUpRight className="w-4 h-4 text-gray-300 group-hover:text-gray-500 flex-shrink-0 mt-0.5 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </button>
           ))}
         </div>
       </div>

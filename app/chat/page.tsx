@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { MessageCard } from "../components/MessageCard";
 import NoChat from "../components/NoChat";
 import ThinkingIndicator from "../components/ThinkingIndicator";
-import { Trash } from "lucide-react";
+import { Trash2 } from "lucide-react";
 import ChatInput from "../components/ChatInput";
 
 export default function Chat() {
@@ -49,27 +49,31 @@ export default function Chat() {
   const handleDeleteChat = () => {
     setMessages([]);
     localStorage.removeItem("chat-bot-kp");
+    stop();
   };
 
   return (
-    <div
-      className="flex justify-center w-full h-screen bg-[rgb(248,251,255)]"
-    >
-      <div className="flex flex-col w-full mt-25 mb-28 overflow-y-auto items-center  gap-3">
-        <div className="flex justify-end w-[45%] max-lg:w-[70%] max-md:w-[90%]">
-          {messages.length > 0 && (
+    <div className="flex justify-center w-full min-h-screen bg-white">
+      <div className="flex flex-col w-full max-w-3xl mx-auto pt-24 pb-32 px-4">
+        {/* Header with delete button */}
+        {messages.length > 0 && (
+          <div className="flex justify-end mb-4">
             <button
-              className="bg-red-500 text-white p-3 rounded-full cursor-pointer hover:bg-red-600 flex items-center gap-2"
               onClick={handleDeleteChat}
+              className="inline-flex items-center gap-2 px-3 py-2 text-sm text-gray-500 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors duration-200"
             >
-              <Trash />
+              <Trash2 size={16} />
+              <span>Hapus Chat</span>
             </button>
-          )}
-        </div>
-        <div className="flex-1 space-y-3 w-[45%] max-lg:w-[70%] max-md:w-[90%]">
+          </div>
+        )}
+
+        {/* Messages Container */}
+        <div className="flex-1 space-y-6">
           {messages.length === 0 && (
             <NoChat onExampleClick={(prompt) => sendMessage({ text: prompt })} />
           )}
+
           {messages.map((message, index) => {
             const messageText = message.parts
               .filter((part) => part.type === "text")
@@ -95,9 +99,14 @@ export default function Chat() {
             return thinking && !isAssistantStreaming && <ThinkingIndicator />;
           })()}
 
-          {error && <MessageCard role="assistant" message="Terjadi kesalahan, coba ulangi lagi." />}
+          {error && (
+            <MessageCard role="assistant" message="Terjadi kesalahan, silakan coba lagi." />
+          )}
         </div>
+
         <div ref={bottomRef} />
+
+        {/* Chat Input */}
         <ChatInput
           input={input}
           setInput={setInput}
