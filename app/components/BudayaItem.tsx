@@ -149,7 +149,7 @@ export default function BudayaItem({
         <div className="relative group" ref={imageRef}>
           {/* Decorative frame */}
           <div
-            className={`budaya-decoration absolute -inset-4 bg-gradient-to-br from-amber-400/20 via-orange-300/20 to-red-400/20 rounded-3xl blur-xl transition-all duration-500 group-hover:scale-105 group-hover:opacity-80`}
+            className={`budaya-decoration absolute -inset-4 bg-linear-to-br from-amber-400/20 via-orange-300/20 to-red-400/20 rounded-3xl blur-xl transition-all duration-500 group-hover:scale-105 group-hover:opacity-80`}
           />
 
           {/* Corner decorations */}
@@ -177,7 +177,7 @@ export default function BudayaItem({
             </div>
 
             {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-60" />
 
             {/* Floating badge on image */}
             <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between">
@@ -203,7 +203,7 @@ export default function BudayaItem({
         >
           {/* Category Tag */}
           <div
-            className={`budaya-category inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r ${
+            className={`budaya-category inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-linear-to-r ${
               isReversed
                 ? "from-orange-100 to-amber-100 border-orange-200"
                 : "from-amber-100 to-orange-100 border-amber-200"
@@ -233,7 +233,7 @@ export default function BudayaItem({
           <Link
             href={`/detail/${slugify(linkUrl)}`}
             className={`budaya-button group/btn inline-flex items-center gap-3 px-8 py-4 
-                       bg-gradient-to-r from-amber-500 to-orange-500 
+                       bg-linear-to-r from-amber-500 to-orange-500 
                        hover:from-amber-600 hover:to-orange-600
                        text-white font-semibold rounded-full 
                        shadow-lg shadow-amber-500/25 

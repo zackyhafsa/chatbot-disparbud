@@ -83,7 +83,7 @@ export default function BudayaSection() {
               <p className="text-sm font-medium text-stone-500 uppercase tracking-widest mb-3">
                 Warisan Leluhur
               </p>
-              <h2 className="text-3xl md:text-4xl  font-semibold text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-green-400 leading-tight">
+              <h2 className="text-3xl md:text-4xl  font-semibold text-transparent bg-clip-text bg-linear-to-r from-sky-600 to-green-400 leading-tight">
                 Budaya & Kesenian
               </h2>
             </div>
@@ -128,7 +128,7 @@ export default function BudayaSection() {
                       <span className="text-xs text-stone-400">0{index + 1}</span>
                     </div>
 
-                    <h3 className="text-2xl md:text-3xl font-semibold text-stone-900 mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-sky-600 group-hover:to-green-400 transition-colors duration-300">
+                    <h3 className="text-2xl md:text-3xl font-semibold text-stone-900 mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-sky-600 group-hover:to-green-400 transition-colors duration-300">
                       {item.title}
                     </h3>
 

@@ -85,7 +85,7 @@ export default function KulinerSection() {
               <p className="text-sm font-medium text-green-600 uppercase tracking-widest mb-3">
                 Kuliner Khas
               </p>
-              <h2 className="text-3xl md:text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-green-400 leading-tight">
+              <h2 className="text-3xl md:text-4xl font-semibold text-transparent bg-clip-text bg-linear-to-r from-sky-600 to-green-400 leading-tight">
                 Cita Rasa Majalengka
               </h2>
             </div>
@@ -129,7 +129,7 @@ export default function KulinerSection() {
                     </h3>
                     <ArrowUpRight
                       size={18}
-                      className="flex-shrink-0 text-gray-400 group-hover:text-green-600 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 mt-1"
+                      className="shrink-0 text-gray-400 group-hover:text-green-600 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 mt-1"
                     />
                   </div>
                   <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>

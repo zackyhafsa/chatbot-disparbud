@@ -107,14 +107,14 @@ export default function CtaSection() {
           </div>
 
           <div className="cta-testimonials-container md:col-span-3 h-96 relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-16 h-full bg-gradient-to-r from-gray-900 to-transparent z-10" />
-            <div className="absolute top-0 right-0 w-16 h-full bg-gradient-to-l from-gray-900 to-transparent z-10" />
+            <div className="absolute top-0 left-0 w-16 h-full bg-linear-to-r from-gray-900 to-transparent z-10" />
+            <div className="absolute top-0 right-0 w-16 h-full bg-linear-to-l from-gray-900 to-transparent z-10" />
 
             <div ref={marqueeRef} className="absolute top-0 left-0 flex space-x-6 w-max">
               {duplicatedTestimonials.map((item, index) => (
                 <div
                   key={index}
-                  className="w-80 h-auto flex-shrink-0 bg-white/5 
+                  className="w-80 h-auto shrink-0 bg-white/5 
                              backdrop-blur-sm border border-white/10 
                              rounded-xl p-6 shadow-lg"
                 >

@@ -99,7 +99,7 @@ export default function Navbar() {
         }`}
       >
         <div className="flex justify-between items-center h-20 max-md:h-16">
-          <div className="flex-shrink-0">
+          <div className="shrink-0">
             <Link
               href="/"
               className="text-3xl font-bold text-green-800 hover:text-green-400 transition-colors max-md:text-2xl flex items-center active:scale-95"

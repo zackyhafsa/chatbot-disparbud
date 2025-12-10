@@ -109,7 +109,7 @@ export default function DestinasiSection() {
               <p className="text-sm font-medium text-green-600 uppercase tracking-widest mb-3">
                 Destinasi Wisata
               </p>
-              <h2 className="text-3xl md:text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-green-400 leading-tight">
+              <h2 className="text-3xl md:text-4xl font-semibold text-transparent bg-clip-text bg-linear-to-r from-sky-600 to-green-400 leading-tight">
                 Jelajahi Majalengka
               </h2>
             </div>
@@ -136,7 +136,7 @@ export default function DestinasiSection() {
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 group-active:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
               </div>
 
               {/* Content */}
@@ -208,7 +208,7 @@ export default function DestinasiSection() {
                         </h3>
                         <ArrowUpRight
                           size={16}
-                          className="flex-shrink-0 text-gray-400 group-hover:text-green-600 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 mt-1"
+                          className="shrink-0 text-gray-400 group-hover:text-green-600 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 mt-1"
                         />
                       </div>
                       <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>

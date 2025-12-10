@@ -86,11 +86,11 @@ const NoChat: React.FC<NoChatProps> = ({ onExampleClick }) => {
               onClick={() => onExampleClick(prompt.text)}
               className="no-chat-card group flex items-start gap-3 p-4 bg-green-50 hover:bg-green-100 rounded-xl border border-green-200 hover:border-green-300 transition-all duration-300 text-left active:scale-[0.98]"
             >
-              <prompt.icon className="w-5 h-5 text-gray-400 group-hover:text-gray-600 flex-shrink-0 mt-0.5 transition-colors" />
+              <prompt.icon className="w-5 h-5 text-gray-400 group-hover:text-gray-600 shrink-0 mt-0.5 transition-colors" />
               <span className="text-sm text-gray-700 group-hover:text-gray-900 flex-1 transition-colors">
                 {prompt.text}
               </span>
-              <ArrowUpRight className="w-4 h-4 text-gray-300 group-hover:text-gray-500 flex-shrink-0 mt-0.5 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              <ArrowUpRight className="w-4 h-4 text-gray-300 group-hover:text-gray-500 shrink-0 mt-0.5 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </button>
           ))}
         </div>

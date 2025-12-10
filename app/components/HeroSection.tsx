@@ -103,7 +103,7 @@ export default function HeroTravel() {
           <div className="relative">
             <h1 className="hero-title text-balance text-4xl font-bold leading-tight text-gray-800 tracking-tight sm:text-5xl md:text-6xl max-lg:text-center ">
               Jelajahi{" "}
-              <span className="bg-gradient-to-r from-sky-500 to-green-600 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-sky-500 to-green-600 bg-clip-text text-transparent">
                 Kuliner, Budaya dan Kesenian
               </span>{" "}
               di Majalengka
@@ -131,13 +131,13 @@ export default function HeroTravel() {
             {/* CTA Button */}
             <div className=" mt-10 flex gap-4 max-lg:justify-center">
               <button
-                className="hero-btn bg-gradient-to-r from-green-700 to-green-600 px-8 py-4 max-sm:py-3 rounded-full shadow-md hover:bg-gradient-to-r hover:from-green-800 hover:to-green-700 active:scale-95 transition-transform duration-200 text-white max-md:px-5"
+                className="hero-btn bg-linear-to-r from-green-700 to-green-600 px-8 py-4 max-sm:py-3 rounded-full shadow-md hover:bg-linear-to-r hover:from-green-800 hover:to-green-700 active:scale-95 transition-transform duration-200 text-white max-md:px-5"
                 onClick={() => router.push("/#destinasi")}
               >
                 Mulai Menjelajah
               </button>
               <button
-                className="hero-btn bg-gradient-to-r from-sky-700 to-sky-600 text-white px-8 py-4 max-sm:py-3 rounded-full shadow-md hover:bg-gradient-to-r hover:from-sky-800 hover:to-sky-700 active:scale-95 transition-transform duration-200 max-md:px-5"
+                className="hero-btn bg-linear-to-r from-sky-700 to-sky-600 text-white px-8 py-4 max-sm:py-3 rounded-full shadow-md hover:bg-linear-to-r hover:from-sky-800 hover:to-sky-700 active:scale-95 transition-transform duration-200 max-md:px-5"
                 onClick={() => router.push("/chat")}
               >
                 Tanya MajaGo
@@ -165,7 +165,7 @@ export default function HeroTravel() {
               />
             </svg>
 
-            <div className="mx-auto grid h-[520px] w-[520px] grid-cols-6 grid-rows-6 gap-4 max-lg:scale-90 max-md:h-[420px] max-lg:w-full max-md:grid-cols-4 max-md:grid-rows-6 z-[1] relative">
+            <div className="mx-auto grid h-[520px] w-[520px] grid-cols-6 grid-rows-6 gap-4 max-lg:scale-90 max-md:h-[420px] max-lg:w-full max-md:grid-cols-4 max-md:grid-rows-6 z-1 relative">
               {/* 1 */}
               <Figure
                 img={IMAGES[0]}

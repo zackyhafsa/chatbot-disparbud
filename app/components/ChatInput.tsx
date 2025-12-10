@@ -86,7 +86,7 @@ export default function ChatInput({
           onKeyDown={handleKeyDown}
         />
 
-        <div className="relative w-12 h-12 flex-shrink-0 flex items-center justify-center">
+        <div className="relative w-12 h-12 shrink-0 flex items-center justify-center">
           {thinking ? (
             <button
               ref={buttonRef}
