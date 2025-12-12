@@ -110,8 +110,8 @@ export default function HeroTravel() {
             </h1>
 
             <p className="hero-desc mt-4 text-pretty text-neutral-600 sm:text-lg max-lg:text-center">
-              Plan and book your perfect trip with expert advice, travel tips, destination info, and
-              inspiration from us.
+              Jelajahi destinasi wisata, cicipi kuliner autentik, dan pelajari warisan budaya
+              Majalengka dengan bantuan asisten virtual kami.
             </p>
             <svg
               aria-hidden
@@ -129,7 +129,7 @@ export default function HeroTravel() {
             </svg>
 
             {/* CTA Button */}
-            <div className=" mt-10 flex gap-4 max-lg:justify-center">
+            <div className=" mt-3 flex gap-4 max-lg:justify-center">
               <button
                 className="hero-btn bg-linear-to-r from-green-700 to-green-600 px-8 py-4 max-sm:py-3 rounded-full shadow-md hover:bg-linear-to-r hover:from-green-800 hover:to-green-700 active:scale-95 transition-transform duration-200 text-white max-md:px-5"
                 onClick={() => router.push("/#destinasi")}

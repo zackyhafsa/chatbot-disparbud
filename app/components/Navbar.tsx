@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import Image from "next/image";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -104,7 +105,7 @@ export default function Navbar() {
               href="/"
               className="text-3xl font-bold text-green-800 hover:text-green-400 transition-colors max-md:text-2xl flex items-center active:scale-95"
             >
-              <img src="logo/majago-solid.png" alt="" width="50" />
+              <Image src="/logo/majago-solid.png" alt="" width={50} height={50} />
               <h1>MajaGo</h1>
             </Link>
           </div>

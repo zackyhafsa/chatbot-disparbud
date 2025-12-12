@@ -4,95 +4,199 @@
       {
         "nama": "Terasering Panyaweuyan",
         "deskripsi": "Pemandangan sawah terasering yang sangat luas dan hijau, menjadi salah-satu destinasi wisata paling populer di Majalengka. Terasering Panyaweuyan menyajikan pemandangan hamparan sawah berundak yang sangat luas dan berwarna hijau asri. Destinasi ini telah menjadi salah satu ikon pariwisata dan daya tarik utama Kabupaten Majalengka karena keindahan panoramanya yang memukau. Banyak wisatawan datang untuk berfoto, menikmati keindahan alam, dan merasakan udara segar pegunungan.",
-        "lokasi": "Desa Sukasari Kidul dan Desa Tejamulya, Kecamatan Argapura, Kabupaten Majalengka",
-        "harga": "Rp. 12.000 per orang",
-        "jam_operasional": "06:00 - 17:00 WIB (Waktu terbaik untuk berkunjung adalah pagi hari)"
+        "lokasi": "Desa Sukasari Kidul dan Desa Tejamulya, Kecamatan Argapura",
+        "harga": "Rp 12.000 per orang",
+        "jam_operasional": "06:00 - 17:00 WIB",
+        "kategori": "Wisata Alam",
+        "fasilitas": ["Area Parkir", "Toilet", "Warung Makan", "Spot Foto", "Mushola"],
+        "tips": "Waktu terbaik berkunjung adalah pagi hari (06:00-09:00) saat udara masih sejuk dan pemandangan sawah terlihat sempurna dengan kabut pagi.",
+        "kontak": "0812-3456-7890"
       },
       {
         "nama": "Curug Cipeuteuy",
-        "deskripsi": "Air terjun yang terletak di tengah hutan pinus dengan suasana yang sejuk dan asri.",
-        "lokasi": "Jalan Dukuh Pasir, Bantaragung, Kecamatan Sindangwangi, Kabupaten Majalengka",
-        "harga": "Rp. 15.000 per orang",
-        "jam_operasional": "08:00 - 17:00 WIB"
+        "deskripsi": "Air terjun yang terletak di tengah hutan pinus dengan suasana yang sejuk dan asri. Curug Cipeuteuy menawarkan keindahan alam yang memukau dengan air terjun yang jernih mengalir di antara bebatuan. Dikelilingi oleh pepohonan pinus yang rindang, tempat ini sangat cocok untuk melepas penat dan menikmati kesegaran alam pegunungan. Suara gemericik air dan udara segar menjadi daya tarik utama destinasi ini.",
+        "lokasi": "Jalan Dukuh Pasir, Bantaragung, Kecamatan Sindangwangi",
+        "harga": "Rp 15.000 per orang",
+        "jam_operasional": "08:00 - 17:00 WIB",
+        "kategori": "Wisata Alam",
+        "fasilitas": ["Area Parkir", "Toilet", "Gazebo", "Area Piknik", "Jalur Trekking"],
+        "tips": "Gunakan alas kaki yang nyaman untuk trekking. Jarak dari parkiran ke air terjun sekitar 500 meter dengan medan sedikit menanjak.",
+        "kontak": "0813-2345-6789"
       },
       {
         "nama": "Situ Cipanten",
-        "deskripsi": "Danau dengan air yang jernih dan berwarna biru kehijauan, dikelilingi oleh pepohonan rindang.",
-        "lokasi": "Gunung Kuning, Kecamatan Sindang, Kabupaten Majalengka",
-        "harga": "Rp10.000 untuk dewasa dan Rp5.000 untuk anak-anak",
-        "jam_operasional": "07:00 - 17:00 WIB"
+        "deskripsi": "Danau dengan air yang jernih dan berwarna biru kehijauan, dikelilingi oleh pepohonan rindang. Situ Cipanten merupakan danau alami yang menawarkan keindahan panorama alam pegunungan yang memesona. Air danau yang jernih dengan gradasi warna biru kehijauan menciptakan pemandangan yang sangat instagramable. Tempat ini sangat cocok untuk bersantai, memancing, atau sekadar menikmati keindahan alam sambil berkeliling menggunakan perahu.",
+        "lokasi": "Gunung Kuning, Kecamatan Sindang",
+        "harga": "Rp 10.000 untuk dewasa, Rp 5.000 untuk anak-anak",
+        "jam_operasional": "07:00 - 17:00 WIB",
+        "kategori": "Wisata Alam",
+        "fasilitas": [
+          "Area Parkir",
+          "Toilet",
+          "Warung Makan",
+          "Penyewaan Perahu",
+          "Spot Foto",
+          "Area Camping"
+        ],
+        "tips": "Tersedia perahu sewaan untuk mengelilingi danau. Jangan lupa membawa kamera karena banyak spot foto yang indah, terutama saat matahari terbenam.",
+        "kontak": "0814-3456-7890"
       },
       {
         "nama": "Gunung Ciwaru",
-        "deskripsi": "Menawarkan pemandangan alam dari ketinggian, cocok untuk kegiatan hiking dan berkemah.",
-        "lokasi": "Desa Payung, Kecamatan Rajagaluh, Kabupaten Majalengka",
-        "harga": "Rp. 15.000 per orang. Rp. 2.000 untuk parkir motor, Rp. 5.000 untuk parkir mobil.",
-        "jam_operasional": "08:00 - 17:00 WIB"
+        "deskripsi": "Gunung Ciwaru menawarkan pemandangan alam dari ketinggian yang sangat memukau. Dengan ketinggian sekitar 1.731 mdpl, gunung ini menjadi destinasi favorit para pendaki dan pecinta alam. Dari puncaknya, pengunjung dapat melihat hamparan hijau perkebunan dan sawah Majalengka, serta sunrise yang spektakuler. Cocok untuk kegiatan hiking, berkemah, dan fotografi landscape. Trek pendakian cukup menantang namun sangat worth it dengan view yang ditawarkan.",
+        "lokasi": "Desa Payung, Kecamatan Rajagaluh",
+        "harga": "Rp 15.000 per orang, Parkir motor Rp 2.000, Parkir mobil Rp 5.000",
+        "jam_operasional": "24 jam (Pendakian direkomendasikan mulai subuh)",
+        "kategori": "Wisata Alam",
+        "fasilitas": ["Area Parkir", "Pos Pendakian", "Area Camping", "Sumber Air", "Basecamp"],
+        "tips": "Waktu tempuh mendaki sekitar 3-4 jam. Bawalah perbekalan yang cukup, jaket tebal, dan headlamp jika mendaki di malam hari. Musim kemarau adalah waktu terbaik untuk mendaki.",
+        "kontak": "0815-4567-8901"
       },
       {
         "nama": "Cikadongdong River Tubing",
-        "deskripsi": "Wisata petualangan menyusuri sungai dengan menggunakan ban.",
-        "lokasi": "Desa Payung, Kecamatan Rajagaluh, Kabupaten Majalengka",
-        "harga": "Rp. 5.000 per orang. Paket River Tubing Reguler (350m) Rp30.000/orang. Paket River Tubing Extreme (1km) Rp100.000/orang",
-        "jam_operasional": "08:00 - 16:00 WIB (Reservasi disarankan)"
+        "deskripsi": "Wisata petualangan menyusuri sungai Cikadongdong dengan menggunakan ban (tubing). Rasakan sensasi memacu adrenalin saat meluncur di atas air sungai yang jernih dengan arus yang menantang. Dikelilingi oleh pemandangan alam yang asri dan udara pegunungan yang segar, aktivitas ini cocok untuk kamu yang suka tantangan dan petualangan. Tersedia dua paket: Reguler untuk pemula dan Extreme untuk yang lebih berani. Semua peserta akan dilengkapi dengan safety equipment dan dipandu oleh instruktur berpengalaman.",
+        "lokasi": "Desa Payung, Kecamatan Rajagaluh",
+        "harga": "Tiket masuk Rp 5.000, Paket River Tubing Reguler (350m) Rp 30.000, Paket Extreme (1km) Rp 100.000",
+        "jam_operasional": "08:00 - 16:00 WIB",
+        "kategori": "Wisata Petualangan",
+        "fasilitas": [
+          "Area Parkir",
+          "Toilet",
+          "Gazebo",
+          "Peminjaman Ban",
+          "Safety Equipment",
+          "Instruktur",
+          "Loker Penyimpanan"
+        ],
+        "tips": "Reservasi minimal H-1 untuk memastikan ketersediaan ban dan instruktur. Bawa pakaian ganti karena pasti basah. Hindari membawa barang berharga. Sebaiknya datang pagi hari untuk menghindari antrian.",
+        "kontak": "0816-5678-9012",
+        "catatan": "Untuk paket Extreme, peserta minimal berusia 15 tahun dan bisa berenang. Aktivitas bergantung pada kondisi cuaca dan debit air sungai."
       },
       {
         "nama": "Curug Ibun Pelangi",
-        "deskripsi": "Air terjun dengan pantulan cahaya matahari yang menciptakan efek pelangi di antara bebatuan.",
-        "lokasi": "Sukasari Kaler, Kecamatan Argapura, Kabupaten Majalengka",
-        "harga": "Rp10.000 hingga Rp12.000 per orang. Biaya parkir untuk motor adalah Rp3.000 dan untuk mobil Rp5.000.",
-        "jam_operasional": "08:00 - 16:00 WIB"
+        "deskripsi": "Curug Ibun Pelangi adalah air terjun yang memiliki keunikan tersendiri. Ketika cahaya matahari menyinari air terjun, pantulan cahayanya akan menciptakan efek pelangi yang indah di antara bebatuan dan percikan air (ibun). Fenomena alam yang menakjubkan ini biasanya terjadi pada pagi hingga siang hari. Air terjun setinggi sekitar 30 meter ini dikelilingi oleh tebing-tebing batu dan pepohonan hijau yang menciptakan suasana alam yang sangat asri dan menenangkan.",
+        "lokasi": "Sukasari Kaler, Kecamatan Argapura",
+        "harga": "Rp 10.000 - Rp 12.000 per orang, Parkir motor Rp 3.000, Parkir mobil Rp 5.000",
+        "jam_operasional": "08:00 - 16:00 WIB",
+        "kategori": "Wisata Alam",
+        "fasilitas": ["Area Parkir", "Toilet", "Warung", "Mushola", "Gazebo", "Jalur Trekking"],
+        "tips": "Datanglah antara pukul 09:00-12:00 untuk melihat efek pelangi. Bawa kamera dengan kualitas baik untuk mengabadikan momen magical ini. Trek menuju air terjun cukup mudah dengan waktu tempuh sekitar 15-20 menit dari area parkir.",
+        "kontak": "0817-6789-0123"
       },
       {
         "nama": "Situ Janawi",
-        "deskripsi": "Danau alami di kaki Gunung Ciremai dengan air yang jernih dan sejuk.",
-        "lokasi": "Desa Payung, Kecamatan Rajagaluh, Kabupaten Majalengka",
-        "harga": "Rp10.000 per orang",
-        "jam_operasional": "08:00 - 17:00 WIB"
+        "deskripsi": "Situ Janawi adalah danau alami yang terletak di kaki Gunung Ciremai dengan air yang jernih dan sejuk. Danau ini menawarkan pemandangan alam pegunungan yang sangat indah dengan latar belakang Gunung Ciremai yang menjulang. Air danau yang jernih berwarna hijau kebiruan menciptakan panorama yang sangat menenangkan. Tempat ini ideal untuk aktivitas memancing, berkeliling dengan perahu, camping, atau sekadar bersantai menikmati keindahan alam. Udara yang sejuk dan suasana yang tenang membuat Situ Janawi menjadi destinasi favorit untuk melepas penat.",
+        "lokasi": "Desa Payung, Kecamatan Rajagaluh",
+        "harga": "Rp 10.000 per orang",
+        "jam_operasional": "08:00 - 17:00 WIB",
+        "kategori": "Wisata Alam",
+        "fasilitas": [
+          "Area Parkir",
+          "Toilet",
+          "Warung Makan",
+          "Penyewaan Perahu",
+          "Area Camping",
+          "Spot Memancing",
+          "Mushola"
+        ],
+        "tips": "Pagi hari adalah waktu terbaik untuk menikmati keindahan danau dengan kabut tipis. Bawa peralatan memancing jika ingin mencoba memancing. Tersedia area camping dengan fasilitas yang cukup memadai untuk camping keluarga.",
+        "kontak": "0818-7890-1234"
       },
       {
         "nama": "Curug Muara Jaya",
-        "deskripsi": "Curug Muara Jaya adalah salah satu air terjun yang indah di Majalengka, seringkali juga dikenal dengan nama Curug Ciputra. Air terjun ini berlokasi di daerah Argalingga, Kecamatan Argapura, Kabupaten Majalengka, tidak jauh dari kawasan Terasering Panyaweuyan.",
-        "lokasi": "Desa Argamukti, Kecamatan Argapura, Kabupaten Majalengka",
-        "harga": "Rp 10.000 hingga Rp 20.000 per orang.",
-        "jam_operasional": "08:00 WIB - 17:00 WIB"
+        "deskripsi": "Curug Muara Jaya (juga dikenal sebagai Curug Ciputra) adalah salah satu air terjun yang indah di Majalengka. Berlokasi tidak jauh dari kawasan Terasering Panyaweuyan, air terjun ini menawarkan keindahan alam yang masih alami dengan air yang jernih mengalir deras menuruni tebing bebatuan. Dikelilingi oleh pepohonan hijau dan suasana pegunungan yang sejuk, Curug Muara Jaya menjadi destinasi yang sempurna untuk dikombinasikan dengan kunjungan ke Terasering Panyaweuyan. Suara gemuruh air terjun dan kesegaran udaranya memberikan pengalaman wisata alam yang menyegarkan.",
+        "lokasi": "Desa Argamukti, Kecamatan Argapura",
+        "harga": "Rp 10.000 - Rp 20.000 per orang",
+        "jam_operasional": "08:00 - 17:00 WIB",
+        "kategori": "Wisata Alam",
+        "fasilitas": ["Area Parkir", "Toilet", "Warung", "Spot Foto", "Jalur Trekking"],
+        "tips": "Kombinasikan kunjungan dengan Terasering Panyaweuyan karena lokasinya berdekatan. Trek menuju air terjun relatif mudah. Bawa alas kaki yang anti slip karena bebatuan di sekitar air terjun bisa licin.",
+        "kontak": "0819-8901-2345"
       }
     ],
     "buatan": [
       {
         "nama": "Jembar Waterpark",
-        "deskripsi": "Taman rekreasi air dengan berbagai wahana permainan untuk keluarga.",
-        "lokasi": "Desa Ranjiwetan, Kecamatan Kasokandel, Kabupaten Majalengka",
-        "harga": "Rp25.000 untuk hari biasa (weekday) dan Rp30.000 untuk akhir pekan (weekend) dan tanggal merah",
-        "jam_operasional": "08:00 - 17:00 WIB"
+        "deskripsi": "Jembar Waterpark adalah taman rekreasi air yang menyajikan berbagai wahana permainan air yang seru dan menyenangkan untuk seluruh keluarga. Dengan kolam renang berbagai ukuran, seluncuran air (water slide), kolam ombak, dan area bermain anak, tempat ini menjadi destinasi favorit untuk menghabiskan waktu bersama keluarga, terutama saat akhir pekan. Dilengkapi dengan fasilitas yang memadai dan harga yang terjangkau, Jembar Waterpark cocok untuk refreshing dan melepas penat dari rutinitas sehari-hari.",
+        "lokasi": "Desa Ranjiwetan, Kecamatan Kasokandel",
+        "harga": "Weekday Rp 25.000, Weekend & Libur Nasional Rp 30.000",
+        "jam_operasional": "08:00 - 17:00 WIB",
+        "kategori": "Wisata Buatan",
+        "fasilitas": [
+          "Area Parkir",
+          "Toilet & Kamar Ganti",
+          "Kolam Renang",
+          "Water Slide",
+          "Kolam Anak",
+          "Kolam Ombak",
+          "Food Court",
+          "Gazebo",
+          "Mushola"
+        ],
+        "tips": "Datang pagi untuk menghindari keramaian. Bawa baju ganti, handuk, dan sunblock. Anak-anak wajib didampingi orang tua di area kolam.",
+        "kontak": "0820-9012-3456"
       },
       {
         "nama": "Paraland Majalengka",
-        "deskripsi": "Menawarkan olahraga paralayang dengan pemandangan kota Majalengka dari ketinggian.",
-        "lokasi": "Gunung Panten, Desa Sidamukti, Kecamatan Majalengka, Kabupaten Majalengka",
-        "harga": "mulai dari sekitar Rp15.000 per orang untuk hari biasa dan Rp20.000 per orang untuk akhir pekan",
-        "catatan": "Harga ini adalah untuk masuk ke area Paraland saja dan belum termasuk biaya untuk aktivitas lain.",
-        "jam_operasional": "08:00 - 17:00 WIB"
+        "deskripsi": "Paraland Majalengka adalah destinasi wisata yang menawarkan pengalaman olahraga paralayang (paragliding) dengan pemandangan spektakuler kota Majalengka dari ketinggian. Terletak di Gunung Panten dengan ketinggian ideal untuk terbang, tempat ini menjadi surga bagi para pecinta olahraga ekstrem dan fotografi aerial. Selain paralayang, pengunjung juga bisa menikmati pemandangan 360 derajat dari puncak, sunrise/sunset yang memukau, dan berbagai aktivitas outdoor lainnya. Cocok untuk yang ingin merasakan sensasi terbang bebas sambil menikmati keindahan alam Majalengka dari perspektif yang berbeda.",
+        "lokasi": "Gunung Panten, Desa Sidamukti, Kecamatan Majalengka",
+        "harga": "Tiket masuk Weekday Rp 15.000, Weekend Rp 20.000. Paralayang tandem Rp 350.000 - Rp 500.000",
+        "jam_operasional": "08:00 - 17:00 WIB (Aktivitas paralayang tergantung cuaca)",
+        "kategori": "Wisata Petualangan",
+        "fasilitas": [
+          "Area Parkir",
+          "Toilet",
+          "Warung",
+          "Viewing Deck",
+          "Peralatan Paralayang",
+          "Instruktur Bersertifikat",
+          "Spot Foto"
+        ],
+        "tips": "Aktivitas paralayang sangat bergantung pada kondisi angin dan cuaca. Waktu terbaik adalah pagi hari atau sore hari. Reservasi untuk paralayang tandem sebaiknya dilakukan H-1. Harga tiket masuk belum termasuk biaya paralayang.",
+        "kontak": "0821-0123-4567",
+        "catatan": "Untuk aktivitas paralayang, peserta minimal berusia 12 tahun dengan berat badan 30-90 kg. Tersedia paket tandem dengan instruktur profesional untuk pemula."
       }
     ],
     "sejarah_dan_budaya": [
       {
         "nama": "Museum Talaga Manggung",
-        "deskripsi": "Menyimpan benda-benda peninggalan sejarah Kerajaan Talaga Manggung.",
-        "lokasi": "Desa Talagawetan, Kecamatan Talaga, Kabupaten Majalengka",
-        "jam_operasional": "08:00 - 16:00 WIB (Senin Tutup)"
+        "deskripsi": "Museum Talaga Manggung adalah museum bersejarah yang menyimpan dan melestarikan benda-benda peninggalan Kerajaan Talaga Manggung, sebuah kerajaan Islam yang pernah berjaya di wilayah Majalengka pada abad ke-16. Koleksi museum meliputi pusaka kerajaan, senjata tradisional, naskah kuno, keramik, pakaian kerajaan, dan berbagai artefak bersejarah lainnya. Museum ini menjadi saksi bisu kejayaan masa lalu dan memberikan edukasi tentang sejarah dan budaya Majalengka. Setiap tahun, di bulan Mulud, diadakan ritual Nyiramkeun Pusaka (memandikan pusaka) yang menarik banyak pengunjung.",
+        "lokasi": "Desa Talagawetan, Kecamatan Talaga",
+        "harga": "Gratis (Donasi sukarela)",
+        "jam_operasional": "08:00 - 16:00 WIB (Tutup hari Senin)",
+        "kategori": "Wisata Sejarah & Budaya",
+        "fasilitas": [
+          "Area Parkir",
+          "Toilet",
+          "Ruang Pameran",
+          "Pemandu Wisata",
+          "Taman",
+          "Mushola"
+        ],
+        "tips": "Berkunjung saat bulan Mulud untuk menyaksikan ritual Nyiramkeun Pusaka. Disarankan datang dengan pemandu untuk mendapat penjelasan lengkap tentang sejarah setiap koleksi. Dilarang menyentuh koleksi museum tanpa izin.",
+        "kontak": "0822-1234-5678"
       },
       {
         "nama": "Makam Pangeran Muhammad",
-        "deskripsi": "Situs ziarah dan sejarah penyebaran Islam di Majalengka.",
-        "lokasi": "Jl. Letkol Abd. Gani, Majalengka Wetan, Kecamatan Majalengka, Kabupaten Majalengka",
-        "jam_operasional": "24 jam (Umumnya untuk ziarah)"
+        "deskripsi": "Makam Pangeran Muhammad adalah situs ziarah bersejarah yang merupakan tempat peristirahatan terakhir Pangeran Muhammad, salah satu tokoh penting dalam penyebaran agama Islam di wilayah Majalengka pada masa lampau. Kompleks makam ini memiliki arsitektur tradisional Jawa dengan nuansa religius yang kental. Tempat ini tidak hanya menjadi destinasi wisata religi bagi peziarah dari berbagai daerah, tetapi juga memiliki nilai sejarah yang tinggi sebagai bagian dari perjalanan Islamisasi di Tatar Sunda. Suasananya yang tenang dan penuh kekhidmatan memberikan kedamaian spiritual bagi pengunjung.",
+        "lokasi": "Jl. Letkol Abd. Gani, Majalengka Wetan, Kecamatan Majalengka",
+        "harga": "Gratis (Donasi sukarela)",
+        "jam_operasional": "24 jam",
+        "kategori": "Wisata Religi & Sejarah",
+        "fasilitas": ["Area Parkir", "Toilet", "Tempat Wudhu", "Mushola", "Taman", "Penjaga Makam"],
+        "tips": "Kenakan pakaian sopan dan tertutup saat berkunjung. Jaga kebersihan dan ketenangan area makam. Waktu terbaik untuk ziarah adalah pagi atau sore hari. Hormati prosedur dan tata cara ziarah yang berlaku.",
+        "kontak": "0823-2345-6789"
       },
       {
         "nama": "Patilasan Prabu Siliwangi",
-        "deskripsi": "Hutan lindung yang dipercaya sebagai tempat peristirahatan Prabu Siliwangi.",
-        "lokasi": "Desa Pajajar, Kecamatan Rajagaluh, Kabupaten Majalengka",
-        "jam_operasional": "07:00 - 17:00 WIB"
+        "deskripsi": "Patilasan Prabu Siliwangi adalah hutan lindung yang dipercaya sebagai tempat peristirahatan Raja Siliwangi dari Kerajaan Pajajaran. Menurut legenda setempat, Prabu Siliwangi pernah singgah dan beristirahat di tempat ini dalam perjalanannya. Situs ini memiliki nilai historis dan spiritual yang tinggi bagi masyarakat Sunda. Hutan yang masih asri dengan pepohonan besar dan udara yang sejuk menciptakan suasana mistis dan sakral. Terdapat beberapa batu besar dan mata air yang dianggap keramat. Tempat ini sering dikunjungi untuk ziarah spiritual dan wisata sejarah.",
+        "lokasi": "Desa Pajajar, Kecamatan Rajagaluh",
+        "harga": "Gratis (Donasi sukarela)",
+        "jam_operasional": "07:00 - 17:00 WIB",
+        "kategori": "Wisata Sejarah & Spiritual",
+        "fasilitas": ["Area Parkir", "Toilet", "Mushola", "Juru Kunci", "Gazebo"],
+        "tips": "Kenakan pakaian sopan saat berkunjung. Ikuti petunjuk juru kunci jika ingin mendengar cerita sejarah lengkap. Jaga kebersihan dan kelestarian area hutan. Sebaiknya berkunjung dalam rombongan.",
+        "kontak": "0824-3456-7890"
       }
     ]
   },
@@ -146,13 +250,19 @@
     "makanan": [
       {
         "nama": "Nasi Tutug Oncom",
-        "deskripsi": "Nasi hangat yang diaduk ('ditutug' atau ditumbuk) dengan oncom bakar dan bumbu kencur. Biasanya disajikan dengan sambal, lalapan, dan lauk seperti tempe/tahu goreng.",
-        "daerah": "Umum dijumpai di seluruh Majalengka (kuliner khas Sunda)"
+        "deskripsi": "Nasi Tutug Oncom adalah kuliner khas Sunda yang sangat populer di Majalengka. 'Tutug' berarti ditumbuk atau diaduk, jadi nasi hangat diaduk dengan oncom bakar yang sudah dibumbui dengan kencur, bawang, cabai, dan garam hingga tercampur rata. Hasilnya adalah nasi yang gurih, wangi, dan sedikit pedas dengan aroma kencur yang khas. Biasanya disajikan dengan sambal terasi, lalapan segar (kol, kemangi, timun), dan lauk pelengkap seperti tempe goreng, tahu goreng, atau ayam goreng. Hidangan sederhana namun sangat nikmat ini menjadi menu favorit untuk sarapan atau makan siang.",
+        "lokasi": "Tersedia di warung-warung makan tradisional di seluruh Majalengka",
+        "harga": "Rp 10.000 - Rp 20.000 per porsi",
+        "kategori": "Makanan Khas",
+        "asal": "Kuliner tradisional Sunda yang populer di Majalengka"
       },
       {
         "nama": "Jalakotek",
-        "deskripsi": "Kudapan mirip pastel, namun kulitnya terbuat dari campuran tepung tapioka (aci) dan terigu, sehingga teksturnya kenyal. Isiannya biasanya tahu.",
-        "daerah": "Sangat populer dan berasal dari Kecamatan Maja"
+        "deskripsi": "Jalakotek adalah jajanan khas Majalengka yang mirip dengan pastel, namun memiliki keunikan tersendiri. Kulitnya terbuat dari campuran tepung tapioka (aci) dan tepung terigu yang memberikan tekstur kenyal dan lembut, berbeda dengan pastel pada umumnya. Isian utamanya adalah tahu yang sudah dibumbui dan dicampur dengan sayuran. Jalakotek digoreng hingga berwarna keemasan dengan tekstur luar yang renyah dan dalam yang kenyal. Camilan ini sangat populer sebagai teman minum teh atau kopi di sore hari. Nama 'Jalakotek' sendiri berasal dari bahasa Sunda yang berarti 'jalan kaki', karena dulunya sering dijajakan keliling kampung.",
+        "lokasi": "Pusat oleh-oleh Kecamatan Maja dan pasar-pasar tradisional Majalengka",
+        "harga": "Rp 2.000 - Rp 3.000 per buah",
+        "kategori": "Makanan Khas",
+        "asal": "Kecamatan Maja, Majalengka"
       },
       {
         "nama": "Oncom Goreng",
@@ -210,14 +320,20 @@
       },
       {
         "nama": "Kecap Majalengka",
-        "deskripsi": "Kecap manis legendaris dengan cita rasa khas yang kental dan legit, diproduksi secara turun-temurun.",
-        "daerah": "Kecamatan Majalengka",
-        "catatan": "Merek paling terkenal dan legendaris adalah Kecap Manis Segi Tiga."
+        "deskripsi": "Kecap Majalengka adalah kecap manis legendaris yang telah diproduksi secara turun-temurun sejak puluhan tahun lalu. Terkenal dengan cita rasa khas yang sangat kental, legit, manis, dan gurih dengan aroma yang harum. Dibuat dari kedelai pilihan dengan proses fermentasi tradisional yang menjadi rahasia kelezatannya. Kecap ini memiliki tekstur yang pekat dan warna hitam pekat yang khas. Sangat cocok untuk bumbu masakan, marinasi, atau sekadar cocolan. Merek paling terkenal dan legendaris adalah 'Kecap Manis Segi Tiga' yang sudah menjadi ikon oleh-oleh khas Majalengka dan diburu wisatawan.",
+        "lokasi": "Kecamatan Majalengka dan Kadipaten",
+        "harga": "Rp 15.000 - Rp 30.000 per botol (tergantung ukuran)",
+        "kategori": "Oleh-oleh Khas",
+        "asal": "Majalengka",
+        "catatan": "Kecap Manis Segi Tiga adalah merek paling terkenal dan wajib dibeli sebagai oleh-oleh."
       },
       {
         "nama": "Mangga Gedong Gincu",
-        "deskripsi": "Mangga primadona Majalengka dengan warna kulit gradasi kuning kemerahan (gincu), daging buah tebal, aroma wangi, dan rasa yang sangat manis.",
-        "daerah": "Pusat produksi utama ada di Kecamatan Panyingkiran, Kadipaten, Ligung, dan Jatitujuh."
+        "deskripsi": "Mangga Gedong Gincu adalah buah mangga primadona dan kebanggaan Majalengka yang terkenal hingga ke seluruh Indonesia. Ciri khasnya adalah warna kulit yang memiliki gradasi cantik dari kuning hingga kemerahan (seperti gincu/lipstik), daging buah yang tebal berwarna kuning cerah, serat yang sangat sedikit (hampir tanpa serat), aroma yang sangat wangi dan harum, serta rasa manis yang sempurna dengan tingkat kemanisan mencapai 18-21 Brix. Teksturnya lembut dan sangat juicy. Mangga ini biasanya dipanen pada musim mangga (September-Desember). Selain dimakan langsung, juga sering diolah menjadi jus, es mangga, rujak, atau dodol mangga.",
+        "lokasi": "Pusat produksi: Kecamatan Panyingkiran, Kadipaten, Ligung, dan Jatitujuh",
+        "harga": "Rp 20.000 - Rp 40.000 per kg (tergantung musim dan kualitas)",
+        "kategori": "Buah & Oleh-oleh",
+        "asal": "Majalengka (Sudah bersertifikat Indikasi Geografis)"
       },
       {
         "nama": "Opak Ketan",
