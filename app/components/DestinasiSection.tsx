@@ -17,21 +17,21 @@ const destinasiData = [
     title: "Terasering Panyaweuyan",
     description:
       "Hamparan sawah terasering yang hijau dan menyejukkan mata di kaki Gunung Ciremai.",
-    imageUrl: "/panyaweyan2.webp",
+    imageUrl: "/destinasi/panyaweyan2.webp",
     location: "Argapura",
   },
   {
     id: 2,
     title: "Curug Muara Jaya",
     description: "Air terjun tertinggi di Majalengka dengan suasana alam yang asri dan sejuk.",
-    imageUrl: "/muara-jaya.jpg",
+    imageUrl: "/destinasi/muara-jaya.jpg",
     location: "Argapura",
   },
   {
     id: 3,
     title: "Situ Cipanten",
     description: "Danau indah dengan air jernih biru kehijauan dan berbagai wahana air seru.",
-    imageUrl: "/cipanten2.jpg",
+    imageUrl: "/destinasi/cipanten2.jpg",
     location: "Maja",
   },
 ];

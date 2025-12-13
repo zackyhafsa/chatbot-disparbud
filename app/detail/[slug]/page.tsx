@@ -34,6 +34,7 @@ type ItemData = {
   imageUrl?: string;
   catatan?: string;
   asal?: string;
+  image?: string;
 };
 
 function findItemBySlug(slug: string): ItemData | null {
@@ -243,16 +244,16 @@ export default function DetailPage({ params }: { params: Promise<{ slug: string 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Hero Image */}
         <section className="detail-hero relative overflow-hidden rounded-2xl lg:rounded-3xl shadow-xl mb-8">
-          <div className="relative aspect-[16/9] sm:aspect-[16/8] lg:aspect-[16/7] w-full">
+          <div className="relative aspect-video sm:aspect-16/8 lg:aspect-16/7 w-full">
             <SmartImage
-              src={heroImage}
+              src={item.image || heroImage}
               alt={item.nama}
               fill
               sizes="100vw"
               priority
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent" />
           </div>
 
           {/* Floating Action Buttons */}
@@ -296,7 +297,7 @@ export default function DetailPage({ params }: { params: Promise<{ slug: string 
             </article>
 
             {/* CTA Card */}
-            <div className="bg-gradient-to-br from-green-600 to-green-700 rounded-2xl p-6 sm:p-8 text-white">
+            <div className="bg-linear-to-br from-green-600 to-green-700 rounded-2xl p-6 sm:p-8 text-white">
               <h3 className="text-xl font-semibold mb-2">Ingin tahu lebih banyak?</h3>
               <p className="text-green-100 mb-6 text-sm sm:text-base">
                 Tanyakan informasi detail tentang {item.nama} kepada asisten virtual kami.
@@ -333,7 +334,7 @@ export default function DetailPage({ params }: { params: Promise<{ slug: string 
                   <h2 className="text-lg font-semibold text-gray-900">Lokasi</h2>
                   <p className="text-sm text-gray-500 mt-1">{item.lokasi}, Majalengka</p>
                 </div>
-                <div className="relative aspect-[4/3] bg-gray-100">
+                <div className="relative aspect-4/3 bg-gray-100">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center p-4">
                       <MapPin size={32} className="mx-auto text-gray-400 mb-2" />
@@ -379,9 +380,9 @@ export default function DetailPage({ params }: { params: Promise<{ slug: string 
                   className="related-card group block"
                 >
                   <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md hover:border-green-200 transition-all duration-300">
-                    <div className="relative aspect-[16/10] overflow-hidden">
+                    <div className="relative aspect-16/10 overflow-hidden">
                       <SmartImage
-                        src={relatedItem.imageUrl || "/images/placeholder.jpg"}
+                        src={relatedItem.image || "/images/placeholder.jpg"}
                         alt={relatedItem.nama}
                         fill
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -421,7 +422,7 @@ const InfoItem = ({
   value: string;
 }) => (
   <li className="flex items-start gap-3">
-    <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center">
+    <div className="shrink-0 w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center">
       <Icon size={18} className="text-green-600" />
     </div>
     <div className="flex-1 min-w-0">

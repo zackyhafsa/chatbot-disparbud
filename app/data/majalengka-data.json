@@ -10,7 +10,8 @@
         "kategori": "Wisata Alam",
         "fasilitas": ["Area Parkir", "Toilet", "Warung Makan", "Spot Foto", "Mushola"],
         "tips": "Waktu terbaik berkunjung adalah pagi hari (06:00-09:00) saat udara masih sejuk dan pemandangan sawah terlihat sempurna dengan kabut pagi.",
-        "kontak": "0812-3456-7890"
+        "kontak": "0812-3456-7890",
+        "image": "/destinasi/panyaweyan2.webp"
       },
       {
         "nama": "Curug Cipeuteuy",
@@ -21,7 +22,8 @@
         "kategori": "Wisata Alam",
         "fasilitas": ["Area Parkir", "Toilet", "Gazebo", "Area Piknik", "Jalur Trekking"],
         "tips": "Gunakan alas kaki yang nyaman untuk trekking. Jarak dari parkiran ke air terjun sekitar 500 meter dengan medan sedikit menanjak.",
-        "kontak": "0813-2345-6789"
+        "kontak": "0813-2345-6789",
+        "image": "/destinasi/curug-cipeuteuy.png"
       },
       {
         "nama": "Situ Cipanten",
@@ -39,7 +41,8 @@
           "Area Camping"
         ],
         "tips": "Tersedia perahu sewaan untuk mengelilingi danau. Jangan lupa membawa kamera karena banyak spot foto yang indah, terutama saat matahari terbenam.",
-        "kontak": "0814-3456-7890"
+        "kontak": "0814-3456-7890",
+        "image": "/destinasi/cipanten2.jpg"
       },
       {
         "nama": "Gunung Ciwaru",
@@ -50,7 +53,8 @@
         "kategori": "Wisata Alam",
         "fasilitas": ["Area Parkir", "Pos Pendakian", "Area Camping", "Sumber Air", "Basecamp"],
         "tips": "Waktu tempuh mendaki sekitar 3-4 jam. Bawalah perbekalan yang cukup, jaket tebal, dan headlamp jika mendaki di malam hari. Musim kemarau adalah waktu terbaik untuk mendaki.",
-        "kontak": "0815-4567-8901"
+        "kontak": "0815-4567-8901",
+        "image": "/destinasi/ciwaru.png"
       },
       {
         "nama": "Cikadongdong River Tubing",
@@ -70,7 +74,8 @@
         ],
         "tips": "Reservasi minimal H-1 untuk memastikan ketersediaan ban dan instruktur. Bawa pakaian ganti karena pasti basah. Hindari membawa barang berharga. Sebaiknya datang pagi hari untuk menghindari antrian.",
         "kontak": "0816-5678-9012",
-        "catatan": "Untuk paket Extreme, peserta minimal berusia 15 tahun dan bisa berenang. Aktivitas bergantung pada kondisi cuaca dan debit air sungai."
+        "catatan": "Untuk paket Extreme, peserta minimal berusia 15 tahun dan bisa berenang. Aktivitas bergantung pada kondisi cuaca dan debit air sungai.",
+        "image": "/destinasi/cikadongdong.png"
       },
       {
         "nama": "Curug Ibun Pelangi",
@@ -81,7 +86,8 @@
         "kategori": "Wisata Alam",
         "fasilitas": ["Area Parkir", "Toilet", "Warung", "Mushola", "Gazebo", "Jalur Trekking"],
         "tips": "Datanglah antara pukul 09:00-12:00 untuk melihat efek pelangi. Bawa kamera dengan kualitas baik untuk mengabadikan momen magical ini. Trek menuju air terjun cukup mudah dengan waktu tempuh sekitar 15-20 menit dari area parkir.",
-        "kontak": "0817-6789-0123"
+        "kontak": "0817-6789-0123",
+        "image": "/destinasi/ibun-pelangi.png"
       },
       {
         "nama": "Situ Janawi",
@@ -100,7 +106,8 @@
           "Mushola"
         ],
         "tips": "Pagi hari adalah waktu terbaik untuk menikmati keindahan danau dengan kabut tipis. Bawa peralatan memancing jika ingin mencoba memancing. Tersedia area camping dengan fasilitas yang cukup memadai untuk camping keluarga.",
-        "kontak": "0818-7890-1234"
+        "kontak": "0818-7890-1234",
+        "image": "/destinasi/janawi.png"
       },
       {
         "nama": "Curug Muara Jaya",
@@ -111,7 +118,8 @@
         "kategori": "Wisata Alam",
         "fasilitas": ["Area Parkir", "Toilet", "Warung", "Spot Foto", "Jalur Trekking"],
         "tips": "Kombinasikan kunjungan dengan Terasering Panyaweuyan karena lokasinya berdekatan. Trek menuju air terjun relatif mudah. Bawa alas kaki yang anti slip karena bebatuan di sekitar air terjun bisa licin.",
-        "kontak": "0819-8901-2345"
+        "kontak": "0819-8901-2345",
+        "image": "/destinasi/muara-jaya.jpg"
       }
     ],
     "buatan": [
@@ -134,7 +142,8 @@
           "Mushola"
         ],
         "tips": "Datang pagi untuk menghindari keramaian. Bawa baju ganti, handuk, dan sunblock. Anak-anak wajib didampingi orang tua di area kolam.",
-        "kontak": "0820-9012-3456"
+        "kontak": "0820-9012-3456",
+        "image": "/destinasi/jembar.png"
       },
       {
         "nama": "Paraland Majalengka",
@@ -154,7 +163,8 @@
         ],
         "tips": "Aktivitas paralayang sangat bergantung pada kondisi angin dan cuaca. Waktu terbaik adalah pagi hari atau sore hari. Reservasi untuk paralayang tandem sebaiknya dilakukan H-1. Harga tiket masuk belum termasuk biaya paralayang.",
         "kontak": "0821-0123-4567",
-        "catatan": "Untuk aktivitas paralayang, peserta minimal berusia 12 tahun dengan berat badan 30-90 kg. Tersedia paket tandem dengan instruktur profesional untuk pemula."
+        "catatan": "Untuk aktivitas paralayang, peserta minimal berusia 12 tahun dengan berat badan 30-90 kg. Tersedia paket tandem dengan instruktur profesional untuk pemula.",
+        "image": "/destinasi/paraland.png"
       }
     ],
     "sejarah_dan_budaya": [

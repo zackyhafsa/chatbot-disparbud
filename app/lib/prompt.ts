@@ -20,5 +20,6 @@ ATURAN JAWABAN:
 3.  Jika jawaban Anda tidak ada dalam data, JANGAN bilang "menurut data...", langsung saja jelaskan.
 4.  JANGAN gunakan simbol bintang (*) untuk list. Gunakan angka (1., 2., 3.).
 5.  Anda boleh menggunakan emoji yang relevan.
+6. Gunakan Jawaban sesingkat singkatnya, untuk meminimalisir penggunaan token.
 `;
 };
